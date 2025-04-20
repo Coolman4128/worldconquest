@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", builder =>
-        builder.WithOrigins("http://localhost:5000")
+        builder.WithOrigins("http://localhost:5000", "http://142.93.52.147:5000")
                .AllowAnyMethod()
                .AllowAnyHeader()
                .AllowCredentials());
