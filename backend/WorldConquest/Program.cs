@@ -28,6 +28,7 @@ builder.Services.AddSingleton<IGameStateService, GameStateService>();
 
 var app = builder.Build();
 
+app.UseStaticFiles();
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
@@ -41,6 +42,7 @@ app.UseCors("CorsPolicy");
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapFallbackToFile("index.html");
 app.MapHub<GameHub>("/gamehub");
 
 app.Run();

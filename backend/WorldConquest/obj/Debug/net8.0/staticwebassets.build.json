@@ -1,11 +1,949 @@
 {
   "Version": 1,
-  "Hash": "sfjTagaB//5kyhhfUcbZRGi4BX+PpcLX9f6Paw+yU4E=",
+  "Hash": "PG7oT9qsZtEXHSews93a9TefgYunL604yyBTaSrVWrM=",
   "Source": "WorldConquest",
   "BasePath": "_content/WorldConquest",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WorldConquest\\wwwroot",
+      "Source": "WorldConquest",
+      "ContentRoot": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\",
+      "BasePath": "_content/WorldConquest",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\assets\\bitmap.bmp",
+      "SourceId": "WorldConquest",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\",
+      "BasePath": "_content/WorldConquest",
+      "RelativePath": "assets/bitmap#[.{fingerprint}]?.bmp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "egbi7qdmzn",
+      "Integrity": "fmmRk6VSlmgTlJzDTzhx/qRTTQbZzO7xByTau3bFX6U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\bitmap.bmp"
+    },
+    {
+      "Identity": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\assets\\bitmap.png",
+      "SourceId": "WorldConquest",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\",
+      "BasePath": "_content/WorldConquest",
+      "RelativePath": "assets/bitmap#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zga8jspmyw",
+      "Integrity": "/SWVYZz1G7esTDYYzsTEfxRqiLFMohFSe7pQjFHhgmA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\bitmap.png"
+    },
+    {
+      "Identity": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\index.html",
+      "SourceId": "WorldConquest",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\",
+      "BasePath": "_content/WorldConquest",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "n6o1dr5yc4",
+      "Integrity": "UYY2fViSngurdI/Q+bHD2Zz1rutMe8LpgrQWUwROmds=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\api.js",
+      "SourceId": "WorldConquest",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\",
+      "BasePath": "_content/WorldConquest",
+      "RelativePath": "js/api#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "58exb7hm2u",
+      "Integrity": "u0JQmcWwTRWVv9U8QLSZCOCoe5hKzXLpKWrscPu2lo4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\api.js"
+    },
+    {
+      "Identity": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\game.js",
+      "SourceId": "WorldConquest",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\",
+      "BasePath": "_content/WorldConquest",
+      "RelativePath": "js/game#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8zhctfgbmo",
+      "Integrity": "BH/jPI5wXS4KkZ/6VGQ/KZhcFCOtslxJTfcy+1Iwmis=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\game.js"
+    },
+    {
+      "Identity": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\mapProcessor.js",
+      "SourceId": "WorldConquest",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\",
+      "BasePath": "_content/WorldConquest",
+      "RelativePath": "js/mapProcessor#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5owcrkfr7o",
+      "Integrity": "m1REek4Em6novUUm6xStDuV0+t3inos9Q4uoWP/Y05U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\mapProcessor.js"
+    },
+    {
+      "Identity": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\utils.js",
+      "SourceId": "WorldConquest",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\",
+      "BasePath": "_content/WorldConquest",
+      "RelativePath": "js/utils#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8ga3o3sbui",
+      "Integrity": "qNtRvuwMQcQjTM+tn/EwCaBNvUZvZr+/ciP/8XCGEQw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\utils.js"
+    },
+    {
+      "Identity": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\server.js",
+      "SourceId": "WorldConquest",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\",
+      "BasePath": "_content/WorldConquest",
+      "RelativePath": "server#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lw705a2fyp",
+      "Integrity": "+2p7mW/p9VizioxKYYCcjED+JWVzvePWZk19jtEmmVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\server.js"
+    },
+    {
+      "Identity": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\styles.css",
+      "SourceId": "WorldConquest",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\",
+      "BasePath": "_content/WorldConquest",
+      "RelativePath": "styles#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i50t1yq7ou",
+      "Integrity": "Bm8TPeo1PXprknW67Jzr76FXYP3gD7sJUm4AGYFOmAI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "assets/bitmap.bmp",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\assets\\bitmap.bmp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3000054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/bmp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fmmRk6VSlmgTlJzDTzhx/qRTTQbZzO7xByTau3bFX6U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:58:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fmmRk6VSlmgTlJzDTzhx/qRTTQbZzO7xByTau3bFX6U="
+        }
+      ]
+    },
+    {
+      "Route": "assets/bitmap.egbi7qdmzn.bmp",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\assets\\bitmap.bmp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3000054"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/bmp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fmmRk6VSlmgTlJzDTzhx/qRTTQbZzO7xByTau3bFX6U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:58:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "egbi7qdmzn"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/bitmap.bmp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fmmRk6VSlmgTlJzDTzhx/qRTTQbZzO7xByTau3bFX6U="
+        }
+      ]
+    },
+    {
+      "Route": "assets/bitmap.png",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\assets\\bitmap.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/SWVYZz1G7esTDYYzsTEfxRqiLFMohFSe7pQjFHhgmA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/SWVYZz1G7esTDYYzsTEfxRqiLFMohFSe7pQjFHhgmA="
+        }
+      ]
+    },
+    {
+      "Route": "assets/bitmap.zga8jspmyw.png",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\assets\\bitmap.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "117700"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/SWVYZz1G7esTDYYzsTEfxRqiLFMohFSe7pQjFHhgmA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zga8jspmyw"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/bitmap.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/SWVYZz1G7esTDYYzsTEfxRqiLFMohFSe7pQjFHhgmA="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3070"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UYY2fViSngurdI/Q+bHD2Zz1rutMe8LpgrQWUwROmds=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UYY2fViSngurdI/Q+bHD2Zz1rutMe8LpgrQWUwROmds="
+        }
+      ]
+    },
+    {
+      "Route": "index.n6o1dr5yc4.html",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3070"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UYY2fViSngurdI/Q+bHD2Zz1rutMe8LpgrQWUwROmds=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n6o1dr5yc4"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UYY2fViSngurdI/Q+bHD2Zz1rutMe8LpgrQWUwROmds="
+        }
+      ]
+    },
+    {
+      "Route": "js/api.58exb7hm2u.js",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\api.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u0JQmcWwTRWVv9U8QLSZCOCoe5hKzXLpKWrscPu2lo4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "58exb7hm2u"
+        },
+        {
+          "Name": "label",
+          "Value": "js/api.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u0JQmcWwTRWVv9U8QLSZCOCoe5hKzXLpKWrscPu2lo4="
+        }
+      ]
+    },
+    {
+      "Route": "js/api.js",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\api.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u0JQmcWwTRWVv9U8QLSZCOCoe5hKzXLpKWrscPu2lo4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u0JQmcWwTRWVv9U8QLSZCOCoe5hKzXLpKWrscPu2lo4="
+        }
+      ]
+    },
+    {
+      "Route": "js/game.8zhctfgbmo.js",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\game.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25216"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BH/jPI5wXS4KkZ/6VGQ/KZhcFCOtslxJTfcy+1Iwmis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8zhctfgbmo"
+        },
+        {
+          "Name": "label",
+          "Value": "js/game.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BH/jPI5wXS4KkZ/6VGQ/KZhcFCOtslxJTfcy+1Iwmis="
+        }
+      ]
+    },
+    {
+      "Route": "js/game.js",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\game.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "25216"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BH/jPI5wXS4KkZ/6VGQ/KZhcFCOtslxJTfcy+1Iwmis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BH/jPI5wXS4KkZ/6VGQ/KZhcFCOtslxJTfcy+1Iwmis="
+        }
+      ]
+    },
+    {
+      "Route": "js/mapProcessor.5owcrkfr7o.js",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\mapProcessor.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m1REek4Em6novUUm6xStDuV0+t3inos9Q4uoWP/Y05U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5owcrkfr7o"
+        },
+        {
+          "Name": "label",
+          "Value": "js/mapProcessor.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-m1REek4Em6novUUm6xStDuV0+t3inos9Q4uoWP/Y05U="
+        }
+      ]
+    },
+    {
+      "Route": "js/mapProcessor.js",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\mapProcessor.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "19021"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"m1REek4Em6novUUm6xStDuV0+t3inos9Q4uoWP/Y05U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-m1REek4Em6novUUm6xStDuV0+t3inos9Q4uoWP/Y05U="
+        }
+      ]
+    },
+    {
+      "Route": "js/utils.8ga3o3sbui.js",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\utils.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2252"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qNtRvuwMQcQjTM+tn/EwCaBNvUZvZr+/ciP/8XCGEQw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8ga3o3sbui"
+        },
+        {
+          "Name": "label",
+          "Value": "js/utils.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qNtRvuwMQcQjTM+tn/EwCaBNvUZvZr+/ciP/8XCGEQw="
+        }
+      ]
+    },
+    {
+      "Route": "js/utils.js",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\js\\utils.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2252"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qNtRvuwMQcQjTM+tn/EwCaBNvUZvZr+/ciP/8XCGEQw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qNtRvuwMQcQjTM+tn/EwCaBNvUZvZr+/ciP/8XCGEQw="
+        }
+      ]
+    },
+    {
+      "Route": "server.js",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\server.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "386"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+2p7mW/p9VizioxKYYCcjED+JWVzvePWZk19jtEmmVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+2p7mW/p9VizioxKYYCcjED+JWVzvePWZk19jtEmmVQ="
+        }
+      ]
+    },
+    {
+      "Route": "server.lw705a2fyp.js",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\server.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "386"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+2p7mW/p9VizioxKYYCcjED+JWVzvePWZk19jtEmmVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lw705a2fyp"
+        },
+        {
+          "Name": "label",
+          "Value": "server.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+2p7mW/p9VizioxKYYCcjED+JWVzvePWZk19jtEmmVQ="
+        }
+      ]
+    },
+    {
+      "Route": "styles.css",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4998"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bm8TPeo1PXprknW67Jzr76FXYP3gD7sJUm4AGYFOmAI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Bm8TPeo1PXprknW67Jzr76FXYP3gD7sJUm4AGYFOmAI="
+        }
+      ]
+    },
+    {
+      "Route": "styles.i50t1yq7ou.css",
+      "AssetFile": "C:\\Users\\TylerW\\worldconquest\\backend\\WorldConquest\\wwwroot\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4998"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bm8TPeo1PXprknW67Jzr76FXYP3gD7sJUm4AGYFOmAI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 22:39:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i50t1yq7ou"
+        },
+        {
+          "Name": "label",
+          "Value": "styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Bm8TPeo1PXprknW67Jzr76FXYP3gD7sJUm4AGYFOmAI="
+        }
+      ]
+    }
+  ]
 }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorldConquest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b407c665aa5c1867dca2cdd4f60c3e4968a847b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorldConquest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorldConquest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
