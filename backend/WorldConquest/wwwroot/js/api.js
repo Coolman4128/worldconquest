@@ -3,8 +3,8 @@
  */
 
 class ApiClient {
-    constructor(baseUrl = 'http://localhost:5000') {
-        this.baseUrl = baseUrl;
+    constructor(baseUrl = null) {
+        this.baseUrl = baseUrl || (window.location.origin === 'http://142.93.52.147:5000' ? 'http://142.93.52.147:5000' : 'http://localhost:5000');
         this.hubConnection = null;
         this.callbacks = {
             onPlayerJoined: null,
