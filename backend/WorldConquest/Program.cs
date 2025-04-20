@@ -45,4 +45,4 @@ app.MapControllers();
 app.MapFallbackToFile("index.html");
 app.MapHub<GameHub>("/gamehub");
 
-app.Run();
+app.Run("http://0.0.0.0:5000");
