@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Conquest Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Lobby Modal -->
+    <div id="lobbyModal" class="modal">
+        <div class="modal-content">
+            <h2>World Conquest - Multiplayer</h2>
+            <div class="lobby-container">
+                <div class="lobby-form">
+                    <h3>Join or Create a Lobby</h3>
+                    <div class="form-group">
+                        <label for="playerName">Your Name:</label>
+                        <input type="text" id="playerName" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lobbyId">Lobby ID:</label>
+                        <input type="text" id="lobbyId" placeholder="Enter lobby ID to join">
+                    </div>
+                    <div class="button-group">
+                        <button id="joinLobbyBtn">Join Lobby</button>
+                        <button id="createLobbyBtn">Create New Lobby</button>
+                    </div>
+                </div>
+                <div class="lobby-list">
+                    <h3>Available Lobbies</h3>
+                    <div id="lobbiesList" class="lobbies-list">
+                        <p>Loading lobbies...</p>
+                    </div>
+                    <button id="refreshLobbiesBtn">Refresh</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="game-header">
+            <div class="game-info">
+                <span id="yearDisplay">Year: 1100 AD</span>
+                <span id="currentTurn">Current Turn: None</span>
+            </div>
+            <div class="game-actions">
+                <button id="advanceTurnBtn">Next Turn</button>
+                <button id="advanceYearBtn">Next Year</button>
+                <button id="downloadStateBtn">Download Game State</button>
+                <button id="lobbyBtn">Lobby</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="map-container">
+                <canvas id="gameCanvas"></canvas>
+                <div class="map-controls">
+                    <button id="zoomIn">+</button>
+                    <button id="zoomOut">-</button>
+                    <button id="resetView">Reset View</button>
+                </div>
+            </div>
+            <div class="province-info">
+                <h2>Province Information</h2>
+                <div id="provinceDetails">
+                    <p>Click on a province to see its details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/mapProcessor.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

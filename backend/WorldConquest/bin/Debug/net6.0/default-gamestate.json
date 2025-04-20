@@ -1,0 +1,186 @@
+{
+  "provinces": {
+    "100_150_200": {
+      "id": "100_150_200",
+      "originalColor": {
+        "r": 100,
+        "g": 150,
+        "b": 200
+      },
+      "owner": "water",
+      "isWater": true,
+      "bounds": {
+        "minX": 10,
+        "minY": 10,
+        "maxX": 50,
+        "maxY": 50
+      }
+    },
+    "200_100_100": {
+      "id": "200_100_100",
+      "originalColor": {
+        "r": 200,
+        "g": 100,
+        "b": 100
+      },
+      "owner": "red",
+      "isWater": false,
+      "bounds": {
+        "minX": 60,
+        "minY": 10,
+        "maxX": 100,
+        "maxY": 50
+      }
+    },
+    "100_200_100": {
+      "id": "100_200_100",
+      "originalColor": {
+        "r": 100,
+        "g": 200,
+        "b": 100
+      },
+      "owner": "green",
+      "isWater": false,
+      "bounds": {
+        "minX": 110,
+        "minY": 10,
+        "maxX": 150,
+        "maxY": 50
+      }
+    },
+    "100_100_200": {
+      "id": "100_100_200",
+      "originalColor": {
+        "r": 100,
+        "g": 100,
+        "b": 200
+      },
+      "owner": "blue",
+      "isWater": false,
+      "bounds": {
+        "minX": 160,
+        "minY": 10,
+        "maxX": 200,
+        "maxY": 50
+      }
+    },
+    "150_150_150": {
+      "id": "150_150_150",
+      "originalColor": {
+        "r": 150,
+        "g": 150,
+        "b": 150
+      },
+      "owner": "neutral",
+      "isWater": false,
+      "bounds": {
+        "minX": 210,
+        "minY": 10,
+        "maxX": 250,
+        "maxY": 50
+      }
+    },
+    "180_120_80": {
+      "id": "180_120_80",
+      "originalColor": {
+        "r": 180,
+        "g": 120,
+        "b": 80
+      },
+      "owner": "neutral",
+      "isWater": false,
+      "bounds": {
+        "minX": 260,
+        "minY": 10,
+        "maxX": 300,
+        "maxY": 50
+      }
+    },
+    "80_120_180": {
+      "id": "80_120_180",
+      "originalColor": {
+        "r": 80,
+        "g": 120,
+        "b": 180
+      },
+      "owner": "water",
+      "isWater": true,
+      "bounds": {
+        "minX": 10,
+        "minY": 60,
+        "maxX": 50,
+        "maxY": 100
+      }
+    },
+    "220_80_80": {
+      "id": "220_80_80",
+      "originalColor": {
+        "r": 220,
+        "g": 80,
+        "b": 80
+      },
+      "owner": "red",
+      "isWater": false,
+      "bounds": {
+        "minX": 60,
+        "minY": 60,
+        "maxX": 100,
+        "maxY": 100
+      }
+    },
+    "80_220_80": {
+      "id": "80_220_80",
+      "originalColor": {
+        "r": 80,
+        "g": 220,
+        "b": 80
+      },
+      "owner": "green",
+      "isWater": false,
+      "bounds": {
+        "minX": 110,
+        "minY": 60,
+        "maxX": 150,
+        "maxY": 100
+      }
+    },
+    "80_80_220": {
+      "id": "80_80_220",
+      "originalColor": {
+        "r": 80,
+        "g": 80,
+        "b": 220
+      },
+      "owner": "blue",
+      "isWater": false,
+      "bounds": {
+        "minX": 160,
+        "minY": 60,
+        "maxX": 200,
+        "maxY": 100
+      }
+    }
+  },
+  "players": [
+    {
+      "id": "player1",
+      "name": "Red Player",
+      "color": "red",
+      "connectionId": ""
+    },
+    {
+      "id": "player2",
+      "name": "Green Player",
+      "color": "green",
+      "connectionId": ""
+    },
+    {
+      "id": "player3",
+      "name": "Blue Player",
+      "color": "blue",
+      "connectionId": ""
+    }
+  ],
+  "year": 1100,
+  "currentTurn": "player1"
+}
