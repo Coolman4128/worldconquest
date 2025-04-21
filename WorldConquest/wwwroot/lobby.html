@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Conquest - Lobby</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .lobby-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .lobby-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .lobby-section {
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .lobby-section h2 {
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        
+        .form-actions {
+            margin-top: 20px;
+        }
+        
+        .lobby-list {
+            margin-top: 20px;
+        }
+        
+        .lobby-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .lobby-item:last-child {
+            border-bottom: none;
+        }
+        
+        .lobby-name {
+            font-weight: bold;
+            flex: 1;
+        }
+        
+        .lobby-players {
+            margin: 0 15px;
+        }
+        
+        .lobby-password {
+            margin-right: 15px;
+        }
+        
+        #lobby-container {
+            display: none;
+        }
+        
+        .player-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .player-item:last-child {
+            border-bottom: none;
+        }
+        
+        .player-name {
+            font-weight: bold;
+            flex: 1;
+        }
+        
+        .player-status {
+            margin: 0 15px;
+        }
+        
+        .host-badge {
+            background-color: #4CAF50;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        
+        .ready-btn, .join-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .ready-btn:hover, .join-btn:hover {
+            background-color: #45a049;
+        }
+        
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            background-color: #ddd;
+            cursor: pointer;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        
+        .tab.active {
+            background-color: #f5f5f5;
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .load-game-section {
+            margin-top: 20px;
+        }
+        
+        .saved-game-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .saved-game-name {
+            flex: 1;
+        }
+        
+        .saved-game-date {
+            margin: 0 15px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="lobby-container">
+        <div class="lobby-header">
+            <h1>World Conquest</h1>
+            <p>Join or create a game lobby to start playing</p>
+        </div>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="join-lobby">Join Lobby</div>
+            <div class="tab" data-tab="create-lobby">Create Lobby</div>
+            <div class="tab" data-tab="load-game">Load Game</div>
+        </div>
+        
+        <div class="tab-content active" id="join-lobby">
+            <div class="lobby-section">
+                <h2>Available Lobbies</h2>
+                <div class="form-group">
+                    <label for="player-name-input">Your Name:</label>
+                    <input type="text" id="player-name-input" placeholder="Enter your name">
+                </div>
+                <button id="refresh-lobbies-btn" class="btn">Refresh Lobbies</button>
+                <div class="lobby-list" id="lobby-list">
+                    <!-- Lobby items will be added here dynamically -->
+                    <div class="lobby-item">
+                        <span class="lobby-name">Loading lobbies...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="create-lobby">
+            <div class="lobby-section">
+                <h2>Create New Lobby</h2>
+                <form id="create-lobby-form">
+                    <div class="form-group">
+                        <label for="create-player-name">Your Name:</label>
+                        <input type="text" id="create-player-name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="create-lobby-name">Lobby Name:</label>
+                        <input type="text" id="create-lobby-name" placeholder="Enter lobby name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="max-players">Max Players:</label>
+                        <input type="number" id="max-players" min="2" max="8" value="4" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="password-protected">
+                            Password Protected
+                        </label>
+                    </div>
+                    <div class="form-group" id="password-group" style="display: none;">
+                        <label for="lobby-password">Password:</label>
+                        <input type="password" id="lobby-password" placeholder="Enter lobby password">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Create Lobby</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="load-game">
+            <div class="lobby-section">
+                <h2>Load Saved Game</h2>
+                <p>Select a saved game to continue playing:</p>
+                <div id="saved-games-list">
+                    <!-- Saved games will be listed here -->
+                    <div class="saved-game-item">
+                        <span class="saved-game-name">No saved games found</span>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button id="refresh-saved-games-btn" class="btn">Refresh Saved Games</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="lobby-container" class="lobby-section">
+            <h2>Lobby: <span id="lobby-name-display">Lobby Name</span></h2>
+            <div id="player-list">
+                <!-- Player items will be added here dynamically -->
+            </div>
+            <div class="form-actions">
+                <button id="leave-lobby-btn" class="btn">Leave Lobby</button>
+                <button id="start-game-btn" class="btn">Start Game</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/lobby.bundle.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and tab contents
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Toggle password field visibility
+        document.getElementById('password-protected').addEventListener('change', function() {
+            document.getElementById('password-group').style.display = this.checked ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
