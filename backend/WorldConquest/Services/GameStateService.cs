@@ -53,37 +53,53 @@ namespace WorldConquest.Services
                 var gameState = new GameState
                 {
                     Year = gameStateData.GetProperty("year").GetInt32(),
-                    CurrentTurn = gameStateData.GetProperty("currentTurn").GetString() ?? string.Empty,
+                    CurrentTurn = gameStateData.TryGetProperty("currentTurn", out var currentTurnProp) ? 
+                        currentTurnProp.GetString() ?? string.Empty : string.Empty,
                     Players = new List<Player>(),
+                    Countries = new List<Country>(),
                     Provinces = new Dictionary<string, Province>()
                 };
 
-                // Add players
-                var playersArray = gameStateData.GetProperty("players");
-                foreach (var playerElement in playersArray.EnumerateArray())
+                // Add countries
+                if (gameStateData.TryGetProperty("countries", out var countriesArray))
                 {
-                    var player = new Player
+                    foreach (var countryElement in countriesArray.EnumerateArray())
                     {
-                        Id = playerElement.GetProperty("id").GetString() ?? string.Empty,
-                        Name = playerElement.GetProperty("name").GetString() ?? string.Empty,
-                        Color = playerElement.GetProperty("color").GetString() ?? string.Empty,
-                        ConnectionId = playerElement.GetProperty("connectionId").GetString() ?? string.Empty
-                    };
-                    gameState.Players.Add(player);
+                        var country = new Country
+                        {
+                            Id = countryElement.GetProperty("id").GetString() ?? string.Empty,
+                            Name = countryElement.GetProperty("name").GetString() ?? string.Empty,
+                            Color = countryElement.GetProperty("color").GetString() ?? string.Empty,
+                            Description = countryElement.TryGetProperty("description", out var descProp) ? 
+                                descProp.GetString() ?? string.Empty : string.Empty,
+                            IsAvailable = true
+                        };
+                        gameState.Countries.Add(country);
+                    }
                 }
+
+                // We don't add players from the JSON file anymore
+                // They will be added when players join the game
 
                 // Add provinces
                 var provincesObject = gameStateData.GetProperty("provinces");
                 foreach (var provinceProperty in provincesObject.EnumerateObject())
                 {
-                    var provinceElement = provinceProperty.Value;
-                    var originalColorElement = provinceElement.GetProperty("originalColor");
-                    
+                    // Skip province entries with insufficient data
+                    if (!provinceProperty.Value.TryGetProperty("originalColor", out var originalColorElement) ||
+                        !provinceProperty.Value.TryGetProperty("owner", out var _) ||
+                        !provinceProperty.Value.TryGetProperty("isWater", out var _) ||
+                        !provinceProperty.Value.TryGetProperty("bounds", out var _))
+                    {
+                        continue;
+                    }
+
                     var province = new Province
                     {
-                        Id = provinceElement.GetProperty("id").GetString() ?? string.Empty,
-                        Owner = provinceElement.GetProperty("owner").GetString() ?? string.Empty,
-                        IsWater = provinceElement.GetProperty("isWater").GetBoolean(),
+                        Id = provinceProperty.Value.TryGetProperty("id", out var idProp) ? 
+                            idProp.GetString() ?? provinceProperty.Name : provinceProperty.Name,
+                        Owner = provinceProperty.Value.GetProperty("owner").GetString() ?? string.Empty,
+                        IsWater = provinceProperty.Value.GetProperty("isWater").GetBoolean(),
                         OriginalColor = new Color
                         {
                             R = originalColorElement.GetProperty("r").GetInt32(),
@@ -92,17 +108,17 @@ namespace WorldConquest.Services
                         },
                         Bounds = new Bounds
                         {
-                            MinX = provinceElement.GetProperty("bounds").GetProperty("minX").GetInt32(),
-                            MinY = provinceElement.GetProperty("bounds").GetProperty("minY").GetInt32(),
-                            MaxX = provinceElement.GetProperty("bounds").GetProperty("maxX").GetInt32(),
-                            MaxY = provinceElement.GetProperty("bounds").GetProperty("maxY").GetInt32()
+                            MinX = provinceProperty.Value.GetProperty("bounds").GetProperty("minX").GetInt32(),
+                            MinY = provinceProperty.Value.GetProperty("bounds").GetProperty("minY").GetInt32(),
+                            MaxX = provinceProperty.Value.GetProperty("bounds").GetProperty("maxX").GetInt32(),
+                            MaxY = provinceProperty.Value.GetProperty("bounds").GetProperty("maxY").GetInt32()
                         }
                     };
                     
                     gameState.Provinces[province.Id] = province;
                 }
 
-                _logger.LogInformation($"Loaded default game state with {gameState.Provinces.Count} provinces and {gameState.Players.Count} players");
+                _logger.LogInformation($"Loaded default game state with {gameState.Provinces.Count} provinces, {gameState.Countries.Count} countries, and {gameState.Players.Count} players");
                 
                 // Cache the default game state
                 _defaultGameState = CloneGameState(gameState);
@@ -125,6 +141,7 @@ namespace WorldConquest.Services
             {
                 Year = 1100,
                 Players = new List<Player>(),
+                Countries = CreateDefaultCountries(),
                 Provinces = new Dictionary<string, Province>()
             };
 
@@ -139,6 +156,54 @@ namespace WorldConquest.Services
             _defaultGameState = CloneGameState(gameState);
 
             return gameState;
+        }
+
+        private List<Country> CreateDefaultCountries()
+        {
+            // Create default countries if JSON loading fails
+            return new List<Country>
+            {
+                new Country
+                {
+                    Id = "kingdom_red",
+                    Name = "Kingdom of Redoria",
+                    Color = "red",
+                    Description = "A wealthy kingdom known for its military might",
+                    IsAvailable = true
+                },
+                new Country
+                {
+                    Id = "empire_blue",
+                    Name = "Blue Empire",
+                    Color = "blue",
+                    Description = "An ancient empire with strong naval traditions",
+                    IsAvailable = true
+                },
+                new Country
+                {
+                    Id = "duchy_green",
+                    Name = "Green Duchy", 
+                    Color = "green",
+                    Description = "A small but prosperous realm with fertile lands",
+                    IsAvailable = true
+                },
+                new Country
+                {
+                    Id = "confederation_yellow",
+                    Name = "Yellow Confederation",
+                    Color = "yellow",
+                    Description = "An alliance of city-states with advanced trade networks",
+                    IsAvailable = true
+                },
+                new Country
+                {
+                    Id = "purple_dominion",
+                    Name = "Purple Dominion",
+                    Color = "purple",
+                    Description = "A mysterious realm ruled by scholars and mages",
+                    IsAvailable = true
+                }
+            };
         }
 
         public async Task<GameState?> GetGameStateAsync(string lobbyId)

@@ -143,14 +143,15 @@ class ApiClient {
      * Join a lobby
      * @param {string} lobbyId - Lobby ID
      * @param {string} playerName - Player name
+     * @param {string} countryId - Country ID
      * @returns {Promise<boolean>} - Success status
      */
-    async joinLobby(lobbyId, playerName) {
+    async joinLobby(lobbyId, playerName, countryId) {
         try {
             if (!this.hubConnection) {
                 await this.initSignalR();
             }
-            await this.hubConnection.invoke('JoinLobby', lobbyId, playerName);
+            await this.hubConnection.invoke('JoinLobby', lobbyId, playerName, countryId);
             return true;
         } catch (error) {
             console.error('Error joining lobby:', error);

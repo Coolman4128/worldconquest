@@ -71,7 +71,7 @@
         "g": 74,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 418,
@@ -87,7 +87,7 @@
         "g": 223,
         "b": 21
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 446,
@@ -103,7 +103,7 @@
         "g": 85,
         "b": 134
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 497,
@@ -119,7 +119,7 @@
         "g": 10,
         "b": 168
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 592,
@@ -135,7 +135,7 @@
         "g": 138,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 744,
@@ -183,7 +183,7 @@
         "g": 61,
         "b": 78
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 909,
@@ -199,7 +199,7 @@
         "g": 54,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 508,
@@ -215,7 +215,7 @@
         "g": 136,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 680,
@@ -231,7 +231,7 @@
         "g": 134,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 0,
@@ -247,7 +247,7 @@
         "g": 160,
         "b": 108
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 594,
@@ -263,7 +263,7 @@
         "g": 68,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 459,
@@ -279,7 +279,7 @@
         "g": 153,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 636,
@@ -295,7 +295,7 @@
         "g": 0,
         "b": 244
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 509,
@@ -311,7 +311,7 @@
         "g": 152,
         "b": 95
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 874,
@@ -327,7 +327,7 @@
         "g": 146,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 835,
@@ -375,7 +375,7 @@
         "g": 72,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 356,
@@ -391,7 +391,7 @@
         "g": 70,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 556,
@@ -407,7 +407,7 @@
         "g": 169,
         "b": 133
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 795,
@@ -423,7 +423,7 @@
         "g": 0,
         "b": 240
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 752,
@@ -439,7 +439,7 @@
         "g": 52,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 413,
@@ -455,7 +455,7 @@
         "g": 0,
         "b": 248
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 460,
@@ -471,7 +471,7 @@
         "g": 54,
         "b": 236
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 647,
@@ -487,7 +487,7 @@
         "g": 142,
         "b": 46
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 898,
@@ -503,7 +503,7 @@
         "g": 94,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 630,
@@ -519,7 +519,7 @@
         "g": 50,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 456,
@@ -535,7 +535,7 @@
         "g": 195,
         "b": 109
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 670,
@@ -551,7 +551,7 @@
         "g": 136,
         "b": 207
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 840,
@@ -567,7 +567,7 @@
         "g": 90,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 593,
@@ -599,7 +599,7 @@
         "g": 196,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 305,
@@ -615,7 +615,7 @@
         "g": 164,
         "b": 53
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 960,
@@ -631,7 +631,7 @@
         "g": 0,
         "b": 236
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 673,
@@ -663,7 +663,7 @@
         "g": 138,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 720,
@@ -679,7 +679,7 @@
         "g": 0,
         "b": 240
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 624,
@@ -695,7 +695,7 @@
         "g": 223,
         "b": 19
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 327,
@@ -711,7 +711,7 @@
         "g": 76,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 367,
@@ -727,7 +727,7 @@
         "g": 96,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 708,
@@ -743,7 +743,7 @@
         "g": 0,
         "b": 232
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 782,
@@ -759,7 +759,7 @@
         "g": 106,
         "b": 43
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 579,
@@ -791,8 +791,8 @@
         "g": 201,
         "b": 201
       },
-      "owner": "water",
-      "isWater": true,
+      "owner": "neutral",
+      "isWater": false,
       "bounds": {
         "minX": 0,
         "minY": 133,
@@ -807,7 +807,7 @@
         "g": 0,
         "b": 236
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 118,
@@ -855,7 +855,7 @@
         "g": 86,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 565,
@@ -871,7 +871,7 @@
         "g": 78,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 305,
@@ -887,7 +887,7 @@
         "g": 0,
         "b": 232
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 598,
@@ -903,7 +903,7 @@
         "g": 48,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 418,
@@ -919,7 +919,7 @@
         "g": 94,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 888,
@@ -951,7 +951,7 @@
         "g": 144,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 793,
@@ -967,7 +967,7 @@
         "g": 66,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 361,
@@ -983,7 +983,7 @@
         "g": 34,
         "b": 210
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 657,
@@ -1015,7 +1015,7 @@
         "g": 146,
         "b": 58
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 822,
@@ -1031,7 +1031,7 @@
         "g": 227,
         "b": 36
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 840,
@@ -1047,7 +1047,7 @@
         "g": 92,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 658,
@@ -1063,7 +1063,7 @@
         "g": 88,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 583,
@@ -1111,7 +1111,7 @@
         "g": 40,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 444,
@@ -1127,7 +1127,7 @@
         "g": 0,
         "b": 232
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 200,
@@ -1159,7 +1159,7 @@
         "g": 154,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 546,
@@ -1175,7 +1175,7 @@
         "g": 34,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 472,
@@ -1191,7 +1191,7 @@
         "g": 42,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 413,
@@ -1207,7 +1207,7 @@
         "g": 98,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 678,
@@ -1223,7 +1223,7 @@
         "g": 0,
         "b": 244
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 712,
@@ -1239,7 +1239,7 @@
         "g": 138,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 954,
@@ -1255,7 +1255,7 @@
         "g": 50,
         "b": 94
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 765,
@@ -1271,7 +1271,7 @@
         "g": 13,
         "b": 54
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 860,
@@ -1303,7 +1303,7 @@
         "g": 69,
         "b": 44
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 349,
@@ -1319,7 +1319,7 @@
         "g": 186,
         "b": 98
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 391,
@@ -1351,7 +1351,7 @@
         "g": 148,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 823,
@@ -1383,7 +1383,7 @@
         "g": 100,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 663,
@@ -1399,7 +1399,7 @@
         "g": 240,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 442,
@@ -1415,7 +1415,7 @@
         "g": 213,
         "b": 76
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 407,
@@ -1431,7 +1431,7 @@
         "g": 80,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 307,
@@ -1447,7 +1447,7 @@
         "g": 104,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 587,
@@ -1463,7 +1463,7 @@
         "g": 0,
         "b": 248
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 482,
@@ -1511,7 +1511,7 @@
         "g": 142,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 629,
@@ -1527,7 +1527,7 @@
         "g": 140,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 693,
@@ -1543,7 +1543,7 @@
         "g": 146,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 907,
@@ -1559,7 +1559,7 @@
         "g": 130,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 178,
@@ -1591,7 +1591,7 @@
         "g": 222,
         "b": 116
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 470,
@@ -1607,7 +1607,7 @@
         "g": 68,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 654,
@@ -1623,7 +1623,7 @@
         "g": 191,
         "b": 169
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 329,
@@ -1639,7 +1639,7 @@
         "g": 181,
         "b": 81
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 737,
@@ -1655,7 +1655,7 @@
         "g": 64,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 406,
@@ -1671,7 +1671,7 @@
         "g": 102,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 568,
@@ -1687,7 +1687,7 @@
         "g": 0,
         "b": 248
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 878,
@@ -1703,7 +1703,7 @@
         "g": 36,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 451,
@@ -1735,7 +1735,7 @@
         "g": 90,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 832,
@@ -1751,7 +1751,7 @@
         "g": 46,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 421,
@@ -1767,7 +1767,7 @@
         "g": 163,
         "b": 151
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 788,
@@ -1783,7 +1783,7 @@
         "g": 142,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 678,
@@ -1815,7 +1815,7 @@
         "g": 30,
         "b": 210
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 814,
@@ -1831,7 +1831,7 @@
         "g": 127,
         "b": 43
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 135,
@@ -1847,7 +1847,7 @@
         "g": 106,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 599,
@@ -1863,7 +1863,7 @@
         "g": 126,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 633,
@@ -1895,7 +1895,7 @@
         "g": 154,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 109,
@@ -1911,8 +1911,8 @@
         "g": 225,
         "b": 255
       },
-      "owner": "water",
-      "isWater": true,
+      "owner": "neutral",
+      "isWater": false,
       "bounds": {
         "minX": 215,
         "minY": 226,
@@ -1927,7 +1927,7 @@
         "g": 144,
         "b": 23
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 411,
@@ -1943,7 +1943,7 @@
         "g": 0,
         "b": 236
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 758,
@@ -1959,7 +1959,7 @@
         "g": 38,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 482,
@@ -1975,7 +1975,7 @@
         "g": 82,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 508,
@@ -2007,7 +2007,7 @@
         "g": 136,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 827,
@@ -2023,7 +2023,7 @@
         "g": 88,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 720,
@@ -2039,7 +2039,7 @@
         "g": 151,
         "b": 200
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 680,
@@ -2055,7 +2055,7 @@
         "g": 157,
         "b": 76
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 431,
@@ -2087,7 +2087,7 @@
         "g": 0,
         "b": 236
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 362,
@@ -2103,7 +2103,7 @@
         "g": 110,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 553,
@@ -2119,7 +2119,7 @@
         "g": 203,
         "b": 22
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 142,
@@ -2135,7 +2135,7 @@
         "g": 150,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 165,
@@ -2151,7 +2151,7 @@
         "g": 217,
         "b": 74
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 814,
@@ -2167,7 +2167,7 @@
         "g": 0,
         "b": 240
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 662,
@@ -2183,7 +2183,7 @@
         "g": 152,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 129,
@@ -2199,7 +2199,7 @@
         "g": 0,
         "b": 244
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 845,
@@ -2231,7 +2231,7 @@
         "g": 84,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 415,
@@ -2247,7 +2247,7 @@
         "g": 127,
         "b": 53
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 613,
@@ -2263,7 +2263,7 @@
         "g": 66,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 629,
@@ -2279,7 +2279,7 @@
         "g": 132,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 894,
@@ -2311,7 +2311,7 @@
         "g": 108,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 768,
@@ -2327,7 +2327,7 @@
         "g": 0,
         "b": 240
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 576,
@@ -2343,7 +2343,7 @@
         "g": 30,
         "b": 112
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 796,
@@ -2359,7 +2359,7 @@
         "g": 17,
         "b": 17
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 877,
@@ -2375,7 +2375,7 @@
         "g": 144,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 958,
@@ -2391,7 +2391,7 @@
         "g": 108,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 600,
@@ -2407,7 +2407,7 @@
         "g": 72,
         "b": 18
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 938,
@@ -2423,7 +2423,7 @@
         "g": 225,
         "b": 69
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 709,
@@ -2439,8 +2439,8 @@
         "g": 201,
         "b": 251
       },
-      "owner": "water",
-      "isWater": true,
+      "owner": "neutral",
+      "isWater": false,
       "bounds": {
         "minX": 0,
         "minY": 259,
@@ -2455,7 +2455,7 @@
         "g": 220,
         "b": 172
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 760,
@@ -2471,7 +2471,7 @@
         "g": 148,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 153,
@@ -2503,7 +2503,7 @@
         "g": 62,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 353,
@@ -2535,7 +2535,7 @@
         "g": 118,
         "b": 56
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 136,
@@ -2551,7 +2551,7 @@
         "g": 219,
         "b": 57
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 375,
@@ -2567,7 +2567,7 @@
         "g": 144,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 159,
@@ -2583,7 +2583,7 @@
         "g": 70,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 658,
@@ -2599,7 +2599,7 @@
         "g": 78,
         "b": 202
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 432,
@@ -2615,7 +2615,7 @@
         "g": 0,
         "b": 248
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 452,
@@ -2631,7 +2631,7 @@
         "g": 44,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 421,
@@ -2647,7 +2647,7 @@
         "g": 62,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 557,
@@ -2663,7 +2663,7 @@
         "g": 8,
         "b": 15
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 594,
@@ -2679,7 +2679,7 @@
         "g": 110,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 793,
@@ -2711,7 +2711,7 @@
         "g": 92,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 872,
@@ -2743,7 +2743,7 @@
         "g": 184,
         "b": 44
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 366,
@@ -2759,7 +2759,7 @@
         "g": 134,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 834,
@@ -2791,7 +2791,7 @@
         "g": 39,
         "b": 199
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 612,
@@ -2807,7 +2807,7 @@
         "g": 56,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 416,
@@ -2823,7 +2823,7 @@
         "g": 38,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 687,
@@ -2839,7 +2839,7 @@
         "g": 200,
         "b": 147
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 965,
@@ -2855,7 +2855,7 @@
         "g": 112,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 555,
@@ -2871,7 +2871,7 @@
         "g": 133,
         "b": 239
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 732,
@@ -2887,7 +2887,7 @@
         "g": 39,
         "b": 195
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 767,
@@ -2903,7 +2903,7 @@
         "g": 60,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 384,
@@ -2919,7 +2919,7 @@
         "g": 146,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 148,
@@ -2951,7 +2951,7 @@
         "g": 124,
         "b": 124
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 172,
@@ -2967,7 +2967,7 @@
         "g": 36,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 639,
@@ -2983,7 +2983,7 @@
         "g": 140,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 185,
@@ -2999,7 +2999,7 @@
         "g": 106,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 709,
@@ -3015,7 +3015,7 @@
         "g": 224,
         "b": 48
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 659,
@@ -3031,7 +3031,7 @@
         "g": 114,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 537,
@@ -3047,7 +3047,7 @@
         "g": 167,
         "b": 188
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 800,
@@ -3063,7 +3063,7 @@
         "g": 58,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 358,
@@ -3079,7 +3079,7 @@
         "g": 22,
         "b": 22
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 155,
@@ -3095,7 +3095,7 @@
         "g": 0,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 579,
@@ -3111,7 +3111,7 @@
         "g": 189,
         "b": 18
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 896,
@@ -3127,7 +3127,7 @@
         "g": 74,
         "b": 52
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 89,
@@ -3143,7 +3143,7 @@
         "g": 122,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 829,
@@ -3159,7 +3159,7 @@
         "g": 140,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 858,
@@ -3175,7 +3175,7 @@
         "g": 0,
         "b": 244
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 455,
@@ -3191,7 +3191,7 @@
         "g": 241,
         "b": 202
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 122,
@@ -3207,7 +3207,7 @@
         "g": 197,
         "b": 95
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 981,
@@ -3223,7 +3223,7 @@
         "g": 136,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 102,
@@ -3239,7 +3239,7 @@
         "g": 142,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 169,
@@ -3255,7 +3255,7 @@
         "g": 112,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 767,
@@ -3271,7 +3271,7 @@
         "g": 142,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 945,
@@ -3287,7 +3287,7 @@
         "g": 60,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 598,
@@ -3303,7 +3303,7 @@
         "g": 0,
         "b": 232
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 396,
@@ -3319,7 +3319,7 @@
         "g": 72,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 639,
@@ -3335,7 +3335,7 @@
         "g": 158,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 551,
@@ -3351,7 +3351,7 @@
         "g": 64,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 617,
@@ -3367,7 +3367,7 @@
         "g": 118,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 502,
@@ -3383,7 +3383,7 @@
         "g": 228,
         "b": 174
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 478,
@@ -3399,7 +3399,7 @@
         "g": 182,
         "b": 201
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 703,
@@ -3431,7 +3431,7 @@
         "g": 194,
         "b": 97
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 432,
@@ -3447,7 +3447,7 @@
         "g": 225,
         "b": 232
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 527,
@@ -3463,7 +3463,7 @@
         "g": 120,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 792,
@@ -3479,7 +3479,7 @@
         "g": 51,
         "b": 43
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 195,
@@ -3511,7 +3511,7 @@
         "g": 112,
         "b": 53
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 83,
@@ -3527,7 +3527,7 @@
         "g": 138,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 189,
@@ -3543,7 +3543,7 @@
         "g": 134,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 377,
@@ -3559,7 +3559,7 @@
         "g": 116,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 534,
@@ -3591,7 +3591,7 @@
         "g": 227,
         "b": 77
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 744,
@@ -3607,7 +3607,7 @@
         "g": 171,
         "b": 135
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 151,
@@ -3623,7 +3623,7 @@
         "g": 136,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 176,
@@ -3639,7 +3639,7 @@
         "g": 128,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 887,
@@ -3655,7 +3655,7 @@
         "g": 42,
         "b": 19
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 350,
@@ -3671,7 +3671,7 @@
         "g": 124,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 410,
@@ -3687,7 +3687,7 @@
         "g": 126,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 420,
@@ -3703,7 +3703,7 @@
         "g": 162,
         "b": 166
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 768,
@@ -3719,7 +3719,7 @@
         "g": 144,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 67,
@@ -3735,7 +3735,7 @@
         "g": 140,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 519,
@@ -3751,7 +3751,7 @@
         "g": 138,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 116,
@@ -3767,7 +3767,7 @@
         "g": 25,
         "b": 232
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 498,
@@ -3783,7 +3783,7 @@
         "g": 128,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 448,
@@ -3799,7 +3799,7 @@
         "g": 175,
         "b": 248
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 608,
@@ -3815,7 +3815,7 @@
         "g": 150,
         "b": 147
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 211,
@@ -3831,7 +3831,7 @@
         "g": 122,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 387,
@@ -3847,7 +3847,7 @@
         "g": 171,
         "b": 33
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 394,
@@ -3863,7 +3863,7 @@
         "g": 245,
         "b": 157
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 430,
@@ -3879,7 +3879,7 @@
         "g": 104,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 683,
@@ -3895,7 +3895,7 @@
         "g": 33,
         "b": 81
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 529,
@@ -3911,7 +3911,7 @@
         "g": 46,
         "b": 209
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 663,
@@ -3927,7 +3927,7 @@
         "g": 38,
         "b": 38
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 101,
@@ -3943,7 +3943,7 @@
         "g": 124,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 839,
@@ -3959,7 +3959,7 @@
         "g": 179,
         "b": 208
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 196,
@@ -3975,7 +3975,7 @@
         "g": 0,
         "b": 250
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 586,
@@ -3991,7 +3991,7 @@
         "g": 103,
         "b": 103
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 825,
@@ -4007,7 +4007,7 @@
         "g": 140,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 359,
@@ -4023,7 +4023,7 @@
         "g": 120,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 373,
@@ -4039,7 +4039,7 @@
         "g": 44,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 382,
@@ -4055,7 +4055,7 @@
         "g": 118,
         "b": 8
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 470,
@@ -4071,7 +4071,7 @@
         "g": 132,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 451,
@@ -4087,7 +4087,7 @@
         "g": 120,
         "b": 238
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 418,
@@ -4103,7 +4103,7 @@
         "g": 46,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 440,
@@ -4119,7 +4119,7 @@
         "g": 159,
         "b": 164
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 610,
@@ -4135,7 +4135,7 @@
         "g": 133,
         "b": 39
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 177,
@@ -4151,7 +4151,7 @@
         "g": 142,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 345,
@@ -4167,7 +4167,7 @@
         "g": 232,
         "b": 161
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 478,
@@ -4183,7 +4183,7 @@
         "g": 60,
         "b": 50
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 336,
@@ -4199,7 +4199,7 @@
         "g": 48,
         "b": 142
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 433,
@@ -4215,7 +4215,7 @@
         "g": 58,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 566,
@@ -4231,7 +4231,7 @@
         "g": 91,
         "b": 132
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 110,
@@ -4247,7 +4247,7 @@
         "g": 134,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 215,
@@ -4263,7 +4263,7 @@
         "g": 48,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 510,
@@ -4279,7 +4279,7 @@
         "g": 114,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 714,
@@ -4295,7 +4295,7 @@
         "g": 208,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 942,
@@ -4311,7 +4311,7 @@
         "g": 82,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 971,
@@ -4327,7 +4327,7 @@
         "g": 52,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 195,
@@ -4343,7 +4343,7 @@
         "g": 78,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 357,
@@ -4359,7 +4359,7 @@
         "g": 0,
         "b": 25
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 543,
@@ -4375,7 +4375,7 @@
         "g": 142,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 72,
@@ -4391,7 +4391,7 @@
         "g": 194,
         "b": 38
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 323,
@@ -4407,7 +4407,7 @@
         "g": 27,
         "b": 97
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 403,
@@ -4423,7 +4423,7 @@
         "g": 132,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 152,
@@ -4439,7 +4439,7 @@
         "g": 104,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 310,
@@ -4455,7 +4455,7 @@
         "g": 130,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 448,
@@ -4471,7 +4471,7 @@
         "g": 138,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 377,
@@ -4487,7 +4487,7 @@
         "g": 134,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 419,
@@ -4503,7 +4503,7 @@
         "g": 36,
         "b": 48
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 365,
@@ -4519,7 +4519,7 @@
         "g": 6,
         "b": 69
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 503,
@@ -4535,7 +4535,7 @@
         "g": 7,
         "b": 164
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 644,
@@ -4551,7 +4551,7 @@
         "g": 182,
         "b": 116
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 189,
@@ -4567,7 +4567,7 @@
         "g": 223,
         "b": 69
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 801,
@@ -4583,7 +4583,7 @@
         "g": 98,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 297,
@@ -4599,7 +4599,7 @@
         "g": 140,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 113,
@@ -4615,7 +4615,7 @@
         "g": 44,
         "b": 114
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 875,
@@ -4631,7 +4631,7 @@
         "g": 128,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 177,
@@ -4647,7 +4647,7 @@
         "g": 132,
         "b": 207
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 95,
@@ -4663,7 +4663,7 @@
         "g": 66,
         "b": 61
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 202,
@@ -4679,7 +4679,7 @@
         "g": 132,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 433,
@@ -4695,7 +4695,7 @@
         "g": 32,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 532,
@@ -4711,7 +4711,7 @@
         "g": 50,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 229,
@@ -4743,7 +4743,7 @@
         "g": 128,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 165,
@@ -4759,7 +4759,7 @@
         "g": 57,
         "b": 119
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 318,
@@ -4775,7 +4775,7 @@
         "g": 162,
         "b": 53
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 332,
@@ -4791,7 +4791,7 @@
         "g": 169,
         "b": 217
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 393,
@@ -4807,7 +4807,7 @@
         "g": 156,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 471,
@@ -4823,7 +4823,7 @@
         "g": 74,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 582,
@@ -4839,7 +4839,7 @@
         "g": 39,
         "b": 189
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 680,
@@ -4855,7 +4855,7 @@
         "g": 0,
         "b": 150
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 739,
@@ -4871,7 +4871,7 @@
         "g": 154,
         "b": 5
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 353,
@@ -4887,7 +4887,7 @@
         "g": 189,
         "b": 115
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 376,
@@ -4903,7 +4903,7 @@
         "g": 178,
         "b": 68
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 492,
@@ -4919,7 +4919,7 @@
         "g": 79,
         "b": 248
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 417,
@@ -4935,7 +4935,7 @@
         "g": 225,
         "b": 101
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 447,
@@ -4951,7 +4951,7 @@
         "g": 143,
         "b": 176
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 216,
@@ -4967,7 +4967,7 @@
         "g": 136,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 397,
@@ -4983,7 +4983,7 @@
         "g": 212,
         "b": 180
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 73,
@@ -4999,7 +4999,7 @@
         "g": 100,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 365,
@@ -5015,7 +5015,7 @@
         "g": 193,
         "b": 204
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 509,
@@ -5031,7 +5031,7 @@
         "g": 76,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 613,
@@ -5047,7 +5047,7 @@
         "g": 244,
         "b": 212
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 144,
@@ -5063,7 +5063,7 @@
         "g": 144,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 340,
@@ -5079,7 +5079,7 @@
         "g": 102,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 428,
@@ -5095,7 +5095,7 @@
         "g": 126,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 913,
@@ -5111,7 +5111,7 @@
         "g": 116,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 775,
@@ -5127,7 +5127,7 @@
         "g": 34,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 546,
@@ -5143,7 +5143,7 @@
         "g": 145,
         "b": 145
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 73,
@@ -5159,7 +5159,7 @@
         "g": 102,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 311,
@@ -5175,7 +5175,7 @@
         "g": 14,
         "b": 89
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 350,
@@ -5191,7 +5191,7 @@
         "g": 110,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 438,
@@ -5207,7 +5207,7 @@
         "g": 146,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 370,
@@ -5223,7 +5223,7 @@
         "g": 90,
         "b": 7
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 528,
@@ -5239,7 +5239,7 @@
         "g": 189,
         "b": 139
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 288,
@@ -5255,7 +5255,7 @@
         "g": 100,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 303,
@@ -5271,7 +5271,7 @@
         "g": 98,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 704,
@@ -5303,7 +5303,7 @@
         "g": 122,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 199,
@@ -5319,7 +5319,7 @@
         "g": 124,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 227,
@@ -5335,7 +5335,7 @@
         "g": 76,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 329,
@@ -5351,7 +5351,7 @@
         "g": 1,
         "b": 69
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 460,
@@ -5367,7 +5367,7 @@
         "g": 0,
         "b": 200
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 642,
@@ -5383,7 +5383,7 @@
         "g": 126,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 182,
@@ -5399,7 +5399,7 @@
         "g": 158,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 494,
@@ -5415,7 +5415,7 @@
         "g": 186,
         "b": 107
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 584,
@@ -5431,7 +5431,7 @@
         "g": 120,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 218,
@@ -5447,7 +5447,7 @@
         "g": 0,
         "b": 225
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 520,
@@ -5463,7 +5463,7 @@
         "g": 118,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 810,
@@ -5479,7 +5479,7 @@
         "g": 240,
         "b": 1
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 356,
@@ -5495,7 +5495,7 @@
         "g": 148,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 405,
@@ -5511,7 +5511,7 @@
         "g": 150,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 419,
@@ -5527,7 +5527,7 @@
         "g": 58,
         "b": 215
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 929,
@@ -5543,7 +5543,7 @@
         "g": 82,
         "b": 89
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 395,
@@ -5559,7 +5559,7 @@
         "g": 190,
         "b": 120
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 754,
@@ -5575,7 +5575,7 @@
         "g": 130,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 159,
@@ -5591,7 +5591,7 @@
         "g": 36,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 509,
@@ -5607,7 +5607,7 @@
         "g": 231,
         "b": 108
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 321,
@@ -5623,7 +5623,7 @@
         "g": 36,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 389,
@@ -5639,7 +5639,7 @@
         "g": 40,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 566,
@@ -5687,7 +5687,7 @@
         "g": 160,
         "b": 75
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 309,
@@ -5703,7 +5703,7 @@
         "g": 84,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 981,
@@ -5719,7 +5719,7 @@
         "g": 42,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 334,
@@ -5735,7 +5735,7 @@
         "g": 31,
         "b": 94
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 453,
@@ -5751,7 +5751,7 @@
         "g": 78,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 604,
@@ -5767,7 +5767,7 @@
         "g": 96,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 280,
@@ -5783,7 +5783,7 @@
         "g": 94,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 297,
@@ -5799,7 +5799,7 @@
         "g": 68,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 347,
@@ -5815,7 +5815,7 @@
         "g": 154,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 428,
@@ -5831,7 +5831,7 @@
         "g": 152,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 444,
@@ -5863,7 +5863,7 @@
         "g": 135,
         "b": 54
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 372,
@@ -5879,7 +5879,7 @@
         "g": 116,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 202,
@@ -5895,7 +5895,7 @@
         "g": 38,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 546,
@@ -5911,7 +5911,7 @@
         "g": 156,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 399,
@@ -5927,7 +5927,7 @@
         "g": 48,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 484,
@@ -5943,7 +5943,7 @@
         "g": 70,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 847,
@@ -5959,7 +5959,7 @@
         "g": 68,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 314,
@@ -5975,7 +5975,7 @@
         "g": 208,
         "b": 93
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 468,
@@ -5991,7 +5991,7 @@
         "g": 207,
         "b": 152
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 211,
@@ -6007,7 +6007,7 @@
         "g": 80,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 683,
@@ -6023,7 +6023,7 @@
         "g": 70,
         "b": 120
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 703,
@@ -6039,7 +6039,7 @@
         "g": 47,
         "b": 96
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 166,
@@ -6055,7 +6055,7 @@
         "g": 118,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 227,
@@ -6071,7 +6071,7 @@
         "g": 72,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 291,
@@ -6087,7 +6087,7 @@
         "g": 72,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 331,
@@ -6103,7 +6103,7 @@
         "g": 108,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 367,
@@ -6119,7 +6119,7 @@
         "g": 158,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 385,
@@ -6135,7 +6135,7 @@
         "g": 74,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 326,
@@ -6151,7 +6151,7 @@
         "g": 226,
         "b": 85
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 504,
@@ -6167,7 +6167,7 @@
         "g": 60,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 277,
@@ -6183,7 +6183,7 @@
         "g": 63,
         "b": 199
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 420,
@@ -6199,7 +6199,7 @@
         "g": 110,
         "b": 247
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 530,
@@ -6215,7 +6215,7 @@
         "g": 183,
         "b": 153
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 730,
@@ -6231,7 +6231,7 @@
         "g": 84,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 261,
@@ -6247,7 +6247,7 @@
         "g": 19,
         "b": 19
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 304,
@@ -6263,7 +6263,7 @@
         "g": 66,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 354,
@@ -6279,7 +6279,7 @@
         "g": 114,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 156,
@@ -6295,7 +6295,7 @@
         "g": 153,
         "b": 90
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 175,
@@ -6327,7 +6327,7 @@
         "g": 32,
         "b": 26
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 399,
@@ -6343,7 +6343,7 @@
         "g": 213,
         "b": 71
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 618,
@@ -6359,7 +6359,7 @@
         "g": 215,
         "b": 143
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 321,
@@ -6375,7 +6375,7 @@
         "g": 70,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 339,
@@ -6391,7 +6391,7 @@
         "g": 86,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 320,
@@ -6407,7 +6407,7 @@
         "g": 253,
         "b": 37
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 411,
@@ -6423,7 +6423,7 @@
         "g": 126,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 434,
@@ -6439,7 +6439,7 @@
         "g": 78,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 251,
@@ -6455,7 +6455,7 @@
         "g": 88,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 291,
@@ -6471,7 +6471,7 @@
         "g": 106,
         "b": 212
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 494,
@@ -6487,7 +6487,7 @@
         "g": 0,
         "b": 50
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 586,
@@ -6503,7 +6503,7 @@
         "g": 203,
         "b": 93
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 137,
@@ -6519,7 +6519,7 @@
         "g": 112,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 887,
@@ -6535,7 +6535,7 @@
         "g": 239,
         "b": 163
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 459,
@@ -6551,7 +6551,7 @@
         "g": 0,
         "b": 75
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 661,
@@ -6583,7 +6583,7 @@
         "g": 215,
         "b": 143
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 266,
@@ -6599,7 +6599,7 @@
         "g": 86,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 280,
@@ -6615,7 +6615,7 @@
         "g": 138,
         "b": 37
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 372,
@@ -6631,7 +6631,7 @@
         "g": 80,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 257,
@@ -6647,7 +6647,7 @@
         "g": 90,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 301,
@@ -6663,7 +6663,7 @@
         "g": 44,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 521,
@@ -6679,7 +6679,7 @@
         "g": 252,
         "b": 132
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 624,
@@ -6695,7 +6695,7 @@
         "g": 102,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 777,
@@ -6711,7 +6711,7 @@
         "g": 62,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 292,
@@ -6727,7 +6727,7 @@
         "g": 104,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 333,
@@ -6743,7 +6743,7 @@
         "g": 230,
         "b": 73
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 388,
@@ -6775,7 +6775,7 @@
         "g": 133,
         "b": 59
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 556,
@@ -6791,7 +6791,7 @@
         "g": 82,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 246,
@@ -6807,7 +6807,7 @@
         "g": 100,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 750,
@@ -6823,7 +6823,7 @@
         "g": 22,
         "b": 22
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 404,
@@ -6839,7 +6839,7 @@
         "g": 52,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 442,
@@ -6855,7 +6855,7 @@
         "g": 191,
         "b": 72
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 958,
@@ -6871,7 +6871,7 @@
         "g": 140,
         "b": 117
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 466,
@@ -6887,7 +6887,7 @@
         "g": 43,
         "b": 139
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 822,
@@ -6903,7 +6903,7 @@
         "g": 82,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 357,
@@ -6919,7 +6919,7 @@
         "g": 62,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 376,
@@ -6935,7 +6935,7 @@
         "g": 36,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 391,
@@ -6967,7 +6967,7 @@
         "g": 46,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 498,
@@ -6983,7 +6983,7 @@
         "g": 70,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 273,
@@ -6999,7 +6999,7 @@
         "g": 186,
         "b": 110
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 573,
@@ -7015,7 +7015,7 @@
         "g": 64,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 325,
@@ -7031,7 +7031,7 @@
         "g": 175,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 363,
@@ -7047,7 +7047,7 @@
         "g": 54,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 424,
@@ -7063,7 +7063,7 @@
         "g": 60,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 349,
@@ -7079,7 +7079,7 @@
         "g": 249,
         "b": 20
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 605,
@@ -7095,7 +7095,7 @@
         "g": 92,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 307,
@@ -7111,7 +7111,7 @@
         "g": 201,
         "b": 123
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 524,
@@ -7127,7 +7127,7 @@
         "g": 0,
         "b": 100
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 696,
@@ -7143,7 +7143,7 @@
         "g": 98,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 408,
@@ -7159,7 +7159,7 @@
         "g": 110,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 227,
@@ -7175,7 +7175,7 @@
         "g": 138,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 285,
@@ -7191,7 +7191,7 @@
         "g": 106,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 339,
@@ -7207,7 +7207,7 @@
         "g": 8,
         "b": 38
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 493,
@@ -7223,7 +7223,7 @@
         "g": 140,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 251,
@@ -7239,7 +7239,7 @@
         "g": 50,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 470,
@@ -7255,7 +7255,7 @@
         "g": 82,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 637,
@@ -7271,7 +7271,7 @@
         "g": 173,
         "b": 70
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 666,
@@ -7287,7 +7287,7 @@
         "g": 68,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 916,
@@ -7303,7 +7303,7 @@
         "g": 22,
         "b": 144
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 452,
@@ -7319,7 +7319,7 @@
         "g": 175,
         "b": 171
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 986,
@@ -7335,7 +7335,7 @@
         "g": 46,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 382,
@@ -7351,7 +7351,7 @@
         "g": 0,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 502,
@@ -7367,7 +7367,7 @@
         "g": 135,
         "b": 143
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 335,
@@ -7383,7 +7383,7 @@
         "g": 38,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 399,
@@ -7399,7 +7399,7 @@
         "g": 210,
         "b": 106
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 191,
@@ -7415,7 +7415,7 @@
         "g": 148,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 269,
@@ -7431,7 +7431,7 @@
         "g": 58,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 357,
@@ -7447,7 +7447,7 @@
         "g": 134,
         "b": 54
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 421,
@@ -7463,7 +7463,7 @@
         "g": 163,
         "b": 215
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 440,
@@ -7479,7 +7479,7 @@
         "g": 246,
         "b": 4
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 525,
@@ -7511,7 +7511,7 @@
         "g": 130,
         "b": 221
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 375,
@@ -7527,7 +7527,7 @@
         "g": 72,
         "b": 55
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 595,
@@ -7559,7 +7559,7 @@
         "g": 100,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 547,
@@ -7575,7 +7575,7 @@
         "g": 96,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 857,
@@ -7591,7 +7591,7 @@
         "g": 136,
         "b": 91
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 301,
@@ -7607,7 +7607,7 @@
         "g": 204,
         "b": 153
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 771,
@@ -7623,7 +7623,7 @@
         "g": 112,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 207,
@@ -7639,7 +7639,7 @@
         "g": 152,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 319,
@@ -7655,7 +7655,7 @@
         "g": 224,
         "b": 54
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 410,
@@ -7671,7 +7671,7 @@
         "g": 124,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 464,
@@ -7687,7 +7687,7 @@
         "g": 50,
         "b": 219
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 237,
@@ -7703,7 +7703,7 @@
         "g": 150,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 352,
@@ -7719,7 +7719,7 @@
         "g": 121,
         "b": 191
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 398,
@@ -7735,7 +7735,7 @@
         "g": 42,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 442,
@@ -7751,7 +7751,7 @@
         "g": 128,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 490,
@@ -7767,7 +7767,7 @@
         "g": 223,
         "b": 25
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 582,
@@ -7783,7 +7783,7 @@
         "g": 104,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 430,
@@ -7799,7 +7799,7 @@
         "g": 142,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 252,
@@ -7815,7 +7815,7 @@
         "g": 54,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 333,
@@ -7831,7 +7831,7 @@
         "g": 84,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 508,
@@ -7847,7 +7847,7 @@
         "g": 42,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 612,
@@ -7863,7 +7863,7 @@
         "g": 44,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 359,
@@ -7879,7 +7879,7 @@
         "g": 210,
         "b": 106
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 385,
@@ -7895,7 +7895,7 @@
         "g": 0,
         "b": 248
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 586,
@@ -7911,7 +7911,7 @@
         "g": 0,
         "b": 175
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 671,
@@ -7927,7 +7927,7 @@
         "g": 150,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 303,
@@ -7943,7 +7943,7 @@
         "g": 154,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 314,
@@ -7959,7 +7959,7 @@
         "g": 116,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 154,
@@ -7975,7 +7975,7 @@
         "g": 32,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 410,
@@ -7991,7 +7991,7 @@
         "g": 86,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 736,
@@ -8007,7 +8007,7 @@
         "g": 70,
         "b": 122
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 820,
@@ -8023,7 +8023,7 @@
         "g": 146,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 282,
@@ -8039,7 +8039,7 @@
         "g": 52,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 344,
@@ -8055,7 +8055,7 @@
         "g": 84,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 378,
@@ -8071,7 +8071,7 @@
         "g": 114,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 178,
@@ -8087,7 +8087,7 @@
         "g": 88,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 211,
@@ -8103,7 +8103,7 @@
         "g": 44,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 472,
@@ -8119,7 +8119,7 @@
         "g": 138,
         "b": 245
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 638,
@@ -8135,7 +8135,7 @@
         "g": 222,
         "b": 218
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 261,
@@ -8151,7 +8151,7 @@
         "g": 148,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 403,
@@ -8167,7 +8167,7 @@
         "g": 253,
         "b": 196
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 334,
@@ -8183,7 +8183,7 @@
         "g": 66,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 387,
@@ -8199,7 +8199,7 @@
         "g": 110,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 359,
@@ -8215,7 +8215,7 @@
         "g": 192,
         "b": 231
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 429,
@@ -8231,7 +8231,7 @@
         "g": 138,
         "b": 80
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 459,
@@ -8247,7 +8247,7 @@
         "g": 0,
         "b": 232
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 554,
@@ -8263,7 +8263,7 @@
         "g": 156,
         "b": 30
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 190,
@@ -8279,7 +8279,7 @@
         "g": 34,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 397,
@@ -8295,7 +8295,7 @@
         "g": 205,
         "b": 68
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 537,
@@ -8311,7 +8311,7 @@
         "g": 82,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 512,
@@ -8327,7 +8327,7 @@
         "g": 118,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 175,
@@ -8343,7 +8343,7 @@
         "g": 130,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 206,
@@ -8359,7 +8359,7 @@
         "g": 237,
         "b": 147
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 442,
@@ -8375,7 +8375,7 @@
         "g": 91,
         "b": 72
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 665,
@@ -8391,7 +8391,7 @@
         "g": 144,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 248,
@@ -8407,7 +8407,7 @@
         "g": 48,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 345,
@@ -8423,7 +8423,7 @@
         "g": 74,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 961,
@@ -8439,7 +8439,7 @@
         "g": 56,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 414,
@@ -8455,7 +8455,7 @@
         "g": 46,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 475,
@@ -8471,7 +8471,7 @@
         "g": 90,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 567,
@@ -8487,7 +8487,7 @@
         "g": 78,
         "b": 142
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 708,
@@ -8503,7 +8503,7 @@
         "g": 143,
         "b": 170
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 776,
@@ -8519,7 +8519,7 @@
         "g": 72,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 874,
@@ -8535,7 +8535,7 @@
         "g": 148,
         "b": 148
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 284,
@@ -8551,7 +8551,7 @@
         "g": 40,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 373,
@@ -8567,7 +8567,7 @@
         "g": 92,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 408,
@@ -8583,7 +8583,7 @@
         "g": 84,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 681,
@@ -8599,7 +8599,7 @@
         "g": 34,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 310,
@@ -8615,7 +8615,7 @@
         "g": 56,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 628,
@@ -8647,7 +8647,7 @@
         "g": 186,
         "b": 20
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 235,
@@ -8663,7 +8663,7 @@
         "g": 146,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 360,
@@ -8679,7 +8679,7 @@
         "g": 90,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 328,
@@ -8695,7 +8695,7 @@
         "g": 32,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 295,
@@ -8711,7 +8711,7 @@
         "g": 225,
         "b": 36
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 496,
@@ -8727,7 +8727,7 @@
         "g": 158,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 271,
@@ -8743,7 +8743,7 @@
         "g": 40,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 437,
@@ -8759,7 +8759,7 @@
         "g": 198,
         "b": 217
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 582,
@@ -8775,7 +8775,7 @@
         "g": 231,
         "b": 108
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 375,
@@ -8791,7 +8791,7 @@
         "g": 134,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 244,
@@ -8807,7 +8807,7 @@
         "g": 64,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 947,
@@ -8823,7 +8823,7 @@
         "g": 120,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 187,
@@ -8839,7 +8839,7 @@
         "g": 70,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 358,
@@ -8855,7 +8855,7 @@
         "g": 0,
         "b": 240
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 369,
@@ -8871,7 +8871,7 @@
         "g": 56,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 459,
@@ -8903,7 +8903,7 @@
         "g": 68,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 345,
@@ -8919,7 +8919,7 @@
         "g": 50,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 387,
@@ -8935,7 +8935,7 @@
         "g": 92,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 819,
@@ -8951,7 +8951,7 @@
         "g": 131,
         "b": 52
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 227,
@@ -8967,7 +8967,7 @@
         "g": 74,
         "b": 122
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 840,
@@ -8983,7 +8983,7 @@
         "g": 86,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 538,
@@ -8999,7 +8999,7 @@
         "g": 92,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 283,
@@ -9015,7 +9015,7 @@
         "g": 106,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 333,
@@ -9031,7 +9031,7 @@
         "g": 230,
         "b": 38
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 409,
@@ -9047,7 +9047,7 @@
         "g": 110,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 719,
@@ -9063,7 +9063,7 @@
         "g": 132,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 205,
@@ -9079,7 +9079,7 @@
         "g": 92,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 607,
@@ -9095,7 +9095,7 @@
         "g": 54,
         "b": 163
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 428,
@@ -9111,7 +9111,7 @@
         "g": 76,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 373,
@@ -9159,7 +9159,7 @@
         "g": 98,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 324,
@@ -9175,7 +9175,7 @@
         "g": 81,
         "b": 38
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 397,
@@ -9191,7 +9191,7 @@
         "g": 97,
         "b": 96
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 642,
@@ -9207,7 +9207,7 @@
         "g": 25,
         "b": 40
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 906,
@@ -9223,7 +9223,7 @@
         "g": 32,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 439,
@@ -9239,7 +9239,7 @@
         "g": 106,
         "b": 111
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 308,
@@ -9255,7 +9255,7 @@
         "g": 108,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 351,
@@ -9271,7 +9271,7 @@
         "g": 120,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 413,
@@ -9303,7 +9303,7 @@
         "g": 88,
         "b": 207
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 193,
@@ -9319,7 +9319,7 @@
         "g": 178,
         "b": 172
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 365,
@@ -9335,7 +9335,7 @@
         "g": 220,
         "b": 117
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 368,
@@ -9367,7 +9367,7 @@
         "g": 224,
         "b": 22
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 337,
@@ -9383,7 +9383,7 @@
         "g": 58,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 492,
@@ -9399,7 +9399,7 @@
         "g": 156,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 261,
@@ -9415,7 +9415,7 @@
         "g": 64,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 317,
@@ -9431,7 +9431,7 @@
         "g": 80,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 468,
@@ -9447,7 +9447,7 @@
         "g": 94,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 815,
@@ -9463,7 +9463,7 @@
         "g": 136,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 220,
@@ -9479,7 +9479,7 @@
         "g": 0,
         "b": 244
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 569,
@@ -9495,7 +9495,7 @@
         "g": 124,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 394,
@@ -9511,7 +9511,7 @@
         "g": 230,
         "b": 38
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 407,
@@ -9527,7 +9527,7 @@
         "g": 186,
         "b": 147
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 456,
@@ -9543,7 +9543,7 @@
         "g": 71,
         "b": 55
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 521,
@@ -9559,7 +9559,7 @@
         "g": 72,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 332,
@@ -9575,7 +9575,7 @@
         "g": 202,
         "b": 39
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 329,
@@ -9591,7 +9591,7 @@
         "g": 111,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 358,
@@ -9607,7 +9607,7 @@
         "g": 132,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 403,
@@ -9623,7 +9623,7 @@
         "g": 126,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 417,
@@ -9639,7 +9639,7 @@
         "g": 34,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 444,
@@ -9655,7 +9655,7 @@
         "g": 0,
         "b": 236
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 323,
@@ -9671,7 +9671,7 @@
         "g": 122,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 432,
@@ -9687,7 +9687,7 @@
         "g": 75,
         "b": 120
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 865,
@@ -9703,7 +9703,7 @@
         "g": 201,
         "b": 142
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 592,
@@ -9719,7 +9719,7 @@
         "g": 126,
         "b": 16
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 280,
@@ -9735,7 +9735,7 @@
         "g": 116,
         "b": 28
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 303,
@@ -9751,7 +9751,7 @@
         "g": 193,
         "b": 31
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 372,
@@ -9767,7 +9767,7 @@
         "g": 96,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 671,
@@ -9783,7 +9783,7 @@
         "g": 123,
         "b": 204
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 319,
@@ -9799,7 +9799,7 @@
         "g": 219,
         "b": 10
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 350,
@@ -9815,7 +9815,7 @@
         "g": 118,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 383,
@@ -9831,7 +9831,7 @@
         "g": 165,
         "b": 183
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 481,
@@ -9863,7 +9863,7 @@
         "g": 120,
         "b": 77
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 238,
@@ -9879,7 +9879,7 @@
         "g": 38,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 465,
@@ -9895,7 +9895,7 @@
         "g": 0,
         "b": 236
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 541,
@@ -9911,7 +9911,7 @@
         "g": 212,
         "b": 150
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 205,
@@ -9927,7 +9927,7 @@
         "g": 54,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 293,
@@ -9943,7 +9943,7 @@
         "g": 118,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 496,
@@ -9959,7 +9959,7 @@
         "g": 88,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 557,
@@ -9975,7 +9975,7 @@
         "g": 120,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 389,
@@ -9991,7 +9991,7 @@
         "g": 88,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 734,
@@ -10007,7 +10007,7 @@
         "g": 46,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 258,
@@ -10023,7 +10023,7 @@
         "g": 243,
         "b": 21
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 431,
@@ -10039,7 +10039,7 @@
         "g": 193,
         "b": 191
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 632,
@@ -10055,7 +10055,7 @@
         "g": 104,
         "b": 55
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 220,
@@ -10071,7 +10071,7 @@
         "g": 58,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 314,
@@ -10087,7 +10087,7 @@
         "g": 112,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 359,
@@ -10103,7 +10103,7 @@
         "g": 80,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 336,
@@ -10119,7 +10119,7 @@
         "g": 248,
         "b": 124
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 398,
@@ -10151,7 +10151,7 @@
         "g": 189,
         "b": 231
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 448,
@@ -10183,7 +10183,7 @@
         "g": 56,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 303,
@@ -10199,7 +10199,7 @@
         "g": 128,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 413,
@@ -10215,7 +10215,7 @@
         "g": 36,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 449,
@@ -10231,7 +10231,7 @@
         "g": 43,
         "b": 43
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 798,
@@ -10247,7 +10247,7 @@
         "g": 34,
         "b": 172
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 518,
@@ -10263,7 +10263,7 @@
         "g": 62,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 834,
@@ -10279,7 +10279,7 @@
         "g": 38,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 241,
@@ -10295,7 +10295,7 @@
         "g": 147,
         "b": 231
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 578,
@@ -10311,7 +10311,7 @@
         "g": 54,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 366,
@@ -10327,7 +10327,7 @@
         "g": 122,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 380,
@@ -10343,7 +10343,7 @@
         "g": 98,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 605,
@@ -10359,7 +10359,7 @@
         "g": 32,
         "b": 199
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 664,
@@ -10375,7 +10375,7 @@
         "g": 124,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 205,
@@ -10391,7 +10391,7 @@
         "g": 90,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 761,
@@ -10407,7 +10407,7 @@
         "g": 108,
         "b": 69
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 345,
@@ -10423,7 +10423,7 @@
         "g": 128,
         "b": 70
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 355,
@@ -10439,7 +10439,7 @@
         "g": 36,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 225,
@@ -10455,7 +10455,7 @@
         "g": 223,
         "b": 29
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 321,
@@ -10471,7 +10471,7 @@
         "g": 114,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 477,
@@ -10487,7 +10487,7 @@
         "g": 56,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 497,
@@ -10503,7 +10503,7 @@
         "g": 37,
         "b": 117
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 275,
@@ -10519,7 +10519,7 @@
         "g": 159,
         "b": 77
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 331,
@@ -10535,7 +10535,7 @@
         "g": 130,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 400,
@@ -10551,7 +10551,7 @@
         "g": 110,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 458,
@@ -10567,7 +10567,7 @@
         "g": 230,
         "b": 204
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 747,
@@ -10599,7 +10599,7 @@
         "g": 202,
         "b": 77
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 514,
@@ -10615,7 +10615,7 @@
         "g": 10,
         "b": 10
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 525,
@@ -10647,7 +10647,7 @@
         "g": 114,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 370,
@@ -10663,7 +10663,7 @@
         "g": 125,
         "b": 215
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 916,
@@ -10679,7 +10679,7 @@
         "g": 110,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 337,
@@ -10695,7 +10695,7 @@
         "g": 63,
         "b": 217
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 553,
@@ -10711,7 +10711,7 @@
         "g": 96,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 583,
@@ -10743,7 +10743,7 @@
         "g": 18,
         "b": 160
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 818,
@@ -10759,7 +10759,7 @@
         "g": 116,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 386,
@@ -10775,7 +10775,7 @@
         "g": 38,
         "b": 84
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 565,
@@ -10791,7 +10791,7 @@
         "g": 106,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 359,
@@ -10807,7 +10807,7 @@
         "g": 58,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 538,
@@ -10823,7 +10823,7 @@
         "g": 124,
         "b": 213
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 230,
@@ -10839,7 +10839,7 @@
         "g": 44,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 257,
@@ -10855,7 +10855,7 @@
         "g": 248,
         "b": 124
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 395,
@@ -10871,7 +10871,7 @@
         "g": 25,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 880,
@@ -10887,7 +10887,7 @@
         "g": 21,
         "b": 172
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 311,
@@ -10903,7 +10903,7 @@
         "g": 132,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 408,
@@ -10919,7 +10919,7 @@
         "g": 219,
         "b": 143
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 460,
@@ -10935,7 +10935,7 @@
         "g": 160,
         "b": 69
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 608,
@@ -10951,7 +10951,7 @@
         "g": 125,
         "b": 222
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 345,
@@ -10967,7 +10967,7 @@
         "g": 229,
         "b": 130
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 526,
@@ -10983,7 +10983,7 @@
         "g": 94,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 650,
@@ -10999,7 +10999,7 @@
         "g": 52,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 299,
@@ -11015,7 +11015,7 @@
         "g": 198,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 504,
@@ -11031,7 +11031,7 @@
         "g": 248,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 274,
@@ -11063,7 +11063,7 @@
         "g": 200,
         "b": 150
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 950,
@@ -11095,7 +11095,7 @@
         "g": 15,
         "b": 15
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 379,
@@ -11111,7 +11111,7 @@
         "g": 54,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 484,
@@ -11127,7 +11127,7 @@
         "g": 108,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 332,
@@ -11143,7 +11143,7 @@
         "g": 126,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 219,
@@ -11175,7 +11175,7 @@
         "g": 136,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 394,
@@ -11191,7 +11191,7 @@
         "g": 231,
         "b": 136
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 413,
@@ -11207,7 +11207,7 @@
         "g": 232,
         "b": 183
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 621,
@@ -11223,7 +11223,7 @@
         "g": 122,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 199,
@@ -11239,7 +11239,7 @@
         "g": 40,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 238,
@@ -11255,7 +11255,7 @@
         "g": 50,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 295,
@@ -11271,7 +11271,7 @@
         "g": 48,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 476,
@@ -11287,7 +11287,7 @@
         "g": 42,
         "b": 7
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 314,
@@ -11303,7 +11303,7 @@
         "g": 76,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 587,
@@ -11319,7 +11319,7 @@
         "g": 142,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 425,
@@ -11335,7 +11335,7 @@
         "g": 223,
         "b": 27
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 858,
@@ -11351,7 +11351,7 @@
         "g": 60,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 81,
@@ -11367,7 +11367,7 @@
         "g": 111,
         "b": 28
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 103,
@@ -11383,7 +11383,7 @@
         "g": 67,
         "b": 67
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 263,
@@ -11399,7 +11399,7 @@
         "g": 134,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 384,
@@ -11415,7 +11415,7 @@
         "g": 112,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 532,
@@ -11431,7 +11431,7 @@
         "g": 176,
         "b": 70
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 553,
@@ -11447,7 +11447,7 @@
         "g": 42,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 846,
@@ -11463,7 +11463,7 @@
         "g": 62,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 116,
@@ -11495,7 +11495,7 @@
         "g": 114,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 575,
@@ -11511,7 +11511,7 @@
         "g": 22,
         "b": 200
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 906,
@@ -11527,7 +11527,7 @@
         "g": 118,
         "b": 123
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 250,
@@ -11559,7 +11559,7 @@
         "g": 23,
         "b": 23
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 412,
@@ -11575,7 +11575,7 @@
         "g": 74,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 152,
@@ -11591,7 +11591,7 @@
         "g": 128,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 211,
@@ -11607,7 +11607,7 @@
         "g": 194,
         "b": 112
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 231,
@@ -11623,7 +11623,7 @@
         "g": 66,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 173,
@@ -11639,7 +11639,7 @@
         "g": 120,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 505,
@@ -11655,7 +11655,7 @@
         "g": 126,
         "b": 40
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 931,
@@ -11687,7 +11687,7 @@
         "g": 138,
         "b": 128
       },
-      "owner": "red",
+      "owner": "kingdom_red",
       "isWater": false,
       "bounds": {
         "minX": 393,
@@ -11703,7 +11703,7 @@
         "g": 52,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 521,
@@ -11719,7 +11719,7 @@
         "g": 68,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 192,
@@ -11735,7 +11735,7 @@
         "g": 60,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 867,
@@ -11751,7 +11751,7 @@
         "g": 85,
         "b": 172
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 141,
@@ -11767,7 +11767,7 @@
         "g": 223,
         "b": 23
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 205,
@@ -11783,7 +11783,7 @@
         "g": 50,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 496,
@@ -11799,7 +11799,7 @@
         "g": 112,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 641,
@@ -11815,7 +11815,7 @@
         "g": 76,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 163,
@@ -11831,7 +11831,7 @@
         "g": 64,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 117,
@@ -11847,7 +11847,7 @@
         "g": 217,
         "b": 66
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 420,
@@ -11863,7 +11863,7 @@
         "g": 108,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 884,
@@ -11879,7 +11879,7 @@
         "g": 90,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 360,
@@ -11895,7 +11895,7 @@
         "g": 116,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 541,
@@ -11911,7 +11911,7 @@
         "g": 26,
         "b": 10
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 87,
@@ -11927,7 +11927,7 @@
         "g": 144,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 432,
@@ -11943,7 +11943,7 @@
         "g": 70,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 208,
@@ -11959,7 +11959,7 @@
         "g": 42,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 261,
@@ -11975,7 +11975,7 @@
         "g": 227,
         "b": 107
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 600,
@@ -11991,7 +11991,7 @@
         "g": 109,
         "b": 201
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 956,
@@ -12007,7 +12007,7 @@
         "g": 58,
         "b": 78
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 179,
@@ -12039,7 +12039,7 @@
         "g": 251,
         "b": 47
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 235,
@@ -12055,7 +12055,7 @@
         "g": 140,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 406,
@@ -12071,7 +12071,7 @@
         "g": 229,
         "b": 130
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 516,
@@ -12087,7 +12087,7 @@
         "g": 143,
         "b": 135
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 571,
@@ -12103,7 +12103,7 @@
         "g": 55,
         "b": 22
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 98,
@@ -12135,7 +12135,7 @@
         "g": 74,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 632,
@@ -12151,7 +12151,7 @@
         "g": 184,
         "b": 55
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 902,
@@ -12167,7 +12167,7 @@
         "g": 46,
         "b": 167
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 116,
@@ -12183,7 +12183,7 @@
         "g": 72,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 254,
@@ -12199,7 +12199,7 @@
         "g": 23,
         "b": 23
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 921,
@@ -12215,7 +12215,7 @@
         "g": 161,
         "b": 198
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 529,
@@ -12231,7 +12231,7 @@
         "g": 222,
         "b": 92
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 442,
@@ -12247,7 +12247,7 @@
         "g": 5,
         "b": 5
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 555,
@@ -12263,7 +12263,7 @@
         "g": 89,
         "b": 1
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 193,
@@ -12279,7 +12279,7 @@
         "g": 114,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 975,
@@ -12295,7 +12295,7 @@
         "g": 110,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 88,
@@ -12311,7 +12311,7 @@
         "g": 236,
         "b": 203
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 424,
@@ -12327,7 +12327,7 @@
         "g": 48,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 758,
@@ -12343,7 +12343,7 @@
         "g": 78,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 140,
@@ -12359,7 +12359,7 @@
         "g": 112,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 102,
@@ -12375,7 +12375,7 @@
         "g": 76,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 209,
@@ -12391,7 +12391,7 @@
         "g": 224,
         "b": 138
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 546,
@@ -12407,7 +12407,7 @@
         "g": 42,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 735,
@@ -12423,7 +12423,7 @@
         "g": 110,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 915,
@@ -12439,7 +12439,7 @@
         "g": 8,
         "b": 179
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 178,
@@ -12455,7 +12455,7 @@
         "g": 74,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 242,
@@ -12471,7 +12471,7 @@
         "g": 236,
         "b": 73
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 459,
@@ -12487,7 +12487,7 @@
         "g": 78,
         "b": 64
       },
-      "owner": "blue",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 652,
@@ -12503,7 +12503,7 @@
         "g": 19,
         "b": 40
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 872,
@@ -12519,7 +12519,7 @@
         "g": 145,
         "b": 124
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 159,
@@ -12535,7 +12535,7 @@
         "g": 11,
         "b": 11
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 226,
@@ -12551,7 +12551,7 @@
         "g": 42,
         "b": 42
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 947,
@@ -12567,7 +12567,7 @@
         "g": 245,
         "b": 164
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 609,
@@ -12583,7 +12583,7 @@
         "g": 231,
         "b": 102
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 708,
@@ -12599,7 +12599,7 @@
         "g": 146,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 440,
@@ -12615,7 +12615,7 @@
         "g": 101,
         "b": 106
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 534,
@@ -12631,7 +12631,7 @@
         "g": 83,
         "b": 143
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 565,
@@ -12647,7 +12647,7 @@
         "g": 36,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 785,
@@ -12663,7 +12663,7 @@
         "g": 147,
         "b": 147
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 528,
@@ -12679,7 +12679,7 @@
         "g": 33,
         "b": 241
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 456,
@@ -12695,7 +12695,7 @@
         "g": 224,
         "b": 200
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 885,
@@ -12711,7 +12711,7 @@
         "g": 80,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 120,
@@ -12727,7 +12727,7 @@
         "g": 0,
         "b": 232
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 474,
@@ -12743,7 +12743,7 @@
         "g": 52,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 821,
@@ -12759,7 +12759,7 @@
         "g": 150,
         "b": 96
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 200,
@@ -12807,7 +12807,7 @@
         "g": 158,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 353,
@@ -12823,7 +12823,7 @@
         "g": 10,
         "b": 162
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 633,
@@ -12855,7 +12855,7 @@
         "g": 152,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 676,
@@ -12871,7 +12871,7 @@
         "g": 198,
         "b": 70
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 965,
@@ -12903,7 +12903,7 @@
         "g": 42,
         "b": 69
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 89,
@@ -12919,7 +12919,7 @@
         "g": 189,
         "b": 108
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 737,
@@ -12935,7 +12935,7 @@
         "g": 140,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 933,
@@ -12951,7 +12951,7 @@
         "g": 82,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 158,
@@ -12967,7 +12967,7 @@
         "g": 36,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 550,
@@ -12983,7 +12983,7 @@
         "g": 244,
         "b": 86
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 218,
@@ -12999,7 +12999,7 @@
         "g": 159,
         "b": 47
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 451,
@@ -13015,7 +13015,7 @@
         "g": 197,
         "b": 16
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 864,
@@ -13031,7 +13031,7 @@
         "g": 0,
         "b": 36
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 468,
@@ -13047,7 +13047,7 @@
         "g": 72,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 576,
@@ -13079,7 +13079,7 @@
         "g": 150,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 764,
@@ -13095,7 +13095,7 @@
         "g": 146,
         "b": 227
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 141,
@@ -13111,7 +13111,7 @@
         "g": 102,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 904,
@@ -13127,7 +13127,7 @@
         "g": 104,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 97,
@@ -13143,7 +13143,7 @@
         "g": 148,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 487,
@@ -13159,7 +13159,7 @@
         "g": 62,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 529,
@@ -13175,7 +13175,7 @@
         "g": 60,
         "b": 86
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 788,
@@ -13207,7 +13207,7 @@
         "g": 0,
         "b": 236
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 924,
@@ -13223,7 +13223,7 @@
         "g": 106,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 992,
@@ -13239,7 +13239,7 @@
         "g": 230,
         "b": 179
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 178,
@@ -13255,7 +13255,7 @@
         "g": 68,
         "b": 153
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 633,
@@ -13271,7 +13271,7 @@
         "g": 54,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 846,
@@ -13287,7 +13287,7 @@
         "g": 32,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 86,
@@ -13303,7 +13303,7 @@
         "g": 22,
         "b": 12
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 630,
@@ -13319,7 +13319,7 @@
         "g": 44,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 714,
@@ -13335,7 +13335,7 @@
         "g": 119,
         "b": 24
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 813,
@@ -13367,7 +13367,7 @@
         "g": 154,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 657,
@@ -13383,7 +13383,7 @@
         "g": 196,
         "b": 4
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 117,
@@ -13399,7 +13399,7 @@
         "g": 70,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 561,
@@ -13415,7 +13415,7 @@
         "g": 195,
         "b": 57
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 690,
@@ -13431,7 +13431,7 @@
         "g": 223,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 940,
@@ -13447,7 +13447,7 @@
         "g": 22,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 357,
@@ -13463,7 +13463,7 @@
         "g": 68,
         "b": 153
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 757,
@@ -13479,7 +13479,7 @@
         "g": 88,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 211,
@@ -13495,7 +13495,7 @@
         "g": 246,
         "b": 23
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 357,
@@ -13511,7 +13511,7 @@
         "g": 73,
         "b": 73
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 746,
@@ -13527,7 +13527,7 @@
         "g": 227,
         "b": 169
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 471,
@@ -13543,7 +13543,7 @@
         "g": 86,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 143,
@@ -13559,7 +13559,7 @@
         "g": 64,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 537,
@@ -13575,7 +13575,7 @@
         "g": 50,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 787,
@@ -13591,7 +13591,7 @@
         "g": 63,
         "b": 140
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 286,
@@ -13607,7 +13607,7 @@
         "g": 94,
         "b": 109
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 884,
@@ -13623,7 +13623,7 @@
         "g": 115,
         "b": 1
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 204,
@@ -13639,7 +13639,7 @@
         "g": 153,
         "b": 66
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 826,
@@ -13655,7 +13655,7 @@
         "g": 24,
         "b": 40
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 926,
@@ -13671,7 +13671,7 @@
         "g": 58,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 263,
@@ -13687,7 +13687,7 @@
         "g": 60,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 530,
@@ -13719,7 +13719,7 @@
         "g": 102,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 78,
@@ -13735,7 +13735,7 @@
         "g": 178,
         "b": 26
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 83,
@@ -13751,7 +13751,7 @@
         "g": 78,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 110,
@@ -13767,7 +13767,7 @@
         "g": 36,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 664,
@@ -13783,7 +13783,7 @@
         "g": 212,
         "b": 37
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 904,
@@ -13799,7 +13799,7 @@
         "g": 151,
         "b": 212
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 93,
@@ -13815,7 +13815,7 @@
         "g": 112,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 952,
@@ -13847,7 +13847,7 @@
         "g": 111,
         "b": 111
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 921,
@@ -13863,7 +13863,7 @@
         "g": 35,
         "b": 179
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 148,
@@ -13879,7 +13879,7 @@
         "g": 170,
         "b": 197
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 180,
@@ -13895,7 +13895,7 @@
         "g": 183,
         "b": 51
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 854,
@@ -13927,7 +13927,7 @@
         "g": 155,
         "b": 105
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 800,
@@ -13943,7 +13943,7 @@
         "g": 152,
         "b": 169
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 643,
@@ -13959,7 +13959,7 @@
         "g": 48,
         "b": 47
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 547,
@@ -13975,7 +13975,7 @@
         "g": 177,
         "b": 141
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 732,
@@ -13991,7 +13991,7 @@
         "g": 150,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 470,
@@ -14007,7 +14007,7 @@
         "g": 110,
         "b": 220
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 608,
@@ -14023,7 +14023,7 @@
         "g": 241,
         "b": 78
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 247,
@@ -14039,7 +14039,7 @@
         "g": 0,
         "b": 244
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 740,
@@ -14055,7 +14055,7 @@
         "g": 84,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 209,
@@ -14071,7 +14071,7 @@
         "g": 121,
         "b": 108
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 691,
@@ -14087,7 +14087,7 @@
         "g": 155,
         "b": 175
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 759,
@@ -14103,7 +14103,7 @@
         "g": 225,
         "b": 132
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 898,
@@ -14119,7 +14119,7 @@
         "g": 224,
         "b": 142
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 976,
@@ -14135,7 +14135,7 @@
         "g": 84,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 112,
@@ -14151,7 +14151,7 @@
         "g": 38,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 713,
@@ -14183,7 +14183,7 @@
         "g": 0,
         "b": 248
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 886,
@@ -14199,7 +14199,7 @@
         "g": 62,
         "b": 183
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 874,
@@ -14215,7 +14215,7 @@
         "g": 68,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 577,
@@ -14247,7 +14247,7 @@
         "g": 156,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 636,
@@ -14263,7 +14263,7 @@
         "g": 25,
         "b": 75
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 672,
@@ -14279,7 +14279,7 @@
         "g": 98,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 139,
@@ -14295,7 +14295,7 @@
         "g": 56,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 788,
@@ -14311,7 +14311,7 @@
         "g": 90,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 191,
@@ -14327,7 +14327,7 @@
         "g": 100,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 835,
@@ -14343,7 +14343,7 @@
         "g": 157,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 630,
@@ -14359,7 +14359,7 @@
         "g": 163,
         "b": 54
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 809,
@@ -14375,7 +14375,7 @@
         "g": 106,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 88,
@@ -14391,7 +14391,7 @@
         "g": 80,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 160,
@@ -14407,7 +14407,7 @@
         "g": 176,
         "b": 123
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 655,
@@ -14423,7 +14423,7 @@
         "g": 0,
         "b": 153
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 548,
@@ -14439,7 +14439,7 @@
         "g": 96,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 935,
@@ -14455,7 +14455,7 @@
         "g": 130,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 555,
@@ -14471,7 +14471,7 @@
         "g": 154,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 685,
@@ -14487,7 +14487,7 @@
         "g": 46,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 756,
@@ -14503,7 +14503,7 @@
         "g": 225,
         "b": 120
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 917,
@@ -14519,7 +14519,7 @@
         "g": 154,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 428,
@@ -14535,7 +14535,7 @@
         "g": 152,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 448,
@@ -14551,7 +14551,7 @@
         "g": 0,
         "b": 232
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 929,
@@ -14567,7 +14567,7 @@
         "g": 90,
         "b": 38
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 109,
@@ -14583,7 +14583,7 @@
         "g": 128,
         "b": 17
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 570,
@@ -14599,7 +14599,7 @@
         "g": 96,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 125,
@@ -14615,7 +14615,7 @@
         "g": 193,
         "b": 247
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 420,
@@ -14631,7 +14631,7 @@
         "g": 167,
         "b": 51
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 865,
@@ -14647,7 +14647,7 @@
         "g": 205,
         "b": 36
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 960,
@@ -14663,7 +14663,7 @@
         "g": 92,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 179,
@@ -14695,7 +14695,7 @@
         "g": 104,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 605,
@@ -14711,7 +14711,7 @@
         "g": 94,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 160,
@@ -14727,7 +14727,7 @@
         "g": 40,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 721,
@@ -14743,7 +14743,7 @@
         "g": 71,
         "b": 200
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 984,
@@ -14759,7 +14759,7 @@
         "g": 68,
         "b": 159
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 431,
@@ -14775,7 +14775,7 @@
         "g": 66,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 583,
@@ -14791,7 +14791,7 @@
         "g": 158,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 651,
@@ -14807,7 +14807,7 @@
         "g": 153,
         "b": 75
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 817,
@@ -14823,7 +14823,7 @@
         "g": 125,
         "b": 200
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 935,
@@ -14855,7 +14855,7 @@
         "g": 135,
         "b": 53
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 446,
@@ -14871,7 +14871,7 @@
         "g": 78,
         "b": 10
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 795,
@@ -14887,7 +14887,7 @@
         "g": 108,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 86,
@@ -14903,7 +14903,7 @@
         "g": 76,
         "b": 176
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 846,
@@ -14935,7 +14935,7 @@
         "g": 225,
         "b": 48
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 140,
@@ -14951,7 +14951,7 @@
         "g": 161,
         "b": 46
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 355,
@@ -14967,7 +14967,7 @@
         "g": 230,
         "b": 147
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 686,
@@ -14983,7 +14983,7 @@
         "g": 86,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 887,
@@ -14999,7 +14999,7 @@
         "g": 79,
         "b": 154
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 903,
@@ -15031,7 +15031,7 @@
         "g": 143,
         "b": 34
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 964,
@@ -15047,7 +15047,7 @@
         "g": 94,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 324,
@@ -15063,7 +15063,7 @@
         "g": 74,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 376,
@@ -15079,7 +15079,7 @@
         "g": 32,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 659,
@@ -15095,7 +15095,7 @@
         "g": 186,
         "b": 222
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 721,
@@ -15111,7 +15111,7 @@
         "g": 181,
         "b": 52
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 785,
@@ -15127,7 +15127,7 @@
         "g": 70,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 282,
@@ -15159,7 +15159,7 @@
         "g": 98,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 999,
@@ -15175,7 +15175,7 @@
         "g": 82,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 128,
@@ -15191,7 +15191,7 @@
         "g": 68,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 258,
@@ -15207,8 +15207,8 @@
         "g": 150,
         "b": 248
       },
-      "owner": "water",
-      "isWater": true,
+      "owner": "neutral",
+      "isWater": false,
       "bounds": {
         "minX": 636,
         "minY": 661,
@@ -15223,7 +15223,7 @@
         "g": 146,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 795,
@@ -15239,7 +15239,7 @@
         "g": 78,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 821,
@@ -15255,7 +15255,7 @@
         "g": 70,
         "b": 30
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 978,
@@ -15287,7 +15287,7 @@
         "g": 72,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 319,
@@ -15303,7 +15303,7 @@
         "g": 100,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 138,
@@ -15319,7 +15319,7 @@
         "g": 131,
         "b": 246
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 223,
@@ -15335,7 +15335,7 @@
         "g": 24,
         "b": 165
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 360,
@@ -15351,7 +15351,7 @@
         "g": 41,
         "b": 144
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 862,
@@ -15367,7 +15367,7 @@
         "g": 231,
         "b": 95
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 353,
@@ -15383,7 +15383,7 @@
         "g": 146,
         "b": 41
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 921,
@@ -15399,7 +15399,7 @@
         "g": 24,
         "b": 90
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 991,
@@ -15415,7 +15415,7 @@
         "g": 1,
         "b": 95
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 257,
@@ -15431,7 +15431,7 @@
         "g": 156,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 449,
@@ -15447,7 +15447,7 @@
         "g": 11,
         "b": 196
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 218,
@@ -15463,7 +15463,7 @@
         "g": 249,
         "b": 145
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 289,
@@ -15479,7 +15479,7 @@
         "g": 203,
         "b": 239
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 314,
@@ -15495,7 +15495,7 @@
         "g": 215,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 941,
@@ -15511,7 +15511,7 @@
         "g": 86,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 139,
@@ -15527,7 +15527,7 @@
         "g": 66,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 205,
@@ -15543,7 +15543,7 @@
         "g": 156,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 795,
@@ -15559,7 +15559,7 @@
         "g": 94,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 906,
@@ -15575,7 +15575,7 @@
         "g": 60,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 128,
@@ -15591,7 +15591,7 @@
         "g": 121,
         "b": 145
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 380,
@@ -15607,7 +15607,7 @@
         "g": 11,
         "b": 71
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 850,
@@ -15623,7 +15623,7 @@
         "g": 34,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 729,
@@ -15639,7 +15639,7 @@
         "g": 102,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 593,
@@ -15655,7 +15655,7 @@
         "g": 148,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 782,
@@ -15671,7 +15671,7 @@
         "g": 19,
         "b": 41
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 888,
@@ -15703,7 +15703,7 @@
         "g": 92,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 980,
@@ -15719,7 +15719,7 @@
         "g": 74,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 808,
@@ -15735,7 +15735,7 @@
         "g": 230,
         "b": 30
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 143,
@@ -15751,7 +15751,7 @@
         "g": 62,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 156,
@@ -15767,7 +15767,7 @@
         "g": 94,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 300,
@@ -15799,7 +15799,7 @@
         "g": 33,
         "b": 133
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 178,
@@ -15815,7 +15815,7 @@
         "g": 244,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 185,
@@ -15831,7 +15831,7 @@
         "g": 96,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 336,
@@ -15847,7 +15847,7 @@
         "g": 76,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 868,
@@ -15863,7 +15863,7 @@
         "g": 12,
         "b": 145
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 366,
@@ -15879,7 +15879,7 @@
         "g": 165,
         "b": 22
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 957,
@@ -15911,7 +15911,7 @@
         "g": 32,
         "b": 200
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 794,
@@ -15927,7 +15927,7 @@
         "g": 121,
         "b": 35
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 122,
@@ -15943,7 +15943,7 @@
         "g": 78,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 135,
@@ -15959,7 +15959,7 @@
         "g": 219,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 923,
@@ -15975,7 +15975,7 @@
         "g": 24,
         "b": 90
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 941,
@@ -15991,7 +15991,7 @@
         "g": 109,
         "b": 46
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 176,
@@ -16007,7 +16007,7 @@
         "g": 12,
         "b": 145
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 198,
@@ -16023,7 +16023,7 @@
         "g": 92,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 250,
@@ -16039,7 +16039,7 @@
         "g": 119,
         "b": 196
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 122,
@@ -16087,7 +16087,7 @@
         "g": 224,
         "b": 174
       },
-      "owner": "blue",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 825,
@@ -16103,7 +16103,7 @@
         "g": 76,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 110,
@@ -16119,7 +16119,7 @@
         "g": 131,
         "b": 246
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 298,
@@ -16135,7 +16135,7 @@
         "g": 59,
         "b": 159
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 393,
@@ -16151,7 +16151,7 @@
         "g": 142,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 173,
@@ -16167,7 +16167,7 @@
         "g": 84,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 905,
@@ -16183,7 +16183,7 @@
         "g": 33,
         "b": 184
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 991,
@@ -16199,7 +16199,7 @@
         "g": 40,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 772,
@@ -16215,7 +16215,7 @@
         "g": 156,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 782,
@@ -16231,7 +16231,7 @@
         "g": 90,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 971,
@@ -16247,7 +16247,7 @@
         "g": 98,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 371,
@@ -16263,7 +16263,7 @@
         "g": 134,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 95,
@@ -16279,7 +16279,7 @@
         "g": 196,
         "b": 33
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 792,
@@ -16295,7 +16295,7 @@
         "g": 46,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 166,
@@ -16311,7 +16311,7 @@
         "g": 90,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 163,
@@ -16327,7 +16327,7 @@
         "g": 51,
         "b": 196
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 273,
@@ -16343,7 +16343,7 @@
         "g": 82,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 895,
@@ -16359,7 +16359,7 @@
         "g": 1,
         "b": 95
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 82,
@@ -16375,7 +16375,7 @@
         "g": 207,
         "b": 97
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 126,
@@ -16391,7 +16391,7 @@
         "g": 184,
         "b": 27
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 957,
@@ -16407,7 +16407,7 @@
         "g": 221,
         "b": 145
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 104,
@@ -16423,7 +16423,7 @@
         "g": 31,
         "b": 196
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 388,
@@ -16439,7 +16439,7 @@
         "g": 100,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 422,
@@ -16455,7 +16455,7 @@
         "g": 104,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 530,
@@ -16471,7 +16471,7 @@
         "g": 106,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 564,
@@ -16487,7 +16487,7 @@
         "g": 227,
         "b": 59
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 798,
@@ -16503,7 +16503,7 @@
         "g": 195,
         "b": 138
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 975,
@@ -16519,7 +16519,7 @@
         "g": 102,
         "b": 96
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 925,
@@ -16535,7 +16535,7 @@
         "g": 38,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 767,
@@ -16551,7 +16551,7 @@
         "g": 31,
         "b": 246
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 439,
@@ -16567,7 +16567,7 @@
         "g": 84,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 135,
@@ -16583,7 +16583,7 @@
         "g": 154,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 781,
@@ -16599,7 +16599,7 @@
         "g": 131,
         "b": 46
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 314,
@@ -16615,7 +16615,7 @@
         "g": 131,
         "b": 46
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 352,
@@ -16631,7 +16631,7 @@
         "g": 82,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 76,
@@ -16647,7 +16647,7 @@
         "g": 80,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 88,
@@ -16663,7 +16663,7 @@
         "g": 151,
         "b": 46
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 145,
@@ -16679,7 +16679,7 @@
         "g": 130,
         "b": 63
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 911,
@@ -16711,7 +16711,7 @@
         "g": 82,
         "b": 127
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 112,
@@ -16727,7 +16727,7 @@
         "g": 14,
         "b": 59
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 799,
@@ -16743,7 +16743,7 @@
         "g": 31,
         "b": 114
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 598,
@@ -16759,7 +16759,7 @@
         "g": 203,
         "b": 86
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 944,
@@ -16775,7 +16775,7 @@
         "g": 88,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 971,
@@ -16791,7 +16791,7 @@
         "g": 109,
         "b": 203
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 387,
@@ -16807,7 +16807,7 @@
         "g": 152,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 777,
@@ -16823,7 +16823,7 @@
         "g": 48,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 430,
@@ -16839,7 +16839,7 @@
         "g": 120,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 736,
@@ -16855,7 +16855,7 @@
         "g": 150,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 761,
@@ -16871,7 +16871,7 @@
         "g": 0,
         "b": 244
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 778,
@@ -16887,7 +16887,7 @@
         "g": 31,
         "b": 46
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 73,
@@ -16903,7 +16903,7 @@
         "g": 135,
         "b": 133
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 90,
@@ -16919,7 +16919,7 @@
         "g": 144,
         "b": 95
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 434,
@@ -16935,7 +16935,7 @@
         "g": 118,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 710,
@@ -16951,7 +16951,7 @@
         "g": 244,
         "b": 179
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 630,
@@ -16967,7 +16967,7 @@
         "g": 116,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 691,
@@ -16983,7 +16983,7 @@
         "g": 151,
         "b": 95
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 109,
@@ -16999,7 +16999,7 @@
         "g": 102,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 470,
@@ -17015,7 +17015,7 @@
         "g": 172,
         "b": 108
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 713,
@@ -17031,7 +17031,7 @@
         "g": 216,
         "b": 222
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 779,
@@ -17047,7 +17047,7 @@
         "g": 88,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 80,
@@ -17063,7 +17063,7 @@
         "g": 108,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 664,
@@ -17079,7 +17079,7 @@
         "g": 24,
         "b": 61
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 702,
@@ -17095,7 +17095,7 @@
         "g": 80,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 977,
@@ -17111,7 +17111,7 @@
         "g": 77,
         "b": 195
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 676,
@@ -17127,7 +17127,7 @@
         "g": 72,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 53,
@@ -17143,7 +17143,7 @@
         "g": 15,
         "b": 246
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 96,
@@ -17159,7 +17159,7 @@
         "g": 56,
         "b": 56
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 765,
@@ -17175,7 +17175,7 @@
         "g": 22,
         "b": 59
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 721,
@@ -17191,7 +17191,7 @@
         "g": 122,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 745,
@@ -17223,7 +17223,7 @@
         "g": 114,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 701,
@@ -17255,7 +17255,7 @@
         "g": 4,
         "b": 48
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 958,
@@ -17271,7 +17271,7 @@
         "g": 110,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 689,
@@ -17287,7 +17287,7 @@
         "g": 158,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 782,
@@ -17303,7 +17303,7 @@
         "g": 106,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 108,
@@ -17319,7 +17319,7 @@
         "g": 128,
         "b": 27
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 708,
@@ -17335,7 +17335,7 @@
         "g": 215,
         "b": 209
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 662,
@@ -17351,7 +17351,7 @@
         "g": 124,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 1,
@@ -17367,7 +17367,7 @@
         "g": 24,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 908,
@@ -17383,7 +17383,7 @@
         "g": 48,
         "b": 146
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 731,
@@ -17399,7 +17399,7 @@
         "g": 21,
         "b": 154
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 720,
@@ -17415,7 +17415,7 @@
         "g": 50,
         "b": 192
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 836,
@@ -17431,7 +17431,7 @@
         "g": 31,
         "b": 145
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 409,
@@ -17447,7 +17447,7 @@
         "g": 44,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 0,
@@ -17463,7 +17463,7 @@
         "g": 86,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 19,
@@ -17479,7 +17479,7 @@
         "g": 201,
         "b": 61
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 694,
@@ -17495,7 +17495,7 @@
         "g": 120,
         "b": 91
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 801,
@@ -17511,7 +17511,7 @@
         "g": 52,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 958,
@@ -17527,7 +17527,7 @@
         "g": 40,
         "b": 15
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 655,
@@ -17543,7 +17543,7 @@
         "g": 231,
         "b": 24
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 780,
@@ -17559,7 +17559,7 @@
         "g": 231,
         "b": 202
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 702,
@@ -17575,7 +17575,7 @@
         "g": 133,
         "b": 60
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 413,
@@ -17591,7 +17591,7 @@
         "g": 210,
         "b": 90
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 930,
@@ -17607,7 +17607,7 @@
         "g": 62,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 694,
@@ -17623,7 +17623,7 @@
         "g": 83,
         "b": 191
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 712,
@@ -17639,7 +17639,7 @@
         "g": 112,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 732,
@@ -17655,7 +17655,7 @@
         "g": 185,
         "b": 45
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 748,
@@ -17671,7 +17671,7 @@
         "g": 32,
         "b": 255
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 819,
@@ -17687,7 +17687,7 @@
         "g": 21,
         "b": 245
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 875,
@@ -17703,7 +17703,7 @@
         "g": 120,
         "b": 94
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 966,
@@ -17719,7 +17719,7 @@
         "g": 65,
         "b": 29
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 744,
@@ -17735,7 +17735,7 @@
         "g": 48,
         "b": 128
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 945,
@@ -17751,7 +17751,7 @@
         "g": 183,
         "b": 82
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 726,
@@ -17767,7 +17767,7 @@
         "g": 82,
         "b": 37
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 850,
@@ -17783,7 +17783,7 @@
         "g": 84,
         "b": 164
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 881,
@@ -17799,7 +17799,7 @@
         "g": 125,
         "b": 54
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 807,
@@ -17831,7 +17831,7 @@
         "g": 200,
         "b": 195
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 950,
@@ -17847,7 +17847,7 @@
         "g": 108,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 143,
@@ -17863,7 +17863,7 @@
         "g": 58,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 726,
@@ -17879,7 +17879,7 @@
         "g": 34,
         "b": 114
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 965,
@@ -17895,7 +17895,7 @@
         "g": 69,
         "b": 139
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 770,
@@ -17911,7 +17911,7 @@
         "g": 23,
         "b": 88
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 855,
@@ -17927,7 +17927,7 @@
         "g": 102,
         "b": 18
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 892,
@@ -17943,7 +17943,7 @@
         "g": 164,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 718,
@@ -17959,7 +17959,7 @@
         "g": 133,
         "b": 180
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 409,
@@ -17975,7 +17975,7 @@
         "g": 34,
         "b": 0
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 844,
@@ -17991,7 +17991,7 @@
         "g": 16,
         "b": 102
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 934,
@@ -18007,7 +18007,7 @@
         "g": 168,
         "b": 213
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 731,
@@ -18023,7 +18023,7 @@
         "g": 227,
         "b": 131
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 695,
@@ -18039,7 +18039,7 @@
         "g": 203,
         "b": 224
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 835,
@@ -18055,7 +18055,7 @@
         "g": 142,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 937,
@@ -18071,7 +18071,7 @@
         "g": 110,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 144,
@@ -18087,7 +18087,7 @@
         "g": 228,
         "b": 233
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 868,
@@ -18103,7 +18103,7 @@
         "g": 125,
         "b": 161
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 361,
@@ -18119,7 +18119,7 @@
         "g": 60,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 787,
@@ -18135,7 +18135,7 @@
         "g": 115,
         "b": 187
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 898,
@@ -18151,7 +18151,7 @@
         "g": 252,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 689,
@@ -18167,7 +18167,7 @@
         "g": 117,
         "b": 83
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 109,
@@ -18183,7 +18183,7 @@
         "g": 145,
         "b": 234
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 330,
@@ -18199,7 +18199,7 @@
         "g": 54,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 743,
@@ -18215,7 +18215,7 @@
         "g": 59,
         "b": 200
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 853,
@@ -18231,7 +18231,7 @@
         "g": 112,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 204,
@@ -18247,7 +18247,7 @@
         "g": 36,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 884,
@@ -18263,7 +18263,7 @@
         "g": 180,
         "b": 181
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 820,
@@ -18279,7 +18279,7 @@
         "g": 36,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 696,
@@ -18295,7 +18295,7 @@
         "g": 161,
         "b": 86
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 400,
@@ -18311,7 +18311,7 @@
         "g": 46,
         "b": 64
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 908,
@@ -18327,7 +18327,7 @@
         "g": 116,
         "b": 126
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 155,
@@ -18343,7 +18343,7 @@
         "g": 183,
         "b": 112
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 873,
@@ -18359,7 +18359,7 @@
         "g": 179,
         "b": 54
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 899,
@@ -18375,7 +18375,7 @@
         "g": 127,
         "b": 186
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 291,
@@ -18391,7 +18391,7 @@
         "g": 98,
         "b": 168
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 196,
@@ -18407,7 +18407,7 @@
         "g": 48,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 775,
@@ -18423,7 +18423,7 @@
         "g": 56,
         "b": 32
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 823,
@@ -18439,7 +18439,7 @@
         "g": 82,
         "b": 79
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 0,
@@ -18455,7 +18455,7 @@
         "g": 122,
         "b": 110
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 754,
@@ -18471,7 +18471,7 @@
         "g": 79,
         "b": 235
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 142,
@@ -18487,7 +18487,7 @@
         "g": 141,
         "b": 184
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 262,
@@ -18503,7 +18503,7 @@
         "g": 115,
         "b": 232
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 112,
@@ -18519,7 +18519,7 @@
         "g": 151,
         "b": 89
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 825,
@@ -18535,7 +18535,7 @@
         "g": 139,
         "b": 157
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 38,
@@ -18551,7 +18551,7 @@
         "g": 118,
         "b": 173
       },
-      "owner": "red",
+      "owner": "neutral",
       "isWater": false,
       "bounds": {
         "minX": 228,
@@ -18561,26 +18561,39 @@
       }
     }
   },
-  "players": [
+  "players": [],
+  "countries": [
     {
-      "id": "player1",
-      "name": "Red Player",
-      "color": "red",
-      "connectionId": ""
+      "id": "kingdom_red",
+      "name": "Kingdom of Redoria",
+      "color": "rgb(255,0,0)",
+      "description": "A wealthy kingdom known for its military might"
     },
     {
-      "id": "player2",
-      "name": "Green Player",
-      "color": "green",
-      "connectionId": ""
+      "id": "empire_blue",
+      "name": "Blue Empire",
+      "color": "rgb(0,0,255)",
+      "description": "An ancient empire with strong naval traditions"
     },
     {
-      "id": "player3",
-      "name": "Blue Player",
-      "color": "blue",
-      "connectionId": ""
+      "id": "duchy_green",
+      "name": "Green Duchy",
+      "color": "rgb(0,255,0)",
+      "description": "A small but prosperous realm with fertile lands"
+    },
+    {
+      "id": "confederation_yellow",
+      "name": "Yellow Confederation",
+      "color": "rgb(0,255,255)",
+      "description": "An alliance of city-states with advanced trade networks"
+    },
+    {
+      "id": "purple_dominion",
+      "name": "Purple Dominion",
+      "color": "rgb(255,0,255)",
+      "description": "A mysterious realm ruled by scholars and mages"
     }
   ],
   "year": 1100,
-  "currentTurn": "player1"
+  "currentTurn": ""
 }

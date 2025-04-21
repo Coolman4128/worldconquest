@@ -137,7 +137,7 @@ def main():
                 is_water = is_water_color(color)
                 
                 # Set owner based on whether it's water or land
-                owner = "water" if is_water else "red"
+                owner = "water" if is_water else "neutral"
                 
                 # Store the province data
                 provinces[province_id] = {
@@ -158,31 +158,47 @@ def main():
     
     print(f"Finished processing. Found {len(provinces)} provinces.")
     
-    # Create the game state object
+    # Define 5 default countries
+    countries = [
+        {
+            "id": "kingdom_red",
+            "name": "Kingdom of Redoria",
+            "color": "red",
+            "description": "A wealthy kingdom known for its military might"
+        },
+        {
+            "id": "empire_blue",
+            "name": "Blue Empire",
+            "color": "blue",
+            "description": "An ancient empire with strong naval traditions"
+        },
+        {
+            "id": "duchy_green",
+            "name": "Green Duchy",
+            "color": "green",
+            "description": "A small but prosperous realm with fertile lands"
+        },
+        {
+            "id": "confederation_yellow",
+            "name": "Yellow Confederation",
+            "color": "yellow",
+            "description": "An alliance of city-states with advanced trade networks"
+        },
+        {
+            "id": "purple_dominion",
+            "name": "Purple Dominion",
+            "color": "purple",
+            "description": "A mysterious realm ruled by scholars and mages"
+        }
+    ]
+    
+    # Create the game state object - now with countries and without pre-defined players
     game_state = {
         "provinces": provinces,
-        "players": [
-            {
-                "id": "player1",
-                "name": "Red Player",
-                "color": "red",
-                "connectionId": ""
-            },
-            {
-                "id": "player2",
-                "name": "Green Player",
-                "color": "green",
-                "connectionId": ""
-            },
-            {
-                "id": "player3",
-                "name": "Blue Player",
-                "color": "blue",
-                "connectionId": ""
-            }
-        ],
+        "players": [],
+        "countries": countries,
         "year": 1100,
-        "currentTurn": "player1"
+        "currentTurn": ""
     }
     
     # Write the game state to the output file

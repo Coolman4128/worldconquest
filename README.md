@@ -13,7 +13,7 @@ A multiplayer strategy game where players conquer provinces on a map.
 
 ### Prerequisites
 
-- [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) for the backend
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) for the backend
 - Node.js and npm for the frontend
 
 ### Running the Backend

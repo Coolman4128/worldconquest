@@ -22,6 +22,13 @@
                         <label for="lobbyId">Lobby ID:</label>
                         <input type="text" id="lobbyId" placeholder="Enter lobby ID to join">
                     </div>
+                    <div class="form-group">
+                        <label for="countrySelect">Choose Country:</label>
+                        <select id="countrySelect">
+                            <option value="">Loading countries...</option>
+                        </select>
+                        <p id="countryDescription" class="country-description"></p>
+                    </div>
                     <div class="button-group">
                         <button id="joinLobbyBtn">Join Lobby</button>
                         <button id="createLobbyBtn">Create New Lobby</button>
@@ -58,6 +65,7 @@
                     <button id="zoomIn">+</button>
                     <button id="zoomOut">-</button>
                     <button id="resetView">Reset View</button>
+                    <button id="toggleHighRes">HD Mode</button>
                 </div>
             </div>
             <div class="province-info">

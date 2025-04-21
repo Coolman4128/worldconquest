@@ -1,12 +1,11 @@
 namespace WorldConquest.Models
 {
-    public class Player
+    public class Country
     {
         public string Id { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string Color { get; set; } = string.Empty;
-        public string ConnectionId { get; set; } = string.Empty;
-        public string CountryId { get; set; } = string.Empty;
-        public bool HasSelectedCountry { get; set; } = false;
+        public string Description { get; set; } = string.Empty;
+        public bool IsAvailable { get; set; } = true;
     }
 }

@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const zoomInButton = document.getElementById('zoomIn');
     const zoomOutButton = document.getElementById('zoomOut');
     const resetViewButton = document.getElementById('resetView');
+    const toggleHighResButton = document.getElementById('toggleHighRes');
     
     // Get the game info elements
     const yearDisplay = document.getElementById('yearDisplay');
@@ -29,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const lobbyModal = document.getElementById('lobbyModal');
     const playerNameInput = document.getElementById('playerName');
     const lobbyIdInput = document.getElementById('lobbyId');
+    const countrySelect = document.getElementById('countrySelect');
+    const countryDescription = document.getElementById('countryDescription');
     const joinLobbyBtn = document.getElementById('joinLobbyBtn');
     const createLobbyBtn = document.getElementById('createLobbyBtn');
     const refreshLobbiesBtn = document.getElementById('refreshLobbiesBtn');
@@ -60,7 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPlayer: null,
         isMultiplayer: false,
         year: 1100,
-        currentTurn: ''
+        currentTurn: '',
+        // Country selection
+        availableCountries: [],
+        // Rendering settings
+        useHighRes: false,         // Whether to use high-res rendering
+        showCountryLabels: true    // Whether to show country labels
     };
     
     // Initialize the game
@@ -80,6 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Initialize the API client
             initializeApiClient();
+            
+            // Load default game state to get available countries
+            await loadDefaultGameState();
             
             // Show the lobby modal
             showLobbyModal();
@@ -105,6 +116,69 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Failed to initialize game:', error);
             provinceDetails.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+        }
+    }
+    
+    // Load default game state to get available countries
+    async function loadDefaultGameState() {
+        try {
+            const defaultGameState = await apiClient.getDefaultGameState();
+            
+            // Store available countries
+            state.availableCountries = defaultGameState.countries || [];
+            
+            // Update country selection dropdown
+            updateCountryDropdown();
+        } catch (error) {
+            console.error('Failed to load default game state:', error);
+            countrySelect.innerHTML = '<option value="">Failed to load countries</option>';
+        }
+    }
+    
+    // Update country selection dropdown with available countries
+    function updateCountryDropdown() {
+        // Clear existing options
+        countrySelect.innerHTML = '';
+        
+        if (state.availableCountries.length === 0) {
+            countrySelect.innerHTML = '<option value="">No countries available</option>';
+            return;
+        }
+        
+        // Add default option
+        countrySelect.innerHTML = '<option value="">Select a country</option>';
+        
+        // Add countries
+        state.availableCountries.forEach(country => {
+            const option = document.createElement('option');
+            option.value = country.id;
+            option.textContent = country.name;
+            option.style.color = country.color;
+            countrySelect.appendChild(option);
+        });
+        
+        // Add change event listener
+        countrySelect.addEventListener('change', handleCountrySelectChange);
+    }
+    
+    // Handle country selection change
+    function handleCountrySelectChange() {
+        const selectedCountryId = countrySelect.value;
+        
+        if (!selectedCountryId) {
+            countryDescription.textContent = '';
+            return;
+        }
+        
+        // Find the selected country
+        const selectedCountry = state.availableCountries.find(c => c.id === selectedCountryId);
+        
+        if (selectedCountry) {
+            // Update the description
+            countryDescription.textContent = selectedCountry.description || '';
+            countryDescription.style.color = selectedCountry.color;
+        } else {
+            countryDescription.textContent = '';
         }
     }
     
@@ -215,8 +289,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        // Draw the map
-        mapProcessor.drawMap(ctx, state.scale, state.offsetX, state.offsetY);
+        // Get countries data for labels
+        const countries = state.isMultiplayer && state.currentLobby ? 
+            state.currentLobby.gameState.countries : 
+            state.availableCountries;
+        
+        // Draw the map with country data for labels
+        mapProcessor.drawMap(ctx, state.scale, state.offsetX, state.offsetY, countries, state.useHighRes);
         
         // Draw a border around the selected province if any
         if (state.selectedProvince) {
@@ -247,7 +326,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Update the province details panel
     function updateProvinceDetails() {
-        provinceDetails.innerHTML = formatProvinceDetails(state.selectedProvince);
+        // Get countries from state for color lookup
+        const countries = state.isMultiplayer && state.currentLobby ? 
+            state.currentLobby.gameState.countries : 
+            state.availableCountries;
+            
+        provinceDetails.innerHTML = formatProvinceDetails(state.selectedProvince, countries);
     }
     
     // Add event listeners
@@ -268,6 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
         zoomInButton.addEventListener('click', handleZoomIn);
         zoomOutButton.addEventListener('click', handleZoomOut);
         resetViewButton.addEventListener('click', resetView);
+        toggleHighResButton.addEventListener('click', handleToggleHighRes);
         
         // Game action buttons
         advanceTurnBtn.addEventListener('click', handleAdvanceTurn);
@@ -329,6 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function handleJoinLobby() {
         const playerName = playerNameInput.value.trim();
         const lobbyId = lobbyIdInput.value.trim();
+        const selectedCountryId = countrySelect.value;
         
         if (!playerName) {
             alert('Please enter your name');
@@ -340,9 +426,15 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
+        if (!selectedCountryId) {
+            alert('Please select a country');
+            return;
+        }
+        
         try {
-            const success = await apiClient.joinLobby(lobbyId, playerName);
+            const success = await apiClient.joinLobby(lobbyId, playerName, selectedCountryId);
             if (success) {
+                // The selected country will be assigned to the player by the server
                 state.currentPlayer = {
                     name: playerName
                 };
@@ -359,9 +451,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle create lobby button click
     async function handleCreateLobby() {
         const playerName = playerNameInput.value.trim();
+        const selectedCountryId = countrySelect.value;
         
         if (!playerName) {
             alert('Please enter your name');
+            return;
+        }
+        
+        if (!selectedCountryId) {
+            alert('Please select a country');
             return;
         }
         
@@ -537,8 +635,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Re-render the map
-        mapProcessor.renderMapToCache();
+        // Re-render the map with countries for color mapping
+        mapProcessor.renderMapToCache(gameState.countries);
     }
     
     // Update game info display
@@ -703,6 +801,22 @@ document.addEventListener('DOMContentLoaded', () => {
         state.offsetY = canvas.height / 2 - centerY * state.scale;
         
         // Mark that a render is needed
+        state.needsRender = true;
+    }
+    
+    // Handle toggle high-res button click
+    function handleToggleHighRes() {
+        state.useHighRes = !state.useHighRes;
+        
+        // Toggle the active class on the button
+        if (state.useHighRes) {
+            toggleHighResButton.classList.add('active');
+            toggleHighResButton.setAttribute('title', 'HD Mode On');
+        } else {
+            toggleHighResButton.classList.remove('active');
+            toggleHighResButton.setAttribute('title', 'HD Mode Off');
+        }
+        
         state.needsRender = true;
     }
     

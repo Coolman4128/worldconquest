@@ -28,6 +28,17 @@ class MapProcessor {
         
         // Loading state
         this.isLoading = false;
+
+        // High resolution rendering
+        this.highResCanvas = null;
+        this.highResCtx = null;
+        this.highResScale = 4; // Scale factor for high-res rendering
+        this.highResRendered = false;
+        
+        // Country label rendering
+        this.countryLabels = new Map(); // Map to store country label positions and sizes
+        this.minZoomForLabels = 0.5;    // Minimum zoom level to show labels
+        this.maxZoomForLabels = 2.0;    // Maximum zoom level before labels fade out
     }
 
     /**
@@ -222,8 +233,9 @@ class MapProcessor {
     
     /**
      * Render the map to the cache canvas
+     * @param {Array} countries - Optional array of countries for color mapping
      */
-    renderMapToCache() {
+    renderMapToCache(countries) {
         // Create a new ImageData object for the map
         const mapData = new ImageData(this.width, this.height);
         
@@ -254,7 +266,7 @@ class MapProcessor {
                 
                 if (province) {
                     // Get the color based on whether it's water or land
-                    const ownerColor = province.isWater ? this.waterColor : getOwnerColor(province.owner);
+                    const ownerColor = province.isWater ? this.waterColor : getOwnerColor(province.owner, countries);
                     
                     // Set the pixel color to the owner's color
                     mapData.data[idx] = ownerColor.r;
@@ -339,28 +351,66 @@ class MapProcessor {
     }
 
     /**
-     * Draw the map with province ownership colors
+     * Draw the map with high resolution and country labels
      * @param {CanvasRenderingContext2D} ctx - Canvas context to draw on
      * @param {number} scale - Scale factor for drawing
      * @param {number} offsetX - X offset for drawing
      * @param {number} offsetY - Y offset for drawing
+     * @param {Array} countries - Optional array of countries for labels
+     * @param {boolean} useHighRes - Whether to use high resolution rendering
      */
-    drawMap(ctx, scale, offsetX, offsetY) {
+    drawMap(ctx, scale, offsetX, offsetY, countries, useHighRes = false) {
         // If the map hasn't been loaded yet, we can't draw it
         if (!this.imageData) {
+            console.log('No image data available, cannot draw map');
             return;
         }
         
         // If the map hasn't been rendered to cache yet, do it now
         if (!this.mapRendered) {
+            console.log('Map not rendered to cache yet, doing it now');
             this.renderMapToCache();
         }
         
-        // Draw the cached map on the main canvas with scaling and offset
+        // Initialize high-res map if needed and not already done
+        if (useHighRes && !this.highResRendered) {
+            try {
+                console.log('Initializing high-res map on demand');
+                this.initHighResMap();
+            } catch (error) {
+                console.error('Failed to initialize high-res map:', error);
+                useHighRes = false;
+            }
+        }
+        
         ctx.save();
-        ctx.scale(scale, scale);
-        ctx.drawImage(this.cachedMapCanvas, offsetX / scale, offsetY / scale);
+        
+        if (useHighRes && this.highResRendered) {
+            // Draw the high-resolution map
+            console.log('Drawing high-resolution map');
+            const highResScale = scale / this.highResScale;
+            ctx.scale(highResScale, highResScale);
+            ctx.drawImage(this.highResCanvas, offsetX / highResScale, offsetY / highResScale);
+        } else {
+            // Draw the standard resolution map
+            console.log('Drawing standard resolution map');
+            ctx.scale(scale, scale);
+            ctx.drawImage(this.cachedMapCanvas, offsetX / scale, offsetY / scale);
+        }
+        
         ctx.restore();
+        
+        // Draw country labels if provided and we're at an appropriate zoom level
+        if (countries && scale >= this.minZoomForLabels && scale <= this.maxZoomForLabels * 2) {
+            // Generate country labels if needed
+            if (this.countryLabels.size === 0) {
+                console.log('Generating country labels');
+                this.generateCountryLabels(countries);
+            }
+            
+            console.log('Drawing country labels');
+            this.drawCountryLabels(ctx, scale, offsetX, offsetY);
+        }
     }
     
     /**
@@ -476,5 +526,446 @@ class MapProcessor {
         }
         
         console.timeEnd('drawProvinceBorders');
+    }
+
+    /**
+     * Initialize the high-resolution map canvas
+     */
+    initHighResMap() {
+        console.time('initHighResMap');
+        console.log('Starting high-res map initialization');
+        
+        try {
+            // Create a canvas for the high-resolution map
+            this.highResCanvas = document.createElement('canvas');
+            this.highResCanvas.width = this.width * this.highResScale;
+            this.highResCanvas.height = this.height * this.highResScale;
+            console.log(`Created high-res canvas: ${this.highResCanvas.width}x${this.highResCanvas.height}`);
+            
+            this.highResCtx = this.highResCanvas.getContext('2d', { alpha: false });
+            
+            // Render the high-resolution map
+            console.log('About to render high-res map');
+            this.renderHighResMap();
+            
+            console.timeEnd('initHighResMap');
+            console.log('High-res map initialization completed');
+        } catch (error) {
+            console.error('Error in initHighResMap:', error);
+        }
+    }
+    
+    /**
+     * Render the map in high resolution
+     */
+    renderHighResMap() {
+        console.time('renderHighResMap');
+        console.log('Starting high-res map rendering');
+        
+        try {
+            const ctx = this.highResCtx;
+            
+            // Clear the canvas
+            ctx.clearRect(0, 0, this.highResCanvas.width, this.highResCanvas.height);
+            
+            // Draw provinces with anti-aliasing
+            ctx.save();
+            ctx.scale(this.highResScale, this.highResScale);
+            
+            console.log(`Processing ${this.provinces.size} provinces for high-res rendering`);
+            let processedCount = 0;
+            
+            // Iterate through all provinces and draw them with smooth edges
+            this.provinces.forEach((province, id) => {
+                try {
+                    if (!province.pixels || province.pixels.length === 0) return;
+                    
+                    const ownerColor = province.isWater ? this.waterColor : getOwnerColor(province.owner);
+                    
+                    // Use the province path for smooth rendering
+                    const path = this.createProvincePath(province.pixels);
+                    
+                    ctx.fillStyle = `rgb(${ownerColor.r}, ${ownerColor.g}, ${ownerColor.b})`;
+                    ctx.fill(path);
+                    
+                    processedCount++;
+                    if (processedCount % 50 === 0) {
+                        console.log(`Processed ${processedCount} provinces`);
+                    }
+                } catch (error) {
+                    console.error(`Error rendering province ${id}:`, error);
+                }
+            });
+            
+            ctx.restore();
+            
+            console.log('Starting border rendering in high-res');
+            // Draw province borders
+            this.drawProvinceBordersHighRes();
+            
+            this.highResRendered = true;
+            console.timeEnd('renderHighResMap');
+            console.log('High-res map rendering completed');
+        } catch (error) {
+            console.error('Error in renderHighResMap:', error);
+        }
+    }
+    
+    /**
+     * Create a Path2D object from province pixels for smooth rendering
+     * @param {Array} pixels - Array of [x, y] coordinates
+     * @returns {Path2D} - Path representing the province shape
+     */
+    createProvincePath(pixels) {
+        try {
+            const path = new Path2D();
+            
+            // Use boundary tracing algorithm to get smooth borders
+            const boundary = this.traceBoundary(pixels);
+            
+            if (boundary.length > 0) {
+                path.moveTo(boundary[0][0], boundary[0][1]);
+                
+                for (let i = 1; i < boundary.length; i++) {
+                    path.lineTo(boundary[i][0], boundary[i][1]);
+                }
+                
+                path.closePath();
+            }
+            
+            return path;
+        } catch (error) {
+            console.error('Error in createProvincePath:', error);
+            return new Path2D(); // Return an empty path on error
+        }
+    }
+    
+    /**
+     * Trace the boundary of a set of pixels
+     * @param {Array} pixels - Array of [x, y] coordinates
+     * @returns {Array} - Array of boundary points
+     */
+    traceBoundary(pixels) {
+        if (pixels.length === 0) return [];
+        
+        try {
+            // For maps with many provinces, limit the tracing to improve performance
+            if (pixels.length > 1000) {
+                // For large provinces, simplify by using fewer points
+                const simplifiedPixels = [];
+                for (let i = 0; i < pixels.length; i += 10) { // Sample every 10th pixel
+                    simplifiedPixels.push(pixels[i]);
+                }
+                return simplifiedPixels;
+            }
+            
+            // Create a set of pixel keys for fast lookup
+            const pixelSet = new Set(pixels.map(([x, y]) => `${x},${y}`));
+            
+            // Find the leftmost pixel as starting point
+            const startPixel = pixels.reduce((left, pixel) => 
+                (pixel[0] < left[0] || (pixel[0] === left[0] && pixel[1] < left[1])) ? pixel : left
+            );
+            
+            const boundary = [startPixel];
+            let current = startPixel;
+            let direction = 0; // 0: right, 1: down, 2: left, 3: up
+            
+            // Directions: right, down, left, up (clockwise)
+            const dirs = [[1, 0], [0, 1], [-1, 0], [0, -1]];
+            
+            // Keep track of visited boundary pixels to avoid infinite loops
+            const visited = new Set([`${startPixel[0]},${startPixel[1]}`]);
+            
+            // Maximum number of steps to prevent infinite loops
+            const maxSteps = Math.min(pixels.length * 2, 2000); // Cap at 2000 steps
+            let steps = 0;
+            
+            while (steps < maxSteps) {
+                // Try to move in the current direction
+                let found = false;
+                
+                for (let i = 0; i < 4; i++) {
+                    const newDir = (direction + i) % 4;
+                    const [dx, dy] = dirs[newDir];
+                    const next = [current[0] + dx, current[1] + dy];
+                    const key = `${next[0]},${next[1]}`;
+                    
+                    if (pixelSet.has(key)) {
+                        if (!visited.has(key)) {
+                            boundary.push(next);
+                            visited.add(key);
+                        }
+                        current = next;
+                        direction = newDir;
+                        found = true;
+                        break;
+                    }
+                }
+                
+                if (!found) break;
+                steps++;
+                
+                // Check if we've returned to the starting position
+                if (current[0] === startPixel[0] && current[1] === startPixel[1] && steps > 2) {
+                    break;
+                }
+            }
+            
+            // Sample the boundary to reduce points if it's very large
+            if (boundary.length > 500) {
+                const sampledBoundary = [];
+                for (let i = 0; i < boundary.length; i += 2) { // Take every other point
+                    sampledBoundary.push(boundary[i]);
+                }
+                return sampledBoundary;
+            }
+            
+            return boundary;
+        } catch (error) {
+            console.error('Error in traceBoundary:', error);
+            return []; // Return empty array on error
+        }
+    }
+    
+    /**
+     * Draw province borders in high resolution
+     */
+    drawProvinceBordersHighRes() {
+        console.time('drawProvinceBordersHighRes');
+        console.log('Starting high-res border rendering');
+        
+        try {
+            const ctx = this.highResCtx;
+            
+            // Set up border colors
+            const sameBorderColor = 'rgba(200, 200, 200, 0.5)';  // Light gray for same owner
+            const diffBorderColor = 'rgba(0, 0, 0, 0.8)';        // Dark black for different owner
+            
+            // Scale for high res
+            ctx.save();
+            ctx.scale(this.highResScale, this.highResScale);
+            
+            // Use a simplified approach for borders to improve performance
+            ctx.strokeStyle = diffBorderColor;
+            ctx.lineWidth = 0.5;
+            
+            let processed = 0;
+            this.provinces.forEach((province) => {
+                // Skip provinces with too many pixels to improve performance
+                if (province.pixels && province.pixels.length > 0 && province.pixels.length < 5000) {
+                    const boundary = this.traceBoundary(province.pixels);
+                    
+                    if (boundary.length > 0) {
+                        // Draw the boundary
+                        ctx.beginPath();
+                        ctx.moveTo(boundary[0][0], boundary[0][1]);
+                        
+                        for (let i = 1; i < boundary.length; i++) {
+                            ctx.lineTo(boundary[i][0], boundary[i][1]);
+                        }
+                        
+                        ctx.closePath();
+                        ctx.stroke();
+                    }
+                }
+                
+                processed++;
+                if (processed % 50 === 0) {
+                    console.log(`Processed borders for ${processed} provinces`);
+                }
+            });
+            
+            ctx.restore();
+            
+            console.timeEnd('drawProvinceBordersHighRes');
+            console.log('High-res border rendering completed');
+        } catch (error) {
+            console.error('Error in drawProvinceBordersHighRes:', error);
+        }
+    }
+    
+    /**
+     * Generate country labels for all countries
+     * @param {Array} countries - Array of country objects
+     */
+    generateCountryLabels(countries) {
+        // Clear existing labels
+        this.countryLabels.clear();
+        
+        if (!countries || countries.length === 0) return;
+        
+        // Group provinces by country/owner
+        const countryProvinces = new Map();
+        
+        this.provinces.forEach(province => {
+            // Skip water provinces
+            if (province.isWater) return;
+            
+            const owner = province.owner;
+            if (!countryProvinces.has(owner)) {
+                countryProvinces.set(owner, []);
+            }
+            countryProvinces.get(owner).push(province);
+        });
+        
+        // For each country, find connected province groups and calculate label positions
+        countryProvinces.forEach((provinces, owner) => {
+            // Find the country object
+            const country = countries.find(c => c.id === owner) || { name: owner.toUpperCase(), color: '#FFFFFF' };
+            
+            // Find connected province groups
+            const groups = this.findConnectedProvinceGroups(provinces);
+            
+            // Calculate label position and size for each group
+            groups.forEach(group => {
+                // Calculate the bounding box of the group
+                const minX = Math.min(...group.flatMap(p => p.pixels.map(([x]) => x)));
+                const minY = Math.min(...group.flatMap(p => p.pixels.map(([_, y]) => y)));
+                const maxX = Math.max(...group.flatMap(p => p.pixels.map(([x]) => x)));
+                const maxY = Math.max(...group.flatMap(p => p.pixels.map(([_, y]) => y)));
+                
+                // Calculate the center of the group
+                const centerX = (minX + maxX) / 2;
+                const centerY = (minY + maxY) / 2;
+                
+                // Estimate the size based on the area
+                const width = maxX - minX;
+                const height = maxY - minY;
+                const area = width * height;
+                const size = Math.sqrt(area) * 0.15; // Scale font size based on area
+                
+                // Store the label information
+                this.countryLabels.set(`${owner}-${this.countryLabels.size}`, {
+                    text: country.name,
+                    x: centerX,
+                    y: centerY,
+                    color: typeof country.color === 'string' ? country.color : `rgb(${country.color.r}, ${country.color.g}, ${country.color.b})`,
+                    size: Math.min(Math.max(size, 12), 72), // Min 12px, max 72px
+                    width,
+                    height,
+                    angle: width > height ? 0 : -Math.PI / 2 // Rotate if taller than wide
+                });
+            });
+        });
+    }
+    
+    /**
+     * Find connected groups of provinces
+     * @param {Array} provinces - Array of province objects
+     * @returns {Array} - Array of connected province groups
+     */
+    findConnectedProvinceGroups(provinces) {
+        if (!provinces || provinces.length === 0) return [];
+        
+        const visited = new Set();
+        const groups = [];
+        
+        // Helper function to check if two provinces share a border
+        const areNeighbors = (a, b) => {
+            // Simple check: if the distance between any pixel in a and any pixel in b is 1
+            for (const [ax, ay] of a.pixels) {
+                for (const [bx, by] of b.pixels) {
+                    const dx = Math.abs(ax - bx);
+                    const dy = Math.abs(ay - by);
+                    if ((dx === 1 && dy === 0) || (dx === 0 && dy === 1)) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
+        
+        // For each province, find its connected group
+        for (const province of provinces) {
+            if (visited.has(province.id)) continue;
+            
+            // Start a new group with this province
+            const group = [province];
+            visited.add(province.id);
+            
+            // Use a queue for breadth-first search
+            const queue = [province];
+            
+            while (queue.length > 0) {
+                const current = queue.shift();
+                
+                // Check all other provinces for neighbors
+                for (const other of provinces) {
+                    if (visited.has(other.id)) continue;
+                    
+                    if (areNeighbors(current, other)) {
+                        group.push(other);
+                        visited.add(other.id);
+                        queue.push(other);
+                    }
+                }
+            }
+            
+            groups.push(group);
+        }
+        
+        return groups;
+    }
+    
+    /**
+     * Draw country labels on the map
+     * @param {CanvasRenderingContext2D} ctx - Canvas context to draw on
+     * @param {number} scale - Scale factor for drawing
+     * @param {number} offsetX - X offset for drawing
+     * @param {number} offsetY - Y offset for drawing
+     */
+    drawCountryLabels(ctx, scale, offsetX, offsetY) {
+        ctx.save();
+        
+        // Calculate opacity based on zoom
+        let opacity = 1.0;
+        if (scale > this.maxZoomForLabels) {
+            // Fade out as we zoom in further
+            opacity = 1.0 - Math.min(1.0, (scale - this.maxZoomForLabels) / this.maxZoomForLabels);
+        }
+        
+        this.countryLabels.forEach(label => {
+            // Position in screen space
+            const screenX = label.x * scale + offsetX;
+            const screenY = label.y * scale + offsetY;
+            
+            // Check if the label is visible on screen
+            if (
+                screenX + label.width * scale / 2 < 0 || 
+                screenX - label.width * scale / 2 > ctx.canvas.width ||
+                screenY + label.height * scale / 2 < 0 ||
+                screenY - label.height * scale / 2 > ctx.canvas.height
+            ) {
+                return; // Skip if not visible
+            }
+            
+            // Set up text rendering
+            ctx.font = `bold ${label.size * scale}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // Add stroke for better visibility
+            ctx.strokeStyle = 'rgba(0, 0, 0, ' + (0.5 * opacity) + ')';
+            ctx.lineWidth = 5 * scale;
+            
+            // Apply rotation if needed
+            ctx.translate(screenX, screenY);
+            ctx.rotate(label.angle);
+            
+            // Draw text stroke
+            ctx.globalAlpha = opacity;
+            ctx.strokeText(label.text, 0, 0);
+            
+            // Draw text fill
+            ctx.fillStyle = label.color;
+            ctx.fillText(label.text, 0, 0);
+            
+            // Reset transformation
+            ctx.rotate(-label.angle);
+            ctx.translate(-screenX, -screenY);
+        });
+        
+        ctx.restore();
     }
 }

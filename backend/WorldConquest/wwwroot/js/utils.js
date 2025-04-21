@@ -19,8 +19,38 @@ function rgbToHex(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
 
+// Parse RGB string to color object
+function parseRgb(rgbStr) {
+    // Parse from format rgb(r,g,b)
+    const matches = rgbStr.match(/rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/i);
+    if (matches) {
+        const r = parseInt(matches[1], 10);
+        const g = parseInt(matches[2], 10);
+        const b = parseInt(matches[3], 10);
+        return { r, g, b, hex: rgbToHex(r, g, b) };
+    }
+    return null;
+}
+
 // Get owner color based on owner name
-function getOwnerColor(owner) {
+function getOwnerColor(owner, countries) {
+    // If owner starts with country ID prefix and countries array is provided, look up color in countries
+    if ((owner.startsWith('kingdom_') || owner.startsWith('empire_') || 
+        owner.startsWith('duchy_') || owner.startsWith('confederation_') || 
+        owner.startsWith('purple_')) && countries) {
+        
+        // Find the country in provided countries array
+        const country = countries.find(c => c.id === owner);
+        if (country && country.color) {
+            // Parse the RGB color and return it
+            const parsedColor = parseRgb(country.color);
+            if (parsedColor) {
+                return parsedColor;
+            }
+        }
+    }
+    
+    // Default colors for basic owners
     switch (owner) {
         case 'red':
             return { r: 231, g: 76, b: 60, hex: '#e74c3c' };
@@ -43,20 +73,23 @@ function colorsEqual(color1, color2, tolerance = 0) {
 }
 
 // Format province details for display
-function formatProvinceDetails(province) {
+function formatProvinceDetails(province, countries) {
     if (!province) {
         return '<p>Click on a province to see its details</p>';
     }
     
-    const ownerClass = `owner-${province.owner}`;
     const typeText = province.isWater ? 'Water' : 'Land';
     const typeClass = province.isWater ? 'province-water' : 'province-land';
+    
+    // Get the owner color in hex format for styling
+    const ownerColor = getOwnerColor(province.owner, countries);
+    const ownerColorStyle = `color: ${ownerColor.hex}; font-weight: bold;`;
     
     return `
         <div>
             <p><strong>ID:</strong> ${province.id}</p>
             <p><strong>Type:</strong> <span class="${typeClass}">${typeText}</span></p>
-            <p><strong>Owner:</strong> <span class="${ownerClass}">${province.owner.toUpperCase()}</span></p>
+            <p><strong>Owner:</strong> <span style="${ownerColorStyle}">${province.owner.toUpperCase()}</span></p>
             <p><strong>Original Color:</strong> rgb(${province.originalColor.r}, ${province.originalColor.g}, ${province.originalColor.b})</p>
         </div>
     `;
