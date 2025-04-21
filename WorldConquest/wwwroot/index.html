@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldConquest</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        header {
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .main-section {
+            display: flex;
+            flex: 1;
+        }
+        
+        .side-menu {
+            width: 200px;
+            background-color: #444;
+            padding: 10px;
+        }
+        
+        .canvas-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        canvas {
+            border: 1px solid #555;
+        }
+        
+        .chat-section {
+            height: 150px;
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            overflow-y: auto;
+            background-color: #444;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        
+        .chat-input {
+            display: flex;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 5px;
+            margin-right: 5px;
+        }
+        
+        button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>Date: <span id="game-date">Jan 1, 1500</span></div>
+        <div>Player: <span id="current-player">Player 1</span></div>
+        <div>Money: <span id="player-money">1000</span></div>
+        <button id="end-turn-btn">End Turn</button>
+    </header>
+    
+    <div class="main-section">
+        <div class="side-menu" id="left-menu">
+            <h3>Country Info</h3>
+            <div id="country-info">
+                Select a country to view info
+            </div>
+        </div>
+        
+        <div class="canvas-container">
+            <!-- Canvas will be inserted here by JavaScript -->
+        </div>
+        
+        <div class="side-menu" id="right-menu">
+            <h3>Province Info</h3>
+            <div id="province-info">
+                Select a province to view info
+            </div>
+        </div>
+    </div>
+    
+    <div class="chat-section">
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+    
+    <script src="js/bundle.js"></script>
+</body>
+</html>
