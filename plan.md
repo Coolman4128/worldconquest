@@ -99,44 +99,7 @@ These are not really "game" features but are features that will need implemented
 
 
 
-# Implementation
 
-I will now outline the different tasks that need completed to make this game possible
-
-### Task 1 
- - Setup the project
- - Make the ASP.NET project and set up static file hosting
- - Make the front end files inside the ASP.NET wwwroot folder and configure the typescript compiling
-
-### Task 2
- - Start making the model classes for both the front and backend, they should be mirrored across to ensure compatibilty.
- - Configure SignalR and some test API endpoints.
- - Get the front end and backend talking, make sure things like CORS and all of that is working properly
-
-### Task 3 
- - Start writing the backend API calls.
- - Create logic for creating lobbys, joining lobbys, giving the game state, downloading the game state, leaving active games and joining active games.
- - Add calls to end a players turn, and logic to advance the date when the turns over.
- - Add a lobby joining menu to the frontend
-
-### Task 4
-- Create the frontend code to display the map based on the game state. 
-- Implement HTML canvas logic including zoom and pan, making sure it remains very responsive and performant
-- Create the structure of the rest of the frontend including the main header with information at top, placeholders for the two side menus and the game chat below.
-- Implement the functioning game chat (only players in the same lobby see chats from that lobby)
-
-### Task 5
- - Create the backend functions for all major actions. Anything that a player can do should be a call here
-
-### Task 6 
-- Go through and make the HTML canvas fully featured. Display troops, clicking things opens the proper menus. Etc. 
-- Make menus for things such as provinces, diplomacy, research, etc and make buttons in these menus that call the backend calls
-
-### Task 7
- - Polish the frontend, adding visual indicators that your actions are doing something, make the CSS and canvas elements look nice. Maybe add animations and places where sound effects will play (give me a list so I can add the sound effect files that I want)
-
-### Task 8
-- Go through anything in the game information and definition that didn't get implemented yet and implement it.
 
 
 
