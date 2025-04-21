@@ -36,6 +36,25 @@
     - tsconfig.json - TypeScript configuration
     - webpack.config.js - Webpack configuration
 
+### SignalR Messaging System Implementation (2025-04-21)
+
+#### Client-Side (TypeScript)
+- Implemented `SendMessage(messageName, data)` function to send messages from client to server
+- Added message handling system with a switch statement to process different message types
+- Created handler functions for various game actions (attack, build, move, upgrade, etc.)
+- Made the SignalR connection globally accessible for use throughout the application
+- Added automatic reconnection capability to the SignalR connection
+
+#### Server-Side (C#)
+- Implemented three message sending methods:
+  - `SendMessageAll(messageName, data)` - Send to all connected clients
+  - `SendMessageToGame(messageName, data, gameId)` - Send to all clients in a specific game
+  - `SendMessageToClient(messageName, data, clientId)` - Send to a specific client
+- Added `ReceiveClientMessage(messageName, data)` to receive messages from clients
+- Implemented message handling system with a switch statement to process different message types
+- Created handler methods for various game actions (attack, build, move, upgrade, end_turn)
+- Added logging for better debugging and monitoring
+
 ### Next Steps
 - Implement the game map rendering
 - Add province data models and logic

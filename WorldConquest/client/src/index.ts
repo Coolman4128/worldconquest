@@ -20,6 +20,9 @@ interface Player {
     money: number;
 }
 
+// Global SignalR connection
+let connection: signalR.HubConnection;
+
 // Initialize the game
 function initGame() {
     document.body.appendChild(gameCanvas);
@@ -43,28 +46,54 @@ function initGame() {
 
 // Connect to SignalR hub
 function connectToHub() {
-    const connection = new signalR.HubConnectionBuilder()
+    connection = new signalR.HubConnectionBuilder()
         .withUrl("/gamehub")
         .configureLogging(signalR.LogLevel.Information)
+        .withAutomaticReconnect()
         .build();
     
-    connection.on("ReceiveMessage", (user: string, message: string) => {
-        console.log(`${user}: ${message}`);
-    });
-    
-    connection.on("PlayerJoined", (connectionId: string) => {
-        console.log(`Player joined: ${connectionId}`);
-    });
-    
-    connection.on("PlayerLeft", (connectionId: string) => {
-        console.log(`Player left: ${connectionId}`);
+    // Handle game messages with data
+    connection.on("GameMessage", (messageName: string, data: any) => {
+        handleGameMessage(messageName, data);
     });
     
     connection.start().catch(err => console.error(err));
 }
 
+/**
+ * Send a message to the server with optional data
+ * @param messageName The name of the message (action to perform)
+ * @param data Optional data to send with the message
+ */
+function SendMessage(messageName: string, data: any = null) {
+    if (connection && connection.state === signalR.HubConnectionState.Connected) {
+        connection.invoke("ReceiveClientMessage", messageName, data)
+            .catch(err => console.error(`Error sending message "${messageName}":`, err));
+    } else {
+        console.error("Cannot send message: connection not established");
+    }
+}
+
+/**
+ * Handle incoming game messages from the server
+ * @param messageName The name of the message (action to perform)
+ * @param data Optional data associated with the message
+ */
+function handleGameMessage(messageName: string, data: any) {
+    console.log(`Received message: ${messageName}`, data);
+    
+    // Process different message types
+    switch (messageName) {
+        // HANDLE ACTIONS HERE
+
+
+        default:
+            console.warn(`Unknown message type: ${messageName}`);
+    }
+}
+
 // Start the game when the DOM is loaded
 document.addEventListener('DOMContentLoaded', initGame);
 
-// Export for testing
-export { initGame, connectToHub };
+// Export for testing and for use in other modules
+export { initGame, connectToHub, SendMessage };

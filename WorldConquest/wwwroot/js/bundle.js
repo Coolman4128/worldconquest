@@ -3889,17 +3889,21 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   SendMessage: () => (/* binding */ SendMessage),
 /* harmony export */   connectToHub: () => (/* binding */ connectToHub),
 /* harmony export */   initGame: () => (/* binding */ initGame)
 /* harmony export */ });
 /* harmony import */ var _microsoft_signalr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @microsoft/signalr */ "./node_modules/@microsoft/signalr/dist/esm/HubConnectionBuilder.js");
 /* harmony import */ var _microsoft_signalr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @microsoft/signalr */ "./node_modules/@microsoft/signalr/dist/esm/ILogger.js");
+/* harmony import */ var _microsoft_signalr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @microsoft/signalr */ "./node_modules/@microsoft/signalr/dist/esm/HubConnection.js");
 
 // DOM Elements
 const gameCanvas = document.createElement('canvas');
 gameCanvas.width = 800;
 gameCanvas.height = 600;
 gameCanvas.id = 'gameCanvas';
+// Global SignalR connection
+let connection;
 // Initialize the game
 function initGame() {
     document.body.appendChild(gameCanvas);
@@ -3919,24 +3923,48 @@ function initGame() {
 }
 // Connect to SignalR hub
 function connectToHub() {
-    const connection = new _microsoft_signalr__WEBPACK_IMPORTED_MODULE_0__.HubConnectionBuilder()
+    connection = new _microsoft_signalr__WEBPACK_IMPORTED_MODULE_0__.HubConnectionBuilder()
         .withUrl("/gamehub")
         .configureLogging(_microsoft_signalr__WEBPACK_IMPORTED_MODULE_1__.LogLevel.Information)
+        .withAutomaticReconnect()
         .build();
-    connection.on("ReceiveMessage", (user, message) => {
-        console.log(`${user}: ${message}`);
-    });
-    connection.on("PlayerJoined", (connectionId) => {
-        console.log(`Player joined: ${connectionId}`);
-    });
-    connection.on("PlayerLeft", (connectionId) => {
-        console.log(`Player left: ${connectionId}`);
+    // Handle game messages with data
+    connection.on("GameMessage", (messageName, data) => {
+        handleGameMessage(messageName, data);
     });
     connection.start().catch(err => console.error(err));
 }
+/**
+ * Send a message to the server with optional data
+ * @param messageName The name of the message (action to perform)
+ * @param data Optional data to send with the message
+ */
+function SendMessage(messageName, data = null) {
+    if (connection && connection.state === _microsoft_signalr__WEBPACK_IMPORTED_MODULE_2__.HubConnectionState.Connected) {
+        connection.invoke("ReceiveClientMessage", messageName, data)
+            .catch(err => console.error(`Error sending message "${messageName}":`, err));
+    }
+    else {
+        console.error("Cannot send message: connection not established");
+    }
+}
+/**
+ * Handle incoming game messages from the server
+ * @param messageName The name of the message (action to perform)
+ * @param data Optional data associated with the message
+ */
+function handleGameMessage(messageName, data) {
+    console.log(`Received message: ${messageName}`, data);
+    // Process different message types
+    switch (messageName) {
+        // HANDLE ACTIONS HERE
+        default:
+            console.warn(`Unknown message type: ${messageName}`);
+    }
+}
 // Start the game when the DOM is loaded
 document.addEventListener('DOMContentLoaded', initGame);
-// Export for testing
+// Export for testing and for use in other modules
 
 
 })();
