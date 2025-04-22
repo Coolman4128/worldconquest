@@ -7,11 +7,7 @@ gameCanvas.height = 600;
 gameCanvas.id = 'gameCanvas';
 
 // Game state
-interface GameState {
-    currentPlayer: string;
-    date: string;
-    players: Player[];
-}
+import { GameState } from "./models/GameState";
 
 interface Player {
     id: string;
@@ -26,23 +22,41 @@ let connection: signalR.HubConnection;
 // Initialize the game
 function initGame() {
     document.body.appendChild(gameCanvas);
-    
+
+    // Load the bitmap image
+    bitmapImage = new window.Image();
+    bitmapImage.src = "/bitmap.png";
+    bitmapImage.onload = () => {
+        bitmapLoaded = true;
+        // If gamestate is already loaded, render
+        if (currentGameState) {
+            renderGameState(currentGameState);
+        }
+    };
+    bitmapImage.onerror = () => {
+        console.error("Failed to load bitmap image.");
+    };
+
     const ctx = gameCanvas.getContext('2d');
     if (ctx) {
         // Draw a simple background
         ctx.fillStyle = '#333';
         ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
-        
+
         // Draw some text
         ctx.fillStyle = '#fff';
         ctx.font = '24px Arial';
         ctx.fillText('WorldConquest Game', 300, 50);
         ctx.fillText('Game is initializing...', 300, 100);
     }
-    
+
     // Connect to SignalR hub
     connectToHub();
 }
+
+let currentGameState: GameState | null = null;
+let bitmapImage: HTMLImageElement | null = null;
+let bitmapLoaded: boolean = false;
 
 // Connect to SignalR hub
 function connectToHub() {
@@ -57,7 +71,25 @@ function connectToHub() {
         handleGameMessage(messageName, data);
     });
     
-    connection.start().catch(err => console.error(err));
+    // Listen for the default gamestate from the backend
+    connection.on("ReceiveGameState", (gameState: GameState) => {
+        if (gameState) {
+            currentGameState = gameState;
+            if (bitmapLoaded) {
+                renderGameState(gameState);
+            }
+            // If bitmap not loaded yet, render will be called from bitmap onload
+        } else {
+            console.error("Failed to receive default gamestate from backend.");
+        }
+    });
+
+    connection.start()
+        .then(() => {
+            // Request the default gamestate after connecting
+            connection.invoke("ReceiveClientMessage", "RequestDefaultGameState", null);
+        })
+        .catch(err => console.error(err));
 }
 
 /**
@@ -90,6 +122,21 @@ function handleGameMessage(messageName: string, data: any) {
         default:
             console.warn(`Unknown message type: ${messageName}`);
     }
+}
+
+/**
+* Render the game state on the canvas.
+* This is a placeholder; actual rendering logic will be implemented next.
+*/
+function renderGameState(gameState: GameState) {
+   const ctx = gameCanvas.getContext('2d');
+   if (!ctx) return;
+   ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+   ctx.fillStyle = '#222';
+   ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+   ctx.fillStyle = '#fff';
+   ctx.font = '20px Arial';
+   ctx.fillText('GameState loaded!', 320, 100);
 }
 
 // Start the game when the DOM is loaded

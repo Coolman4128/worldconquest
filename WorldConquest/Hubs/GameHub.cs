@@ -93,8 +93,35 @@ public class GameHub : Hub
         switch (messageName)
         {
             // HANDLE CLIENT MESSAGES HERE
+            //Make classes for them and every class should have a method call check message which will check all the different event types
+            //That class will handle
 
+                case "RequestDefaultGameState":
+                    try
+                    {
+                        var filePath = Path.Combine("..", "assets", "default_gamestate.json");
+                        if (!File.Exists(filePath))
+                        {
+                            _logger.LogError($"Default gamestate file not found at {filePath}");
+                            await Clients.Caller.SendAsync("ReceiveGameState", null);
+                            break;
+                        }
 
+                        var json = await File.ReadAllTextAsync(filePath);
+                        var gameState = JsonSerializer.Deserialize<Models.GameState>(json, new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        });
+
+                        await Clients.Caller.SendAsync("ReceiveGameState", gameState);
+                        _logger.LogInformation("Sent default gamestate to client.");
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, "Failed to send default gamestate.");
+                        await Clients.Caller.SendAsync("ReceiveGameState", null);
+                    }
+                    break;
 
             default:
                 _logger.LogWarning($"Unknown message type: {messageName}");
