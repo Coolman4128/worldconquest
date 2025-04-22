@@ -70,22 +70,6 @@ In this section I am going to give a fairly comprehensive overview of all of the
 ## Technical Stack
 This game is web based, and such isn't going to be developed using a game engine. It is also mostly information based so it doesn't need much of that
 
-## Frontend
-The frontend for this game is based on a normal website. I want a HTML5 canvas where the map will be rendered and most interactivity happens, but then also side menus for things like province management, troop hiring, game chat, diplomacy, etc. Most of the logic will be javascript, but I would rather use typescript as it is much more type friendly and easier to build off of so the javascript used will be compiled from typescript.
-
-## Backend
-The backend for this game is going to be written in C# using ASP.NET. It will manage lobbies, players connecting and disconnecting, api calls, game state, etc. The players will make calls to the backend based on what their local gamestate is, and then the backend will process those calls and then rely the outcome to all the players.
-
-## Technical Game Flow Example
-1. User connects to website, backend serves frontend files
-2. The user joins or creates a lobby, that lobby is now publically accessable to other players looking to join
-3. They get the current gamestate from the backend and it loads into their frontend
-4. Pick their country, get set up, etc now it is there turn
-5. They choose to build a building, they select the button to do so on the front end and a SignalR call is made to the backend
-6. The backend verifies that they are in fact allowed to build that building (checking how much money they have, do they own the province, etc) and either denies the request or accepts it
-7. Upon accepting the server transmits a SignalR call to all clients alerting them of the action and updating their game states.
-8.  The front end does what it needs to do to update things (reload province screen, play animations, etc)
-
 ## Technical Features
 These are not really "game" features but are features that will need implemented
  

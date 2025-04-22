@@ -45,7 +45,8 @@ def main():
                 "Money": 0,
                 "PlayerId": None,
                 "Stability": 100,
-                "Population": 0
+                "Population": 0,
+                "Color": "rgb(255, 0, 0)"
             }
         ],
         "Provinces": provinces,
