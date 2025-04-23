@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import { io, Socket } from 'socket.io-client';
-import { GameState, Province, GameContextType, MapPosition } from '../types/game';
+import { GameState, GameContextType, MapPosition } from '../types/game';
 
 const SOCKET_URL = 'http://localhost:3000';
 
@@ -8,6 +8,9 @@ const defaultMapPosition: MapPosition = {
   x: 0,
   y: 0,
   scale: 1,
+  targetX: 0,
+  targetY: 0,
+  targetScale: 1,
 };
 
 const GameContext = createContext<GameContextType | null>(null);
@@ -36,7 +39,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [socket, setSocket] = useState<Socket<ServerToClientEvents, ClientToServerEvents> | null>(null);
   const [gameState, setGameState] = useState<GameState | null>(null);
   const [playerId, setPlayerId] = useState<string | null>(null);
-  const [selectedProvince, setSelectedProvince] = useState<Province | null>(null);
+  // Removed selectedProvince state; now handled by ProvinceSelectionContext
   const [mapPosition, setMapPosition] = useState<MapPosition>(defaultMapPosition);
 
   const connect = useCallback(() => {
@@ -88,9 +91,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, [socket]);
 
-  const selectProvince = useCallback((province: Province) => {
-    setSelectedProvince(province);
-  }, []);
+  // Removed selectProvince; now handled by ProvinceSelectionContext
 
   const updateMapPosition = useCallback((position: Partial<MapPosition>) => {
     setMapPosition(prev => ({
@@ -102,12 +103,12 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const value = {
     gameState,
     playerId,
-    selectedProvince,
+    // selectedProvince removed from context value
     mapPosition,
     connect,
     createGame,
     joinGame,
-    selectProvince,
+    // selectProvince removed from context value
     updateMapPosition,
   };
 

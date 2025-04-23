@@ -56,16 +56,17 @@ export interface MapPosition {
   x: number;
   y: number;
   scale: number;
+  targetX: number;
+  targetY: number;
+  targetScale: number;
 }
 
 export interface GameContextType {
   gameState: GameState | null;
   playerId: string | null;
-  selectedProvince: Province | null;
   mapPosition: MapPosition;
   connect: () => void;
   createGame: () => void;
   joinGame: (gameId: string) => void;
-  selectProvince: (province: Province) => void;
   updateMapPosition: (position: Partial<MapPosition>) => void;
 }

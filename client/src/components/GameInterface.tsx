@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useGame } from '../contexts/GameContext';
+import { useProvinceSelection } from '../contexts/ProvinceSelectionContext';
 import { GameMap } from './GameMap';
 import styled from '@emotion/styled';
 
@@ -104,7 +105,8 @@ const ProvinceInfo = styled.div`
 `;
 
 export const GameInterface: React.FC = () => {
-  const { gameState, playerId, connect, createGame, selectedProvince } = useGame();
+  const { gameState, playerId, connect, createGame } = useGame();
+  const { selectedProvince } = useProvinceSelection();
 
   useEffect(() => {
     connect();
@@ -147,6 +149,7 @@ export const GameInterface: React.FC = () => {
           {selectedProvince && (
             <ProvinceInfo> {/* Use the styled component */}
               <h4>Selected Province</h4>
+              <p><strong>ID:</strong> {selectedProvince.Id}</p>
               <p>Owner: {
                 selectedProvince.OwnerId
                   ? gameState?.Countries.find(c => c.Id === selectedProvince.OwnerId)?.Name ?? 'Unknown'

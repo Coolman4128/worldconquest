@@ -1,5 +1,6 @@
 import { Global, css } from '@emotion/react';
 import { GameProvider } from './contexts/GameContext';
+import { ProvinceSelectionProvider } from './contexts/ProvinceSelectionContext';
 import { GameInterface } from './components/GameInterface';
 
 const globalStyles = css`
@@ -46,8 +47,10 @@ const globalStyles = css`
 function App() {
   return (
     <GameProvider>
-      <Global styles={globalStyles} />
-      <GameInterface />
+      <ProvinceSelectionProvider>
+        <Global styles={globalStyles} />
+        <GameInterface />
+      </ProvinceSelectionProvider>
     </GameProvider>
   );
 }

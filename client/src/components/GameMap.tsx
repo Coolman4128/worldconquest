@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useGame } from '../contexts/GameContext';
-// Removed unused Province import
+import { useProvinceSelection } from '../contexts/ProvinceSelectionContext';
 import { Province, Country } from '../types/game';
 
 // Define fallback and border colors
@@ -10,7 +10,7 @@ const FALLBACK_COLORS = {
   Wasteland: 'rgba(128, 128, 128, 0.7)', // Gray for wasteland
 };
 const BORDER_COLORS = {
-  Internal: 'rgba(172, 172, 172, 0.6)', // Light gray
+  Internal: 'rgba(172, 172, 172, 0.2)', // Light gray
   External: 'rgba(0, 0, 0, 1)',      // Black
   Selected: 'rgba(184, 134, 11, 1)', // Darker Gold
 };
@@ -52,14 +52,68 @@ export const GameMap: React.FC = () => {
   const [isDragging, setIsDragging] = useState(false);
   const [lastMousePos, setLastMousePos] = useState({ x: 0, y: 0 });
   const animationFrameId = useRef<number | null>(null); // To manage animation frames
+  const zoomAnimationFrameId = useRef<number | null>(null); // To manage zoom animation frames
 
   const {
     gameState,
     mapPosition,
     updateMapPosition,
-    selectProvince,
-    selectedProvince, // Add selectedProvince from context
   } = useGame();
+
+  const {
+    selectProvince,
+    selectedProvince,
+  } = useProvinceSelection();
+
+  // Attach wheel event listener with passive: false to allow preventDefault
+  React.useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    // Create a new wheel listener inside the effect to ensure it captures the latest mapPosition
+    const wheelListener = (e: WheelEvent) => {
+      e.preventDefault();
+      
+      // Normalize deltaY based on the deltaMode
+      let normalizedDelta = e.deltaY;
+      
+      // Apply different scaling factors based on the device type
+      const zoomSensitivity = 0.025;
+      
+      // Apply non-linear scaling for better control
+      const direction = normalizedDelta > 0 ? 1 : -1;
+      const magnitude = Math.log1p(Math.abs(normalizedDelta)) * direction;
+      
+      const scaleFactor = Math.exp(-magnitude * zoomSensitivity);
+      const newTargetScale = mapPosition.targetScale * scaleFactor;
+
+      // Limit zoom range
+      if (newTargetScale < 0.05 || newTargetScale > 20) return;
+
+      // Calculate zoom center
+      const rect = canvasRef.current?.getBoundingClientRect();
+      if (!rect) return;
+
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+
+      // Calculate target position to zoom towards mouse
+      const newTargetX = mapPosition.targetX - (mouseX - mapPosition.targetX) * (scaleFactor - 1);
+      const newTargetY = mapPosition.targetY - (mouseY - mapPosition.targetY) * (scaleFactor - 1);
+
+      updateMapPosition({
+        targetX: newTargetX,
+        targetY: newTargetY,
+        targetScale: newTargetScale
+      });
+    };
+    
+    canvas.addEventListener('wheel', wheelListener, { passive: false });
+
+    return () => {
+      canvas.removeEventListener('wheel', wheelListener);
+    };
+  }, [canvasRef, mapPosition, updateMapPosition]); // Add mapPosition and updateMapPosition to dependencies
 
   // Load the bitmap image
   useEffect(() => {
@@ -302,7 +356,7 @@ export const GameMap: React.FC = () => {
         // The effect below handles closing the *last remaining* map on unmount.
     };
 
-  }, [bitmap, gameState, provinceMap, countryMap, selectedProvince]); // Dependencies for pre-rendering
+  }, [bitmap, gameState, provinceMap, countryMap]); // Dependencies for pre-rendering
 
   // Effect specifically to close the preRenderedMap instance when it's replaced or on unmount
   useEffect(() => {
@@ -519,8 +573,79 @@ export const GameMap: React.FC = () => {
 
     setCountryProvinceGroups(calculatedGroups); // Set the state for groups
     console.log(`Calculated ${calculatedGroups.length} province groups.`);
+}, [bitmap, gameState, provinceMap, countryMap]); // Dependencies for group and border calculation
 
-  }, [bitmap, gameState, provinceMap, countryMap]); // Dependencies for group and border calculation
+// Effect for smooth zoom and position animation
+useEffect(() => {
+  // Skip animation if everything is already at target values
+  if (
+    mapPosition.scale === mapPosition.targetScale &&
+    mapPosition.x === mapPosition.targetX &&
+    mapPosition.y === mapPosition.targetY
+  ) {
+    return;
+  }
+
+  const animateMapPosition = () => {
+    // Animation speed factor (adjust for faster/slower animation)
+    const smoothingFactor = 0.15;
+    
+    // Calculate the differences between current and target values
+    const scaleDiff = mapPosition.targetScale - mapPosition.scale;
+    const xDiff = mapPosition.targetX - mapPosition.x;
+    const yDiff = mapPosition.targetY - mapPosition.y;
+    
+    // Check if we're close enough to all targets to stop animating
+    const isCloseEnough =
+      Math.abs(scaleDiff) < 0.001 &&
+      Math.abs(xDiff) < 0.5 &&
+      Math.abs(yDiff) < 0.5;
+    
+    if (isCloseEnough) {
+      // Set exact target values and stop animation
+      updateMapPosition({
+        scale: mapPosition.targetScale,
+        x: mapPosition.targetX,
+        y: mapPosition.targetY
+      });
+      zoomAnimationFrameId.current = null;
+      return;
+    }
+    
+    // Calculate the new values by moving a percentage of the way to the targets
+    const newScale = mapPosition.scale + scaleDiff * smoothingFactor;
+    const newX = mapPosition.x + xDiff * smoothingFactor;
+    const newY = mapPosition.y + yDiff * smoothingFactor;
+    
+    // Update all values
+    updateMapPosition({
+      scale: newScale,
+      x: newX,
+      y: newY
+    });
+    
+    // Continue the animation
+    zoomAnimationFrameId.current = requestAnimationFrame(animateMapPosition);
+  };
+  
+  // Start the animation if not already running
+  if (zoomAnimationFrameId.current === null) {
+    zoomAnimationFrameId.current = requestAnimationFrame(animateMapPosition);
+  }
+  
+  // Cleanup function
+  return () => {
+    if (zoomAnimationFrameId.current !== null) {
+      cancelAnimationFrame(zoomAnimationFrameId.current);
+      zoomAnimationFrameId.current = null;
+    }
+  };
+}, [
+  mapPosition.scale, mapPosition.targetScale,
+  mapPosition.x, mapPosition.targetX,
+  mapPosition.y, mapPosition.targetY,
+  updateMapPosition
+]);
 
 
 
@@ -551,15 +676,17 @@ export const GameMap: React.FC = () => {
         // const borderAlpha = Math.max(0, Math.min(1, (scale - borderMinScale) / (borderMaxScale - borderMinScale))); // Old calculation
 
         // Country names: Fade out (more transparent) as scale increases (zoom in)
-        // Let's say fully visible at scale 1.0, fully transparent at scale 5.0
-        const nameMinScale = 1.0;
-        const nameMaxScale = 5.0;
+        // Make names visible at lower zoom levels and become more visible quicker
+        const nameMinScale = 0.3; // Lower minimum scale (was 1.0) - names start appearing at more zoomed out level
+        const nameMaxScale = 3.0; // Lower maximum scale (was 5.0) - names become fully visible sooner
         // Inverse relationship: higher scale -> lower alpha (Names fade on zoom IN)
-        const nameAlpha = Math.max(0, Math.min(1, 1 - (scale - nameMinScale) / (nameMaxScale - nameMinScale)));
+        // Using a non-linear curve to make names become visible more quickly
+        const nameAlpha = Math.max(0, Math.min(1, Math.pow(1 - (scale - nameMinScale) / (nameMaxScale - nameMinScale), 0.7)));
 
         // Internal borders: Fade IN (more opaque) as scale increases (zoom in), matching name fade-out range
-        // Transparent when names are fully visible (scale <= 1.0), Opaque when names are fully transparent (scale >= 5.0)
-        const borderAlpha = Math.max(0, Math.min(1, (scale - nameMinScale) / (nameMaxScale - nameMinScale)));
+        // Transparent when zoomed out, but never exceeding 0.4 alpha even at maximum zoom
+        const maxBorderAlpha = 0.4; // Cap the maximum opacity of internal borders
+        const borderAlpha = Math.max(0, Math.min(maxBorderAlpha, (scale - nameMinScale) / (nameMaxScale - nameMinScale) * maxBorderAlpha));
 
 
         // --- Start Drawing ---
@@ -623,8 +750,8 @@ export const GameMap: React.FC = () => {
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             // Basic text color - consider contrast with country colors later
-            ctx.fillStyle = `rgba(255, 255, 255, ${nameAlpha * 0.8})`; // White with alpha, slightly less than max
-            ctx.strokeStyle = `rgba(0, 0, 0, ${nameAlpha * 0.9})`; // Black outline
+            ctx.fillStyle = `rgba(255, 255, 255, ${nameAlpha * 0.9})`; // White with alpha, increased from 0.8
+            ctx.strokeStyle = `rgba(0, 0, 0, ${nameAlpha})`; // Black outline with full nameAlpha
             ctx.lineWidth = 2 * invScale; // Thin outline
 
             for (const group of countryProvinceGroups) {
@@ -681,6 +808,12 @@ export const GameMap: React.FC = () => {
             cancelAnimationFrame(animationFrameId.current);
             animationFrameId.current = null;
         }
+        
+        // Also cancel any zoom animation frame
+        if (zoomAnimationFrameId.current !== null) {
+            cancelAnimationFrame(zoomAnimationFrameId.current);
+            zoomAnimationFrameId.current = null;
+        }
     };
   }, [preRenderedMap, mapPosition, countryProvinceGroups, countryMap, selectedProvince, bitmap, provinceMap, provinceBorders]); // Added provinceBorders dependency
 
@@ -697,8 +830,8 @@ export const GameMap: React.FC = () => {
     const dy = e.clientY - lastMousePos.y;
 
     updateMapPosition({
-      x: mapPosition.x + dx,
-      y: mapPosition.y + dy
+      targetX: mapPosition.targetX + dx,
+      targetY: mapPosition.targetY + dy
     });
 
     setLastMousePos({ x: e.clientX, y: e.clientY });
@@ -708,31 +841,9 @@ export const GameMap: React.FC = () => {
     setIsDragging(false);
   };
 
-  const handleWheel = (e: React.WheelEvent) => {
-    e.preventDefault();
-    const scaleFactor = e.deltaY > 0 ? 0.9 : 1.1;
-    const newScale = mapPosition.scale * scaleFactor;
+  // handleWheel function removed as it's now defined inside the useEffect
 
-    // Limit zoom range
-    if (newScale < 0.1 || newScale > 10) return;
-
-    // Calculate zoom center
-    const rect = canvasRef.current?.getBoundingClientRect();
-    if (!rect) return;
-
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-
-    // Update position to zoom towards mouse
-    const newX = mouseX - (mouseX - mapPosition.x) * scaleFactor;
-    const newY = mouseY - (mouseY - mapPosition.y) * scaleFactor;
-
-    updateMapPosition({
-      x: newX,
-      y: newY,
-      scale: newScale
-    });
-  };
+  // Remove the duplicate wheel event listener - we're now handling it in the effect above
 
   // Handle province selection
   const handleClick = (e: React.MouseEvent) => {
@@ -778,7 +889,7 @@ export const GameMap: React.FC = () => {
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseUp}
       onClick={handleClick}
-      onWheel={handleWheel}
+      // onWheel removed; handled by manual event listener for passive: false
     />
   );
 };

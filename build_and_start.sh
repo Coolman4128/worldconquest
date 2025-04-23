@@ -5,14 +5,14 @@ set -e
 
 echo "Building client..."
 cd client
-call npm install
-call npm run build
+npm install
+npm run build
 cd ..
 
 echo "Building and starting server..."
 cd server
-call npm install
-call npm run build
-call npm start
+npm install
+npm run build
+npm start
 
 echo "Server started."
