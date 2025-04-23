@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useGame } from '../contexts/GameContext';
 import { useProvinceSelection } from '../contexts/ProvinceSelectionContext';
+import { useLobby } from '../contexts/LobbyContext';
 import { GameMap } from './GameMap';
 import styled from '@emotion/styled';
 
@@ -104,16 +105,18 @@ const ProvinceInfo = styled.div`
   }
 `;
 
-export const GameInterface: React.FC = () => {
-  const { gameState, playerId, connect, createGame } = useGame();
+interface GameInterfaceProps {
+  onLeaveGame: () => void;
+}
+
+export const GameInterface: React.FC<GameInterfaceProps> = ({ onLeaveGame }) => {
+  const { gameState, playerId, leaveGame } = useGame();
   const { selectedProvince } = useProvinceSelection();
+  const { currentLobby } = useLobby();
 
-  useEffect(() => {
-    connect();
-  }, [connect]);
-
-  const handleCreateGame = () => {
-    createGame();
+  const handleLeaveGame = () => {
+    leaveGame();
+    onLeaveGame();
   };
 
   const formatDate = (dateString: string) => {
@@ -133,14 +136,18 @@ export const GameInterface: React.FC = () => {
               <span style={{ margin: '0 20px' }}>
                 Turn: {gameState.CurrentTurnPlayerId === playerId ? 'Your Turn' : 'Waiting'}
               </span>
+              <span>Lobby: {currentLobby?.name || 'Unknown'}</span>
             </>
           ) : (
-            <Button onClick={handleCreateGame}>Create New Game</Button>
+            <span>Loading game...</span>
           )}
         </div>
-        {gameState?.CurrentTurnPlayerId === playerId && (
-          <Button>End Turn</Button>
-        )}
+        <div>
+          {gameState?.CurrentTurnPlayerId === playerId && (
+            <Button style={{ marginRight: '10px' }}>End Turn</Button>
+          )}
+          <Button onClick={handleLeaveGame}>Leave Game</Button>
+        </div>
       </Header>
 
       <MainContent>

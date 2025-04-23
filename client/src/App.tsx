@@ -1,7 +1,10 @@
 import { Global, css } from '@emotion/react';
+import { useState } from 'react';
 import { GameProvider } from './contexts/GameContext';
+import { LobbyProvider } from './contexts/LobbyContext';
 import { ProvinceSelectionProvider } from './contexts/ProvinceSelectionContext';
 import { GameInterface } from './components/GameInterface';
+import { LobbyInterface } from './components/LobbyInterface';
 
 const globalStyles = css`
   * {
@@ -45,13 +48,26 @@ const globalStyles = css`
 `;
 
 function App() {
+  const [inGame, setInGame] = useState(false);
+
+  // Create a function to be passed down to components to update the game state
+  const setGameActive = (active: boolean) => {
+    setInGame(active);
+  };
+
   return (
-    <GameProvider>
-      <ProvinceSelectionProvider>
-        <Global styles={globalStyles} />
-        <GameInterface />
-      </ProvinceSelectionProvider>
-    </GameProvider>
+    <LobbyProvider>
+      <GameProvider>
+        <ProvinceSelectionProvider>
+          <Global styles={globalStyles} />
+          {inGame ? (
+            <GameInterface onLeaveGame={() => setGameActive(false)} />
+          ) : (
+            <LobbyInterface onJoinGame={() => setGameActive(true)} />
+          )}
+        </ProvinceSelectionProvider>
+      </GameProvider>
+    </LobbyProvider>
   );
 }
 

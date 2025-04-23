@@ -5,6 +5,7 @@ import cors from 'cors';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import fs from 'fs/promises';
+import { v4 as uuidv4 } from 'uuid';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -40,33 +41,439 @@ async function loadDefaultGameState() {
   }
 }
 
+// Define types for our server
+interface Lobby {
+  id: string;
+  name: string;
+  players: LobbyPlayer[];
+  maxPlayers: number;
+  inProgress: boolean;
+  createdAt: string;
+  availableCountries: Country[]; // Add countries to the lobby
+}
+
+interface LobbyPlayer {
+  id: string;
+  name: string;
+  selectedCountry: string | null;
+}
+
+interface Country {
+  Id: string;
+  Name: string;
+  Color: string;
+  Money: number;
+  PlayerId: string | null;
+  Stability: number;
+  Population: number;
+}
+
+interface GameState {
+  GameId: string;
+  Players: string[];
+  Countries: Country[];
+  PlayerCountries: Record<string, string>;
+  [key: string]: any; // Allow other properties
+}
+
 // Game state storage (in-memory for now, will move to MongoDB later)
 const games = new Map();
+const lobbies = new Map<string, Lobby>();
+const playerLobbyMap = new Map<string, string>(); // Maps playerId to lobbyId
 
 // Socket.IO event handlers
 io.on('connection', (socket: Socket) => {
   console.log('Client connected:', socket.id);
 
-  socket.on('create_game', () => {
-    const gameId = Math.random().toString(36).substring(7);
-    const gameState = { ...defaultGameState, GameId: gameId };
-    games.set(gameId, gameState);
-    socket.join(gameId);
-    socket.emit('game_created', { gameId, gameState });
+  // Lobby-related events
+  socket.on('get_lobbies', () => {
+    socket.emit('lobbies_updated', Array.from(lobbies.values()));
   });
 
-  socket.on('join_game', (gameId: string) => {
+  socket.on('create_lobby', (name: string, playerName: string) => {
+    const lobbyId = uuidv4();
+    
+    // Get countries from default gamestate
+    const countries = defaultGameState.Countries.map((country: Country) => ({
+      Id: country.Id,
+      Name: country.Name,
+      Color: country.Color,
+      PlayerId: null
+    }));
+    
+    const newLobby: Lobby = {
+      id: lobbyId,
+      name,
+      players: [{
+        id: socket.id,
+        name: playerName,
+        selectedCountry: null
+      }],
+      maxPlayers: 8,
+      inProgress: false,
+      createdAt: new Date().toISOString(),
+      availableCountries: countries
+    };
+    
+    lobbies.set(lobbyId, newLobby);
+    playerLobbyMap.set(socket.id, lobbyId);
+    
+    socket.join(lobbyId);
+    socket.emit('lobby_created', newLobby);
+    io.emit('lobbies_updated', Array.from(lobbies.values()));
+  });
+
+  socket.on('join_lobby', (lobbyId: string, playerName: string) => {
+    const lobby = lobbies.get(lobbyId);
+    
+    if (!lobby) {
+      return socket.emit('error', 'Lobby not found');
+    }
+    
+    if (lobby.inProgress) {
+      return socket.emit('error', 'Game already in progress');
+    }
+    
+    if (lobby.players.length >= lobby.maxPlayers) {
+      return socket.emit('error', 'Lobby is full');
+    }
+    
+    // Store player name in socket data
+    socket.data.playerName = playerName;
+    
+    // Add player to lobby
+    lobby.players.push({
+      id: socket.id,
+      name: playerName,
+      selectedCountry: null
+    });
+    
+    playerLobbyMap.set(socket.id, lobbyId);
+    
+    socket.join(lobbyId);
+    socket.emit('lobby_joined', lobby);
+    
+    // Notify all clients about the updated lobbies
+    io.emit('lobbies_updated', Array.from(lobbies.values()));
+    
+    // Also specifically notify all players in this lobby about the update
+    io.to(lobbyId).emit('lobby_joined', lobby);
+  });
+
+  socket.on('leave_lobby', () => {
+    const lobbyId = playerLobbyMap.get(socket.id);
+    if (lobbyId) {
+      const lobby = lobbies.get(lobbyId);
+      if (lobby) {
+        // Remove player from lobby
+        lobby.players = lobby.players.filter(player => player.id !== socket.id);
+        
+        // If lobby is empty, remove it
+        if (lobby.players.length === 0) {
+          lobbies.delete(lobbyId);
+        }
+        
+        socket.leave(lobbyId);
+        playerLobbyMap.delete(socket.id);
+        
+        io.emit('lobbies_updated', Array.from(lobbies.values()));
+      }
+    }
+  });
+
+  socket.on('start_game', () => {
+    console.log('=== START GAME EVENT RECEIVED ===');
+    console.log('Start game requested by:', socket.id);
+    
+    const lobbyId = playerLobbyMap.get(socket.id);
+    if (!lobbyId) {
+      console.log('Player not in a lobby:', socket.id);
+      return socket.emit('error', 'You are not in a lobby');
+    }
+    
+    const lobby = lobbies.get(lobbyId);
+    if (!lobby) {
+      console.log('Lobby not found:', lobbyId);
+      return socket.emit('error', 'Lobby not found');
+    }
+    
+    console.log('Lobby creator ID:', lobby.players[0].id);
+    console.log('Current player ID:', socket.id);
+    console.log('All players:', lobby.players);
+    
+    // Find the player in the lobby
+    const player = lobby.players.find(p => p.id === socket.id);
+    if (!player) {
+      console.log('Player not found in lobby');
+      return socket.emit('error', 'You are not in this lobby');
+    }
+    
+    console.log('Player found:', player);
+    
+    // Check if this player is the lobby creator (first player)
+    if (lobby.players[0].id !== socket.id) {
+      console.log('Player is not the lobby creator');
+      return socket.emit('error', 'Only the lobby creator can start the game');
+    }
+    
+    // Check if the player has selected a country
+    if (!player.selectedCountry) {
+      console.log('Player has not selected a country');
+      return socket.emit('error', 'You must select a country before starting the game');
+    }
+    
+    // Check if at least the creator has selected a country
+    console.log('Checking if players have selected countries...');
+    lobby.players.forEach((p, index) => {
+      console.log(`Player ${index}: ${p.name}, Country: ${p.selectedCountry}`);
+    });
+    
+    // Only require that the creator (first player) has selected a country
+    if (!player.selectedCountry) {
+      console.log('Creator has not selected a country');
+      return socket.emit('error', 'You must select a country before starting the game');
+    }
+    
+    // Don't filter out players who haven't selected a country
+    console.log('All players in lobby who will join the game:', lobby.players);
+    
+    // Mark lobby as in progress
+    lobby.inProgress = true;
+    
+    // Create the game automatically
+    const gameId = lobbyId; // Use the lobby ID as the game ID for simplicity
+    const gameState = {
+      ...defaultGameState,
+      GameId: gameId,
+      Players: lobby.players.map(p => p.id),
+      PlayerCountries: {} // Will be populated as players select countries
+    };
+    
+    games.set(gameId, gameState);
+    
+    // Add all players to the game automatically
+    lobby.players.forEach(lobbyPlayer => {
+      // Add player to the game room
+      const playerSocket = io.sockets.sockets.get(lobbyPlayer.id);
+      if (playerSocket) {
+        playerSocket.join(gameId);
+        
+        // If player has selected a country, assign it to them
+        if (lobbyPlayer.selectedCountry) {
+          gameState.PlayerCountries[lobbyPlayer.id] = lobbyPlayer.selectedCountry;
+          
+          // Find the country and assign the player ID to it
+          const country = gameState.Countries.find((c: Country) => c.Id === lobbyPlayer.selectedCountry);
+          if (country) {
+            country.PlayerId = lobbyPlayer.id;
+          }
+        }
+      }
+    });
+    
+    // Notify all players in the lobby that the game is starting and send them the game state
+    console.log('Emitting game_started event to all players in lobby:', lobbyId);
+    io.to(lobbyId).emit('game_started', lobbyId);
+    
+    console.log('Emitting game_created event to all players in lobby');
+    io.to(lobbyId).emit('game_created', { gameId, gameState });
+    
+    console.log('Emitting game_joined event to all players in lobby');
+    io.to(lobbyId).emit('game_joined', gameState);
+    
+    console.log('Emitting lobbies_updated event to all clients');
+    io.emit('lobbies_updated', Array.from(lobbies.values()));
+    
+    console.log('Game start process completed');
+  });
+
+  // Game-related events
+  socket.on('create_game', (lobbyId: string) => {
+    const lobby = lobbies.get(lobbyId);
+    if (!lobby) {
+      return socket.emit('error', 'Lobby not found');
+    }
+    
+    const gameId = lobbyId; // Use the lobby ID as the game ID for simplicity
+    const gameState = {
+      ...defaultGameState,
+      GameId: gameId,
+      Players: lobby.players.map(p => p.id),
+      PlayerCountries: {} // Will be populated as players select countries
+    };
+    
+    games.set(gameId, gameState);
+    
+    // Make sure all players are in the game room
+    lobby.players.forEach(player => {
+      const playerSocket = io.sockets.sockets.get(player.id);
+      if (playerSocket) {
+        playerSocket.join(gameId);
+      }
+    });
+    
+    // Broadcast game creation to all players in the lobby
+    console.log('Broadcasting game_created to all players in lobby:', lobbyId);
+    io.to(lobbyId).emit('game_created', { gameId, gameState });
+  });
+
+  socket.on('join_game', (gameId: string, countryId: string) => {
     const gameState = games.get(gameId);
-    if (gameState) {
-      socket.join(gameId);
-      socket.emit('game_joined', gameState);
+    if (!gameState) {
+      return socket.emit('error', 'Game not found');
+    }
+    
+    // Check if the player is joining as an observer (without a country)
+    if (countryId !== "observer") {
+      // Assign the country to the player
+      gameState.PlayerCountries[socket.id] = countryId;
+      
+      // Find the country and assign the player ID to it
+      const country = gameState.Countries.find((c: Country) => c.Id === countryId);
+      if (country) {
+        country.PlayerId = socket.id;
+      }
     } else {
-      socket.emit('error', 'Game not found');
+      console.log(`Player ${socket.id} joining as observer (no country selected)`);
+      // Make sure the player is in the Players array even if they don't have a country
+      if (!gameState.Players.includes(socket.id)) {
+        gameState.Players.push(socket.id);
+      }
+    }
+    
+    socket.join(gameId);
+    socket.emit('game_joined', gameState);
+    
+    // Notify all players in the game about the update
+    io.to(gameId).emit('game_updated', gameState);
+  });
+
+  socket.on('select_country', (countryId: string) => {
+    const lobbyId = playerLobbyMap.get(socket.id);
+    if (!lobbyId) {
+      return socket.emit('error', 'You are not in a lobby');
+    }
+    
+    const lobby = lobbies.get(lobbyId);
+    if (!lobby) {
+      return socket.emit('error', 'Lobby not found');
+    }
+    
+    // Check if country is already selected by another player
+    const isCountryTaken = lobby.players.some(p =>
+      p.id !== socket.id && p.selectedCountry === countryId
+    );
+    
+    if (isCountryTaken) {
+      console.log('Country already taken:', countryId);
+      return socket.emit('error', 'This country is already selected by another player');
+    }
+    
+    // Update player's selected country
+    const player = lobby.players.find(p => p.id === socket.id);
+    if (player) {
+      console.log(`Player ${player.name} selected country: ${countryId}`);
+      player.selectedCountry = countryId;
+      
+      // Log all players' country selections after update
+      console.log('Updated player country selections:');
+      lobby.players.forEach((p, index) => {
+        console.log(`Player ${index}: ${p.name}, Country: ${p.selectedCountry}`);
+      });
+      
+      // Update the lobby in the map
+      lobbies.set(lobbyId, lobby);
+      
+      // Notify all clients about the updated lobbies
+      io.emit('lobbies_updated', Array.from(lobbies.values()));
+      
+      // Also specifically notify all players in this lobby about the update
+      io.to(lobbyId).emit('lobby_joined', lobby);
+      
+      // Log the updated lobby state
+      const updatedLobby = lobbies.get(lobbyId);
+      console.log('Updated lobby state:', updatedLobby);
+      console.log('All players selected country?', updatedLobby?.players.every(p => p.selectedCountry !== null));
+    }
+  });
+
+  socket.on('leave_game', () => {
+    // Find all games this player is in
+    for (const [gameId, gameState] of games.entries()) {
+      if (gameState.Players.includes(socket.id)) {
+        // Remove player from game
+        gameState.Players = gameState.Players.filter((id: string) => id !== socket.id);
+        
+        // If player had a country, free it up
+        if (gameState.PlayerCountries[socket.id]) {
+          const countryId = gameState.PlayerCountries[socket.id];
+          const country = gameState.Countries.find((c: Country) => c.Id === countryId);
+          if (country) {
+            country.PlayerId = null;
+          }
+          delete gameState.PlayerCountries[socket.id];
+        }
+        
+        socket.leave(gameId);
+        
+        // If game is empty, remove it
+        if (gameState.Players.length === 0) {
+          games.delete(gameId);
+        } else {
+          // Notify remaining players
+          io.to(gameId).emit('game_updated', gameState);
+        }
+      }
     }
   });
 
   socket.on('disconnect', () => {
     console.log('Client disconnected:', socket.id);
+    
+    // Handle lobby cleanup
+    const lobbyId = playerLobbyMap.get(socket.id);
+    if (lobbyId) {
+      const lobby = lobbies.get(lobbyId);
+      if (lobby) {
+        // Remove player from lobby
+        lobby.players = lobby.players.filter(player => player.id !== socket.id);
+        
+        // If lobby is empty, remove it
+        if (lobby.players.length === 0) {
+          lobbies.delete(lobbyId);
+        } else {
+          io.to(lobbyId).emit('lobbies_updated', Array.from(lobbies.values()));
+        }
+        
+        playerLobbyMap.delete(socket.id);
+      }
+    }
+    
+    // Handle game cleanup (same as leave_game)
+    for (const [gameId, gameState] of games.entries()) {
+      if (gameState.Players.includes(socket.id)) {
+        // Remove player from game
+        gameState.Players = gameState.Players.filter((id: string) => id !== socket.id);
+        
+        // If player had a country, free it up
+        if (gameState.PlayerCountries[socket.id]) {
+          const countryId = gameState.PlayerCountries[socket.id];
+          const country = gameState.Countries.find((c: Country) => c.Id === countryId);
+          if (country) {
+            country.PlayerId = null;
+          }
+          delete gameState.PlayerCountries[socket.id];
+        }
+        
+        // If game is empty, remove it
+        if (gameState.Players.length === 0) {
+          games.delete(gameId);
+        } else {
+          // Notify remaining players
+          io.to(gameId).emit('game_updated', gameState);
+        }
+      }
+    }
   });
 });
 

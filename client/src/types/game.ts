@@ -43,6 +43,23 @@ export interface GameState {
   CurrentDate: string;
   CurrentTurnPlayerId: string;
   Armies: Army[];
+  PlayerCountries: Record<string, string>; // Maps playerId to countryId
+}
+
+export interface Lobby {
+  id: string;
+  name: string;
+  players: LobbyPlayer[];
+  maxPlayers: number;
+  inProgress: boolean;
+  createdAt: string;
+  availableCountries: Country[];
+}
+
+export interface LobbyPlayer {
+  id: string;
+  name: string;
+  selectedCountry: string | null;
 }
 
 export interface DiplomaticRelation {
@@ -64,9 +81,30 @@ export interface MapPosition {
 export interface GameContextType {
   gameState: GameState | null;
   playerId: string | null;
+  playerName: string | null;
   mapPosition: MapPosition;
+  gameReady: boolean; // Add gameReady property
   connect: () => void;
-  createGame: () => void;
-  joinGame: (gameId: string) => void;
+  createGame: (lobbyId: string) => void;
+  joinGame: (gameId: string, countryId: string) => void;
   updateMapPosition: (position: Partial<MapPosition>) => void;
+  selectCountry: (countryId: string) => void;
+  leaveGame: () => void;
+}
+
+export interface LobbyContextType {
+  lobbies: Lobby[];
+  currentLobby: Lobby | null;
+  playerName: string | null;
+  isConnected: boolean;
+  error: string | null;
+  gameStarted: string | null; // ID of the game that was started
+  connect: () => void;
+  setPlayerName: (name: string) => void;
+  createLobby: (name: string) => void;
+  joinLobby: (lobbyId: string) => void;
+  leaveLobby: () => void;
+  startGame: () => void;
+  refreshLobbies: () => void;
+  selectCountry: (countryId: string) => void;
 }
