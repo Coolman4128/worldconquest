@@ -1,6 +1,6 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
 import { createServer } from 'http';
-import { Server } from 'socket.io';
+import { Server, Socket } from 'socket.io';
 import cors from 'cors';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
@@ -22,6 +22,10 @@ const io = new Server(httpServer, {
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from the client build directory
+const clientBuildPath = join(__dirname, '../../client/dist');
+app.use(express.static(clientBuildPath));
+
 // Load default gamestate
 let defaultGameState: any = null;
 
@@ -40,7 +44,7 @@ async function loadDefaultGameState() {
 const games = new Map();
 
 // Socket.IO event handlers
-io.on('connection', (socket) => {
+io.on('connection', (socket: Socket) => {
   console.log('Client connected:', socket.id);
 
   socket.on('create_game', () => {
@@ -51,7 +55,7 @@ io.on('connection', (socket) => {
     socket.emit('game_created', { gameId, gameState });
   });
 
-  socket.on('join_game', (gameId) => {
+  socket.on('join_game', (gameId: string) => {
     const gameState = games.get(gameId);
     if (gameState) {
       socket.join(gameId);
@@ -64,6 +68,11 @@ io.on('connection', (socket) => {
   socket.on('disconnect', () => {
     console.log('Client disconnected:', socket.id);
   });
+});
+
+// Fallback route for SPA: serve index.html for any unknown paths
+app.get('*', (req: Request, res: Response) => {
+  res.sendFile(join(clientBuildPath, 'index.html'));
 });
 
 // Start server

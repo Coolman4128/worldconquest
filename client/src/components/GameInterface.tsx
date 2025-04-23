@@ -33,7 +33,8 @@ interface SidePanelProps {
 }
 
 const SidePanel = styled.div<SidePanelProps>`
-  width: 300px;
+  width: 500px; /* Increased width further */
+  flex-shrink: 0; /* Prevent shrinking below the specified width */
   background: #34495e;
   color: white;
   padding: 20px;
@@ -90,6 +91,18 @@ const Button = styled.button`
   }
 `;
 
+const ProvinceInfo = styled.div`
+  margin-top: 15px; /* Add some space above */
+  h4 {
+    margin-bottom: 10px; /* Space below header */
+  }
+  p {
+    font-size: 1.1em; /* Increase font size */
+    line-height: 1.6; /* Increase line spacing */
+    margin-bottom: 5px; /* Space between lines */
+  }
+`;
+
 export const GameInterface: React.FC = () => {
   const { gameState, playerId, connect, createGame, selectedProvince } = useGame();
 
@@ -132,13 +145,18 @@ export const GameInterface: React.FC = () => {
         <SidePanel side="left">
           <h3>Game Info</h3>
           {selectedProvince && (
-            <div>
+            <ProvinceInfo> {/* Use the styled component */}
               <h4>Selected Province</h4>
+              <p>Owner: {
+                selectedProvince.OwnerId
+                  ? gameState?.Countries.find(c => c.Id === selectedProvince.OwnerId)?.Name ?? 'Unknown'
+                  : 'Unowned'
+              }</p>
               <p>Level: {selectedProvince.Level}</p>
               <p>Religion: {selectedProvince.Religion}</p>
               <p>Type: {selectedProvince.Type}</p>
               <p>Unrest: {selectedProvince.Unrest}</p>
-            </div>
+            </ProvinceInfo>
           )}
         </SidePanel>
 
