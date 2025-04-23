@@ -8759,7 +8759,7 @@
         "g": 198,
         "b": 217
       },
-      "owner": "red",
+      "owner": "hungary",
       "isWater": false,
       "bounds": {
         "minX": 582,
@@ -8839,7 +8839,7 @@
         "g": 70,
         "b": 173
       },
-      "owner": "red",
+      "owner": "hre",
       "isWater": false,
       "bounds": {
         "minX": 358,
@@ -8855,7 +8855,7 @@
         "g": 0,
         "b": 240
       },
-      "owner": "red",
+      "owner": "hre",
       "isWater": false,
       "bounds": {
         "minX": 369,
@@ -9031,7 +9031,7 @@
         "g": 230,
         "b": 38
       },
-      "owner": "red",
+      "owner": "hre",
       "isWater": false,
       "bounds": {
         "minX": 409,
@@ -9655,7 +9655,7 @@
         "g": 0,
         "b": 236
       },
-      "owner": "red",
+      "owner": "hre",
       "isWater": false,
       "bounds": {
         "minX": 323,
@@ -12503,7 +12503,7 @@
         "g": 19,
         "b": 40
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 872,
@@ -12743,7 +12743,7 @@
         "g": 52,
         "b": 0
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 821,
@@ -13015,7 +13015,7 @@
         "g": 197,
         "b": 16
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 864,
@@ -13271,7 +13271,7 @@
         "g": 54,
         "b": 64
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 846,
@@ -13335,7 +13335,7 @@
         "g": 119,
         "b": 24
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 813,
@@ -13607,7 +13607,7 @@
         "g": 94,
         "b": 109
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 884,
@@ -13639,7 +13639,7 @@
         "g": 153,
         "b": 66
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 826,
@@ -13783,7 +13783,7 @@
         "g": 212,
         "b": 37
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 904,
@@ -13815,7 +13815,7 @@
         "g": 112,
         "b": 255
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 952,
@@ -13895,7 +13895,7 @@
         "g": 183,
         "b": 51
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 854,
@@ -13943,7 +13943,7 @@
         "g": 152,
         "b": 169
       },
-      "owner": "byzanitum",
+      "owner": "byzantium",
       "isWater": false,
       "bounds": {
         "minX": 643,
@@ -14103,7 +14103,7 @@
         "g": 225,
         "b": 132
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 898,
@@ -14119,7 +14119,7 @@
         "g": 224,
         "b": 142
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 976,
@@ -14183,7 +14183,7 @@
         "g": 0,
         "b": 248
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 886,
@@ -14199,7 +14199,7 @@
         "g": 62,
         "b": 183
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 874,
@@ -14327,7 +14327,7 @@
         "g": 100,
         "b": 192
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 835,
@@ -14439,7 +14439,7 @@
         "g": 96,
         "b": 64
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 935,
@@ -14503,7 +14503,7 @@
         "g": 225,
         "b": 120
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 917,
@@ -14551,7 +14551,7 @@
         "g": 0,
         "b": 232
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 929,
@@ -14567,7 +14567,7 @@
         "g": 90,
         "b": 38
       },
-      "owner": "spain",
+      "owner": "moors",
       "isWater": false,
       "bounds": {
         "minX": 109,
@@ -14631,7 +14631,7 @@
         "g": 167,
         "b": 51
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 865,
@@ -14647,7 +14647,7 @@
         "g": 205,
         "b": 36
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 960,
@@ -14743,7 +14743,7 @@
         "g": 71,
         "b": 200
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 984,
@@ -14807,7 +14807,7 @@
         "g": 153,
         "b": 75
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 817,
@@ -14823,7 +14823,7 @@
         "g": 125,
         "b": 200
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 935,
@@ -14903,7 +14903,7 @@
         "g": 76,
         "b": 176
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 846,
@@ -14983,7 +14983,7 @@
         "g": 86,
         "b": 64
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 887,
@@ -14999,7 +14999,7 @@
         "g": 79,
         "b": 154
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 903,
@@ -15031,7 +15031,7 @@
         "g": 143,
         "b": 34
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 964,
@@ -15223,7 +15223,7 @@
         "g": 146,
         "b": 128
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 795,
@@ -15239,7 +15239,7 @@
         "g": 78,
         "b": 128
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 821,
@@ -15255,7 +15255,7 @@
         "g": 70,
         "b": 30
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 978,
@@ -15351,7 +15351,7 @@
         "g": 41,
         "b": 144
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 862,
@@ -15399,7 +15399,7 @@
         "g": 24,
         "b": 90
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 991,
@@ -15495,7 +15495,7 @@
         "g": 215,
         "b": 128
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 941,
@@ -15543,7 +15543,7 @@
         "g": 156,
         "b": 126
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 795,
@@ -15559,7 +15559,7 @@
         "g": 94,
         "b": 0
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 906,
@@ -15607,7 +15607,7 @@
         "g": 11,
         "b": 71
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 850,
@@ -15655,7 +15655,7 @@
         "g": 148,
         "b": 192
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 782,
@@ -15671,7 +15671,7 @@
         "g": 19,
         "b": 41
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 888,
@@ -15703,7 +15703,7 @@
         "g": 92,
         "b": 255
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 980,
@@ -15719,7 +15719,7 @@
         "g": 74,
         "b": 0
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 808,
@@ -15847,7 +15847,7 @@
         "g": 76,
         "b": 64
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 868,
@@ -15879,7 +15879,7 @@
         "g": 165,
         "b": 22
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 957,
@@ -15911,7 +15911,7 @@
         "g": 32,
         "b": 200
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 794,
@@ -15959,7 +15959,7 @@
         "g": 219,
         "b": 32
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 923,
@@ -15975,7 +15975,7 @@
         "g": 24,
         "b": 90
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 941,
@@ -16087,7 +16087,7 @@
         "g": 224,
         "b": 174
       },
-      "owner": "blue",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 825,
@@ -16167,7 +16167,7 @@
         "g": 84,
         "b": 0
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 905,
@@ -16183,7 +16183,7 @@
         "g": 33,
         "b": 184
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 991,
@@ -16215,7 +16215,7 @@
         "g": 156,
         "b": 128
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 782,
@@ -16231,7 +16231,7 @@
         "g": 90,
         "b": 192
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 971,
@@ -16279,7 +16279,7 @@
         "g": 196,
         "b": 33
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 792,
@@ -16343,7 +16343,7 @@
         "g": 82,
         "b": 255
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 895,
@@ -16391,7 +16391,7 @@
         "g": 184,
         "b": 27
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 957,
@@ -16471,7 +16471,7 @@
         "g": 106,
         "b": 128
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 564,
@@ -16487,7 +16487,7 @@
         "g": 227,
         "b": 59
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 798,
@@ -16503,7 +16503,7 @@
         "g": 195,
         "b": 138
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 975,
@@ -16519,7 +16519,7 @@
         "g": 102,
         "b": 96
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 925,
@@ -16535,7 +16535,7 @@
         "g": 38,
         "b": 173
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 767,
@@ -16583,7 +16583,7 @@
         "g": 154,
         "b": 64
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 781,
@@ -16679,7 +16679,7 @@
         "g": 130,
         "b": 63
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 911,
@@ -16727,7 +16727,7 @@
         "g": 14,
         "b": 59
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 799,
@@ -16743,7 +16743,7 @@
         "g": 31,
         "b": 114
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 598,
@@ -16759,7 +16759,7 @@
         "g": 203,
         "b": 86
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 944,
@@ -16775,7 +16775,7 @@
         "g": 88,
         "b": 128
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 971,
@@ -16807,7 +16807,7 @@
         "g": 152,
         "b": 0
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 777,
@@ -16839,7 +16839,7 @@
         "g": 120,
         "b": 255
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 736,
@@ -16855,7 +16855,7 @@
         "g": 150,
         "b": 255
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 761,
@@ -16871,7 +16871,7 @@
         "g": 0,
         "b": 244
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 778,
@@ -16935,7 +16935,7 @@
         "g": 118,
         "b": 192
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 710,
@@ -16951,7 +16951,7 @@
         "g": 244,
         "b": 179
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 630,
@@ -16967,7 +16967,7 @@
         "g": 116,
         "b": 128
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 691,
@@ -17015,7 +17015,7 @@
         "g": 172,
         "b": 108
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 713,
@@ -17031,7 +17031,7 @@
         "g": 216,
         "b": 222
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 779,
@@ -17063,7 +17063,7 @@
         "g": 108,
         "b": 192
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 664,
@@ -17079,7 +17079,7 @@
         "g": 24,
         "b": 61
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 702,
@@ -17095,7 +17095,7 @@
         "g": 80,
         "b": 192
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 977,
@@ -17111,7 +17111,7 @@
         "g": 77,
         "b": 195
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 676,
@@ -17159,7 +17159,7 @@
         "g": 56,
         "b": 56
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 765,
@@ -17175,7 +17175,7 @@
         "g": 22,
         "b": 59
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 721,
@@ -17191,7 +17191,7 @@
         "g": 122,
         "b": 0
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 745,
@@ -17223,7 +17223,7 @@
         "g": 114,
         "b": 64
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 701,
@@ -17255,7 +17255,7 @@
         "g": 4,
         "b": 48
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 958,
@@ -17271,7 +17271,7 @@
         "g": 110,
         "b": 255
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 689,
@@ -17287,7 +17287,7 @@
         "g": 158,
         "b": 192
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 782,
@@ -17319,7 +17319,7 @@
         "g": 128,
         "b": 27
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 708,
@@ -17335,7 +17335,7 @@
         "g": 215,
         "b": 209
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 662,
@@ -17367,7 +17367,7 @@
         "g": 24,
         "b": 126
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 908,
@@ -17383,7 +17383,7 @@
         "g": 48,
         "b": 146
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 731,
@@ -17399,7 +17399,7 @@
         "g": 21,
         "b": 154
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 720,
@@ -17415,7 +17415,7 @@
         "g": 50,
         "b": 192
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 836,
@@ -17479,7 +17479,7 @@
         "g": 201,
         "b": 61
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 694,
@@ -17495,7 +17495,7 @@
         "g": 120,
         "b": 91
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 801,
@@ -17511,7 +17511,7 @@
         "g": 52,
         "b": 255
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 958,
@@ -17527,7 +17527,7 @@
         "g": 40,
         "b": 15
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 655,
@@ -17543,7 +17543,7 @@
         "g": 231,
         "b": 24
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 780,
@@ -17559,7 +17559,7 @@
         "g": 231,
         "b": 202
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 702,
@@ -17591,7 +17591,7 @@
         "g": 210,
         "b": 90
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 930,
@@ -17607,7 +17607,7 @@
         "g": 62,
         "b": 173
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 694,
@@ -17623,7 +17623,7 @@
         "g": 83,
         "b": 191
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 712,
@@ -17639,7 +17639,7 @@
         "g": 112,
         "b": 0
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 732,
@@ -17655,7 +17655,7 @@
         "g": 185,
         "b": 45
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 748,
@@ -17671,7 +17671,7 @@
         "g": 32,
         "b": 255
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 819,
@@ -17687,7 +17687,7 @@
         "g": 21,
         "b": 245
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 875,
@@ -17703,7 +17703,7 @@
         "g": 120,
         "b": 94
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 966,
@@ -17719,7 +17719,7 @@
         "g": 65,
         "b": 29
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 744,
@@ -17735,7 +17735,7 @@
         "g": 48,
         "b": 128
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 945,
@@ -17751,7 +17751,7 @@
         "g": 183,
         "b": 82
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 726,
@@ -17767,7 +17767,7 @@
         "g": 82,
         "b": 37
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 850,
@@ -17783,7 +17783,7 @@
         "g": 84,
         "b": 164
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 881,
@@ -17799,7 +17799,7 @@
         "g": 125,
         "b": 54
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 807,
@@ -17831,7 +17831,7 @@
         "g": 200,
         "b": 195
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 950,
@@ -17863,7 +17863,7 @@
         "g": 58,
         "b": 79
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 726,
@@ -17879,7 +17879,7 @@
         "g": 34,
         "b": 114
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 965,
@@ -17895,7 +17895,7 @@
         "g": 69,
         "b": 139
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 770,
@@ -17911,7 +17911,7 @@
         "g": 23,
         "b": 88
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 855,
@@ -17927,7 +17927,7 @@
         "g": 102,
         "b": 18
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 892,
@@ -17943,7 +17943,7 @@
         "g": 164,
         "b": 32
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 718,
@@ -17975,7 +17975,7 @@
         "g": 34,
         "b": 0
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 844,
@@ -17991,7 +17991,7 @@
         "g": 16,
         "b": 102
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 934,
@@ -18007,7 +18007,7 @@
         "g": 168,
         "b": 213
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 731,
@@ -18023,7 +18023,7 @@
         "g": 227,
         "b": 131
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 695,
@@ -18039,7 +18039,7 @@
         "g": 203,
         "b": 224
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 835,
@@ -18055,7 +18055,7 @@
         "g": 142,
         "b": 173
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 937,
@@ -18087,7 +18087,7 @@
         "g": 228,
         "b": 233
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 868,
@@ -18119,7 +18119,7 @@
         "g": 60,
         "b": 126
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 787,
@@ -18135,7 +18135,7 @@
         "g": 115,
         "b": 187
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 898,
@@ -18151,7 +18151,7 @@
         "g": 252,
         "b": 126
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 689,
@@ -18199,7 +18199,7 @@
         "g": 54,
         "b": 173
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 743,
@@ -18215,7 +18215,7 @@
         "g": 59,
         "b": 200
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 853,
@@ -18247,7 +18247,7 @@
         "g": 36,
         "b": 64
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 884,
@@ -18279,7 +18279,7 @@
         "g": 36,
         "b": 126
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 696,
@@ -18311,7 +18311,7 @@
         "g": 46,
         "b": 64
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 908,
@@ -18343,7 +18343,7 @@
         "g": 183,
         "b": 112
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 873,
@@ -18359,7 +18359,7 @@
         "g": 179,
         "b": 54
       },
-      "owner": "red",
+      "owner": "turks",
       "isWater": false,
       "bounds": {
         "minX": 899,
@@ -18407,7 +18407,7 @@
         "g": 48,
         "b": 32
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 775,
@@ -18423,7 +18423,7 @@
         "g": 56,
         "b": 32
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 823,
@@ -18455,7 +18455,7 @@
         "g": 122,
         "b": 110
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 754,
@@ -18519,7 +18519,7 @@
         "g": 151,
         "b": 89
       },
-      "owner": "red",
+      "owner": "egypt",
       "isWater": false,
       "bounds": {
         "minX": 825,
