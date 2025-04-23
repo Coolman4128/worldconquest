@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
 import { io, Socket } from 'socket.io-client';
-import { Lobby, LobbyContextType } from '../types/game';
+import { Lobby, LobbyContextType, GameState } from '../types/game';
 
 const SOCKET_URL = 'http://localhost:3000';
 
@@ -14,11 +14,15 @@ export const useLobby = () => {
   return context;
 };
 
+// Expanded to include game events
 interface ServerToClientEvents {
   lobbies_updated: (lobbies: Lobby[]) => void;
   lobby_joined: (lobby: Lobby) => void;
   lobby_created: (lobby: Lobby) => void;
   game_started: (gameId: string) => void;
+  game_created: (data: { gameId: string; gameState: GameState }) => void;
+  game_joined: (gameState: GameState) => void;
+  game_updated: (gameState: GameState) => void;
   error: (message: string) => void;
 }
 
@@ -29,6 +33,9 @@ interface ClientToServerEvents {
   leave_lobby: () => void;
   start_game: () => void;
   select_country: (countryId: string) => void;
+  create_game: (lobbyId: string) => void;
+  join_game: (gameId: string, countryId: string) => void;
+  leave_game: () => void;
 }
 
 export const LobbyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -41,6 +48,14 @@ export const LobbyProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const [gameStarted, setGameStarted] = useState<string | null>(null); // Store gameId when game is started
 
   const connect = useCallback(() => {
+    // Check if we already have a socket connection
+    if (socket && socket.connected) {
+      console.log('Socket already connected, not creating a new one');
+      setIsConnected(true);
+      return;
+    }
+    
+    console.log('Creating new socket connection');
     const newSocket = io(SOCKET_URL) as Socket<ServerToClientEvents, ClientToServerEvents>;
     
     newSocket.on('connect', () => {
@@ -185,6 +200,7 @@ export const LobbyProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     isConnected,
     error,
     gameStarted,
+    socket, // Expose the socket to be used by GameContext
     connect,
     setPlayerName: updatePlayerName,
     createLobby,

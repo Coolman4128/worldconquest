@@ -246,7 +246,8 @@ io.on('connection', (socket: Socket) => {
       ...defaultGameState,
       GameId: gameId,
       Players: lobby.players.map(p => p.id),
-      PlayerCountries: {} // Will be populated as players select countries
+      PlayerCountries: {}, // Will be populated as players select countries
+      CurrentTurnPlayerId: lobby.players[0].id // Set the first player as the current turn player
     };
     
     games.set(gameId, gameState);
@@ -299,7 +300,8 @@ io.on('connection', (socket: Socket) => {
       ...defaultGameState,
       GameId: gameId,
       Players: lobby.players.map(p => p.id),
-      PlayerCountries: {} // Will be populated as players select countries
+      PlayerCountries: {}, // Will be populated as players select countries
+      CurrentTurnPlayerId: lobby.players[0].id // Set the first player as the current turn player
     };
     
     games.set(gameId, gameState);
@@ -321,6 +323,34 @@ io.on('connection', (socket: Socket) => {
     const gameState = games.get(gameId);
     if (!gameState) {
       return socket.emit('error', 'Game not found');
+    }
+    
+    // Get the player's name from socket data if available
+    const playerName = socket.data.playerName;
+    console.log(`Player ${socket.id} (${playerName || 'unnamed'}) joining game ${gameId} with country ${countryId}`);
+    
+    // Check if this player is already in the game with a different socket ID
+    // This can happen when a player has multiple socket connections
+    let existingPlayerId = null;
+    
+    // If we have a player name, try to find a matching player in the lobby
+    if (playerName) {
+      const lobby = lobbies.get(gameId); // Using gameId as lobbyId
+      if (lobby) {
+        const playerInLobby = lobby.players.find(p => p.name === playerName);
+        if (playerInLobby && playerInLobby.id !== socket.id) {
+          console.log(`Found player ${playerName} in lobby with ID ${playerInLobby.id}, current socket ID is ${socket.id}`);
+          existingPlayerId = playerInLobby.id;
+          
+          // Check if this player already has a country assigned
+          if (gameState.PlayerCountries[existingPlayerId]) {
+            console.log(`Player already has country ${gameState.PlayerCountries[existingPlayerId]} assigned with ID ${existingPlayerId}`);
+            
+            // Use the existing player ID's country assignment
+            countryId = gameState.PlayerCountries[existingPlayerId];
+          }
+        }
+      }
     }
     
     // Check if the player is joining as an observer (without a country)

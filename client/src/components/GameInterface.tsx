@@ -110,7 +110,7 @@ interface GameInterfaceProps {
 }
 
 export const GameInterface: React.FC<GameInterfaceProps> = ({ onLeaveGame }) => {
-  const { gameState, playerId, leaveGame } = useGame();
+  const { gameState, playerId, playerName, leaveGame } = useGame();
   const { selectedProvince } = useProvinceSelection();
   const { currentLobby } = useLobby();
 
@@ -159,8 +159,41 @@ export const GameInterface: React.FC<GameInterfaceProps> = ({ onLeaveGame }) => 
               <p><strong>ID:</strong> {selectedProvince.Id}</p>
               <p>Owner: {
                 selectedProvince.OwnerId
-                  ? gameState?.Countries.find(c => c.Id === selectedProvince.OwnerId)?.Name ?? 'Unknown'
-                  : 'Unowned'
+                  ? (() => {
+                      // Get the owner country
+                      const ownerCountry = gameState?.Countries.find(c => c.Id === selectedProvince.OwnerId);
+                      if (!ownerCountry) return 'Unknown';
+                      
+                      // Find which player owns this country (if any)
+                      let ownerPlayerId = null;
+                      let ownerName = 'N/A';
+                      
+                      // Loop through PlayerCountries to find who owns this country
+                      if (gameState?.PlayerCountries) {
+                        for (const [pid, cid] of Object.entries(gameState.PlayerCountries)) {
+                          if (cid === ownerCountry.Id) {
+                            ownerPlayerId = pid;
+                            break;
+                          }
+                        }
+                      }
+                      
+                      // If no player owns this country, return N/A
+                      if (!ownerPlayerId) return 'N/A';
+                      
+                      // Find the player name
+                      const ownerPlayer = currentLobby?.players.find(p => p.id === ownerPlayerId);
+                      ownerName = ownerPlayer?.name || 'Unknown Player';
+                      
+                      // Check if it's the current player's country by comparing names instead of IDs
+                      // This is more reliable since socket IDs might change but names are consistent
+                      if (ownerPlayer && ownerPlayer.name === playerName) {
+                        return `${ownerName} (You)`;
+                      }
+                      
+                      return ownerName;
+                    })()
+                  : 'N/A'
               }</p>
               <p>Level: {selectedProvince.Level}</p>
               <p>Religion: {selectedProvince.Religion}</p>

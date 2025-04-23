@@ -99,6 +99,7 @@ export interface LobbyContextType {
   isConnected: boolean;
   error: string | null;
   gameStarted: string | null; // ID of the game that was started
+  socket: any; // Socket instance shared with GameContext
   connect: () => void;
   setPlayerName: (name: string) => void;
   createLobby: (name: string) => void;

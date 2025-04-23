@@ -3,15 +3,6 @@
   "Players": [],
   "Countries": [
     {
-      "Id": "red_kingdom",
-      "Name": "The Red Kingdom",
-      "Color": "rgb(255, 0, 0)",
-      "Money": 0,
-      "PlayerId": null,
-      "Stability": 100,
-      "Population": 0
-    },
-    {
       "Id": "hre",
       "Name": "Holy Roman Empire",
       "Color": "rgb(230, 223, 170)",
@@ -209,7 +200,6 @@
       "Stability": 100,
       "Population": 0
     }
-    
   ],
   "Provinces": [
     {
@@ -236,7 +226,7 @@
     },
     {
       "Id": "179_106_128",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -247,7 +237,7 @@
     },
     {
       "Id": "206_231_202",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -676,7 +666,7 @@
     },
     {
       "Id": "255_24_90",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -709,7 +699,7 @@
     },
     {
       "Id": "157_215_209",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -731,7 +721,7 @@
     },
     {
       "Id": "179_118_192",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -819,7 +809,7 @@
     },
     {
       "Id": "99_77_195",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -874,7 +864,7 @@
     },
     {
       "Id": "186_86_64",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1017,7 +1007,7 @@
     },
     {
       "Id": "116_62_183",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1050,7 +1040,7 @@
     },
     {
       "Id": "208_71_200",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1105,7 +1095,7 @@
     },
     {
       "Id": "24_212_37",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1127,7 +1117,7 @@
     },
     {
       "Id": "187_24_90",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1358,7 +1348,7 @@
     },
     {
       "Id": "56_252_126",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1391,7 +1381,7 @@
     },
     {
       "Id": "69_59_200",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1589,7 +1579,7 @@
     },
     {
       "Id": "51_112_0",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1666,7 +1656,7 @@
     },
     {
       "Id": "51_130_63",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1710,7 +1700,7 @@
     },
     {
       "Id": "51_116_128",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1754,7 +1744,7 @@
     },
     {
       "Id": "210_179_54",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1886,7 +1876,7 @@
     },
     {
       "Id": "157_34_114",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -1963,7 +1953,7 @@
     },
     {
       "Id": "48_167_51",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2007,7 +1997,7 @@
     },
     {
       "Id": "59_92_255",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2051,7 +2041,7 @@
     },
     {
       "Id": "184_54_173",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2216,7 +2206,7 @@
     },
     {
       "Id": "101_125_54",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2238,7 +2228,7 @@
     },
     {
       "Id": "6_0_236",
-      "OwnerId": "red",
+      "OwnerId": "hre",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2326,7 +2316,7 @@
     },
     {
       "Id": "187_94_0",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2414,7 +2404,7 @@
     },
     {
       "Id": "187_215_128",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2491,7 +2481,7 @@
     },
     {
       "Id": "201_24_126",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2700,7 +2690,7 @@
     },
     {
       "Id": "182_150_255",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2799,7 +2789,7 @@
     },
     {
       "Id": "188_228_233",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2876,7 +2866,7 @@
     },
     {
       "Id": "58_80_192",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2909,7 +2899,7 @@
     },
     {
       "Id": "213_56_56",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -2942,7 +2932,7 @@
     },
     {
       "Id": "250_19_41",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3129,7 +3119,7 @@
     },
     {
       "Id": "60_143_34",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3140,7 +3130,7 @@
     },
     {
       "Id": "184_65_29",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3151,7 +3141,7 @@
     },
     {
       "Id": "127_84_164",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3184,7 +3174,7 @@
     },
     {
       "Id": "13_94_109",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3217,7 +3207,7 @@
     },
     {
       "Id": "212_79_154",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3371,7 +3361,7 @@
     },
     {
       "Id": "185_74_0",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3382,7 +3372,7 @@
     },
     {
       "Id": "154_216_222",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3404,7 +3394,7 @@
     },
     {
       "Id": "58_76_64",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3415,7 +3405,7 @@
     },
     {
       "Id": "17_195_138",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3426,7 +3416,7 @@
     },
     {
       "Id": "245_244_179",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3470,7 +3460,7 @@
     },
     {
       "Id": "59_82_37",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3481,7 +3471,7 @@
     },
     {
       "Id": "56_48_128",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3547,7 +3537,7 @@
     },
     {
       "Id": "56_56_32",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3646,7 +3636,7 @@
     },
     {
       "Id": "9_0_248",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3712,7 +3702,7 @@
     },
     {
       "Id": "79_184_27",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3745,7 +3735,7 @@
     },
     {
       "Id": "158_168_213",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3767,7 +3757,7 @@
     },
     {
       "Id": "200_122_110",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -3976,7 +3966,7 @@
     },
     {
       "Id": "0_120_94",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4097,7 +4087,7 @@
     },
     {
       "Id": "93_0_244",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4141,7 +4131,7 @@
     },
     {
       "Id": "187_165_22",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4262,7 +4252,7 @@
     },
     {
       "Id": "52_120_255",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4295,7 +4285,7 @@
     },
     {
       "Id": "213_197_16",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4427,7 +4417,7 @@
     },
     {
       "Id": "89_153_66",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4581,7 +4571,7 @@
     },
     {
       "Id": "175_54_64",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4592,7 +4582,7 @@
     },
     {
       "Id": "250_203_224",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4636,7 +4626,7 @@
     },
     {
       "Id": "188_102_18",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4647,7 +4637,7 @@
     },
     {
       "Id": "53_76_176",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4658,7 +4648,7 @@
     },
     {
       "Id": "56_48_32",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4724,7 +4714,7 @@
     },
     {
       "Id": "57_164_32",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4933,7 +4923,7 @@
     },
     {
       "Id": "60_112_255",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -4999,7 +4989,7 @@
     },
     {
       "Id": "238_16_102",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5076,7 +5066,7 @@
     },
     {
       "Id": "255_225_120",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5087,7 +5077,7 @@
     },
     {
       "Id": "99_32_200",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5131,7 +5121,7 @@
     },
     {
       "Id": "51_108_192",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5175,7 +5165,7 @@
     },
     {
       "Id": "255_125_200",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5186,7 +5176,7 @@
     },
     {
       "Id": "224_40_15",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5197,7 +5187,7 @@
     },
     {
       "Id": "252_183_112",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5340,7 +5330,7 @@
     },
     {
       "Id": "10_0_232",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5362,7 +5352,7 @@
     },
     {
       "Id": "183_46_64",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5670,7 +5660,7 @@
     },
     {
       "Id": "132_41_144",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5835,7 +5825,7 @@
     },
     {
       "Id": "58_84_0",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5846,7 +5836,7 @@
     },
     {
       "Id": "54_156_128",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5857,7 +5847,7 @@
     },
     {
       "Id": "31_210_90",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -5890,7 +5880,7 @@
     },
     {
       "Id": "163_183_82",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6033,7 +6023,7 @@
     },
     {
       "Id": "55_36_126",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6044,7 +6034,7 @@
     },
     {
       "Id": "187_90_192",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6055,7 +6045,7 @@
     },
     {
       "Id": "56_60_126",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6297,7 +6287,7 @@
     },
     {
       "Id": "54_32_255",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6330,7 +6320,7 @@
     },
     {
       "Id": "255_21_245",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6440,7 +6430,7 @@
     },
     {
       "Id": "54_152_0",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6462,7 +6452,7 @@
     },
     {
       "Id": "245_152_169",
-      "OwnerId": "byzanitum",
+      "OwnerId": "byzantium",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6561,7 +6551,7 @@
     },
     {
       "Id": "0_153_75",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6649,7 +6639,7 @@
     },
     {
       "Id": "139_22_59",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6693,7 +6683,7 @@
     },
     {
       "Id": "225_205_36",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6704,7 +6694,7 @@
     },
     {
       "Id": "237_230_38",
-      "OwnerId": "red",
+      "OwnerId": "hre",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6792,7 +6782,7 @@
     },
     {
       "Id": "203_185_45",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -6836,7 +6826,7 @@
     },
     {
       "Id": "219_23_88",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -7265,7 +7255,7 @@
     },
     {
       "Id": "186_78_128",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -7287,7 +7277,7 @@
     },
     {
       "Id": "91_196_33",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -7518,7 +7508,7 @@
     },
     {
       "Id": "184_58_79",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -7584,7 +7574,7 @@
     },
     {
       "Id": "225_224_174",
-      "OwnerId": "blue",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -7694,7 +7684,7 @@
     },
     {
       "Id": "201_70_30",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -7705,7 +7695,7 @@
     },
     {
       "Id": "239_69_139",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -7958,7 +7948,7 @@
     },
     {
       "Id": "184_183_51",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -8024,7 +8014,7 @@
     },
     {
       "Id": "178_31_114",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -8068,7 +8058,7 @@
     },
     {
       "Id": "184_50_192",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -8101,7 +8091,7 @@
     },
     {
       "Id": "255_14_59",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -8387,7 +8377,7 @@
     },
     {
       "Id": "168_219_32",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -8486,7 +8476,7 @@
     },
     {
       "Id": "47_52_0",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -8585,7 +8575,7 @@
     },
     {
       "Id": "242_90_38",
-      "OwnerId": "spain",
+      "OwnerId": "moors",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -8618,7 +8608,7 @@
     },
     {
       "Id": "181_146_128",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -8651,7 +8641,7 @@
     },
     {
       "Id": "186_82_255",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -8827,7 +8817,7 @@
     },
     {
       "Id": "185_62_173",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -9124,7 +9114,7 @@
     },
     {
       "Id": "179_114_64",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -9245,7 +9235,7 @@
     },
     {
       "Id": "4_24_61",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -9267,7 +9257,7 @@
     },
     {
       "Id": "7_0_240",
-      "OwnerId": "red",
+      "OwnerId": "hre",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -9289,7 +9279,7 @@
     },
     {
       "Id": "180_122_0",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -9300,7 +9290,7 @@
     },
     {
       "Id": "201_151_89",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -9311,7 +9301,7 @@
     },
     {
       "Id": "111_33_184",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -9399,7 +9389,7 @@
     },
     {
       "Id": "121_21_154",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -9531,7 +9521,7 @@
     },
     {
       "Id": "55_36_64",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -9674,7 +9664,7 @@
     },
     {
       "Id": "210_38_173",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -9773,7 +9763,7 @@
     },
     {
       "Id": "242_102_96",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10026,7 +10016,7 @@
     },
     {
       "Id": "59_100_192",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10103,7 +10093,7 @@
     },
     {
       "Id": "16_119_24",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10191,7 +10181,7 @@
     },
     {
       "Id": "49_11_71",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10312,7 +10302,7 @@
     },
     {
       "Id": "212_227_131",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10455,7 +10445,7 @@
     },
     {
       "Id": "54_148_192",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10521,7 +10511,7 @@
     },
     {
       "Id": "59_96_64",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10587,7 +10577,7 @@
     },
     {
       "Id": "182_154_64",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10598,7 +10588,7 @@
     },
     {
       "Id": "183_34_0",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10631,7 +10621,7 @@
     },
     {
       "Id": "9_115_187",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10642,7 +10632,7 @@
     },
     {
       "Id": "182_158_192",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10697,7 +10687,7 @@
     },
     {
       "Id": "149_201_61",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10774,7 +10764,7 @@
     },
     {
       "Id": "83_203_86",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10829,7 +10819,7 @@
     },
     {
       "Id": "91_4_48",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -10851,7 +10841,7 @@
     },
     {
       "Id": "53_200_195",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -11192,7 +11182,7 @@
     },
     {
       "Id": "62_48_146",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -11346,7 +11336,7 @@
     },
     {
       "Id": "0_120_91",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -11412,7 +11402,7 @@
     },
     {
       "Id": "51_172_108",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -11544,7 +11534,7 @@
     },
     {
       "Id": "255_19_40",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -11566,7 +11556,7 @@
     },
     {
       "Id": "207_225_132",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -11819,7 +11809,7 @@
     },
     {
       "Id": "63_128_27",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -11863,7 +11853,7 @@
     },
     {
       "Id": "214_231_24",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -12127,7 +12117,7 @@
     },
     {
       "Id": "58_88_128",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -12259,7 +12249,7 @@
     },
     {
       "Id": "209_227_59",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -12270,7 +12260,7 @@
     },
     {
       "Id": "82_156_126",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -12369,7 +12359,7 @@
     },
     {
       "Id": "56_52_255",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -12655,7 +12645,7 @@
     },
     {
       "Id": "199_142_173",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -12699,7 +12689,7 @@
     },
     {
       "Id": "195_83_191",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -12820,7 +12810,7 @@
     },
     {
       "Id": "213_70_173",
-      "OwnerId": "red",
+      "OwnerId": "hre",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -12853,7 +12843,7 @@
     },
     {
       "Id": "146_198_217",
-      "OwnerId": "red",
+      "OwnerId": "hungary",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -12897,7 +12887,7 @@
     },
     {
       "Id": "179_110_255",
-      "OwnerId": "red",
+      "OwnerId": "egypt",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",
@@ -12941,7 +12931,7 @@
     },
     {
       "Id": "88_224_142",
-      "OwnerId": "red",
+      "OwnerId": "turks",
       "TroopIds": [],
       "BuildingIds": [],
       "Level": "Countryside",

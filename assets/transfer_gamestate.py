@@ -1,7 +1,7 @@
 import json
 
 # File paths
-old_gamestate_path = 'assets/default-gamestate_OLD.json'
+old_gamestate_path = 'assets/default-gamestateOLD.json'
 new_gamestate_path = 'assets/default_gamestate.json'
 
 # Load the old gamestate
@@ -39,7 +39,7 @@ except Exception as e:
     print(f"An unexpected error occurred while loading {new_gamestate_path}: {e}")
     exit(1)
 
-# Process provinces
+# Process provinces (only provinces will be affected, not countries or other parts)
 updated_count = 0
 skipped_count = 0
 water_count = 0
@@ -57,7 +57,7 @@ for new_province in new_provinces_list:
         old_owner = old_province.get('owner')
         is_water = old_province.get('isWater', False)
 
-        # Update OwnerId
+        # Update OwnerId (transfer ownership from old gamestate to new gamestate)
         if old_owner and old_owner.lower() != 'water':
             new_province['OwnerId'] = old_owner
             owner_updated_count += 1
