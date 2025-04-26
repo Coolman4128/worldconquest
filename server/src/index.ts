@@ -457,6 +457,101 @@ io.on('connection', (socket: Socket) => {
     }
   });
 
+  socket.on('end_turn', () => {
+    // Find the game the player is in
+    // We need a reliable way to map socket.id to gameId.
+    // Using playerLobbyMap assumes gameId === lobbyId and player is still in lobby map.
+    // A better approach might be to store gameId in socket.data when joining.
+    // For now, iterating games map:
+    let gameId: string | null = null;
+    for (const [id, state] of games.entries()) {
+      // Check if the player is listed in this game's players array
+      if (state.Players && state.Players.includes(socket.id)) {
+        gameId = id;
+        break;
+      }
+    }
+
+    if (!gameId) {
+      console.error(`Player ${socket.id} tried to end turn but could not be mapped to a game.`);
+      // Attempt to find via playerLobbyMap as a fallback (if gameId === lobbyId)
+      const potentialGameId = playerLobbyMap.get(socket.id);
+      if (potentialGameId && games.has(potentialGameId)) {
+          const potentialGameState = games.get(potentialGameId);
+          if (potentialGameState && potentialGameState.Players && potentialGameState.Players.includes(socket.id)) {
+              gameId = potentialGameId;
+              console.log(`Found game ${gameId} for player ${socket.id} via playerLobbyMap fallback.`);
+          }
+      }
+      if (!gameId) {
+        return socket.emit('error', 'Could not determine the game you are in.');
+      }
+    }
+
+
+    const gameState = games.get(gameId);
+    if (!gameState) {
+      console.error(`Game state not found for gameId: ${gameId}`);
+      return socket.emit('error', 'Game not found.');
+    }
+
+    // Verify it's actually this player's turn
+    if (gameState.CurrentTurnPlayerId !== socket.id) {
+      console.warn(`Player ${socket.id} tried to end turn out of sequence in game ${gameId}. Current turn: ${gameState.CurrentTurnPlayerId}`);
+      return socket.emit('error', "It's not your turn.");
+    }
+
+    console.log(`Player ${socket.id} ended their turn in game ${gameId}.`);
+
+    // Determine the order of players who have countries assigned
+    // Filter gameState.Players to only include those present in PlayerCountries keys
+    // Ensure the order is consistent by using the order in gameState.Players
+    const activePlayerIds = gameState.Players.filter((playerId: string) =>
+      gameState.PlayerCountries && gameState.PlayerCountries.hasOwnProperty(playerId)
+    );
+
+    if (activePlayerIds.length === 0) {
+        console.warn(`No active players with countries in game ${gameId}. Cannot advance turn.`);
+        // Keep the turn with the current player or handle appropriately
+        io.to(gameId).emit('game_updated', gameState); // Still update clients even if turn doesn't change
+        return;
+    }
+
+
+    // Find the index of the current player in the active player list
+    const currentPlayerIndex = activePlayerIds.indexOf(gameState.CurrentTurnPlayerId);
+
+    if (currentPlayerIndex === -1) {
+        console.error(`Current turn player ${gameState.CurrentTurnPlayerId} not found in active players list [${activePlayerIds.join(', ')}] for game ${gameId}. Resetting turn.`);
+        // Reset to the first active player as a fallback
+        gameState.CurrentTurnPlayerId = activePlayerIds[0];
+    } else {
+        // Determine the next player's index
+        const nextPlayerIndex = (currentPlayerIndex + 1) % activePlayerIds.length;
+        const nextPlayerId = activePlayerIds[nextPlayerIndex];
+
+        console.log(`Next turn in game ${gameId} goes to player ${nextPlayerId}.`);
+        gameState.CurrentTurnPlayerId = nextPlayerId;
+
+        // If the turn loops back to the first player, advance the date
+        if (nextPlayerIndex === 0) {
+          try {
+            const currentDate = new Date(gameState.CurrentDate);
+            currentDate.setMonth(currentDate.getMonth() + 3);
+            gameState.CurrentDate = currentDate.toISOString();
+            console.log(`Advanced game ${gameId} date to: ${gameState.CurrentDate}`);
+          } catch (dateError) {
+            console.error(`Error parsing or advancing game date for game ${gameId}:`, dateError, "Current date string:", gameState.CurrentDate);
+            // Handle error, maybe reset date or log more details
+          }
+        }
+    }
+
+    // Broadcast the updated game state to all players in the game
+    io.to(gameId).emit('game_updated', gameState);
+    console.log(`Game state updated and broadcasted for game ${gameId}. New turn: ${gameState.CurrentTurnPlayerId}`);
+  });
+
   socket.on('disconnect', () => {
     console.log('Client disconnected:', socket.id);
     

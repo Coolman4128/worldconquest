@@ -90,6 +90,7 @@ export interface GameContextType {
   updateMapPosition: (position: Partial<MapPosition>) => void;
   selectCountry: (countryId: string) => void;
   leaveGame: () => void;
+  endTurn: () => void; // Add endTurn function type
 }
 
 export interface LobbyContextType {

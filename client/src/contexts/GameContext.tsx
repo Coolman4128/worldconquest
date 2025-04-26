@@ -203,6 +203,15 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Removed selectProvince; now handled by ProvinceSelectionContext
 
+  const endTurn = useCallback(() => {
+    if (socket && isConnected) {
+      console.log('Emitting end_turn');
+      socket.emit('end_turn');
+    } else {
+      console.error('Cannot end turn: socket not connected.');
+    }
+  }, [socket, isConnected]);
+
   const updateMapPosition = useCallback((position: Partial<MapPosition>) => {
     setMapPosition(prev => ({
       ...prev,
@@ -224,6 +233,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     leaveGame,
     // selectProvince removed from context value
     updateMapPosition,
+    endTurn, // Add endTurn to context value
   };
 
   return (

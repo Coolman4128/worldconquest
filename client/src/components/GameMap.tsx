@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useGame } from '../contexts/GameContext';
 import { useProvinceSelection } from '../contexts/ProvinceSelectionContext';
-import { Province, Country } from '../types/game';
+import { Province, Country } from '../types/game'; // Removed unused GameState import
+import { memo } from 'react'; // Import memo
 
 // Define fallback and border colors
 const FALLBACK_COLORS = {
@@ -40,7 +41,14 @@ interface ProvinceGroup {
   bounds: { minX: number; minY: number; maxX: number; maxY: number }; // In bitmap coordinates
 }
 
-export const GameMap: React.FC = () => {
+interface GameMapProps {
+  provinces: Province[];
+  countries: Country[];
+  // playerCountries: Record<string, string>; // Removed unused prop
+}
+
+// Rename the component implementation
+const GameMapComponent: React.FC<GameMapProps> = ({ provinces, countries }) => { // Removed unused playerCountries prop
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const offscreenCanvasRef = useRef<HTMLCanvasElement | null>(null); // For pixel data access
   const [bitmap, setBitmap] = useState<ImageBitmap | null>(null);
@@ -54,12 +62,8 @@ export const GameMap: React.FC = () => {
   const animationFrameId = useRef<number | null>(null); // To manage animation frames
   const zoomAnimationFrameId = useRef<number | null>(null); // To manage zoom animation frames
 
-  const {
-    gameState,
-    mapPosition,
-    updateMapPosition,
-  } = useGame();
-
+  // Get only map position and selection context data here
+  const { mapPosition, updateMapPosition } = useGame();
   const {
     selectProvince,
     selectedProvince,
@@ -132,18 +136,16 @@ export const GameMap: React.FC = () => {
     loadBitmap();
   }, []);
 
-  // Pre-process gameState into maps for faster lookups when it changes
+  // Pre-process props into maps for faster lookups when they change
   useEffect(() => {
-    if (gameState) {
-      const newProvinceMap = new Map<string, Province>();
-      gameState.Provinces.forEach(p => newProvinceMap.set(p.Id, p));
-      setProvinceMap(newProvinceMap);
+    const newProvinceMap = new Map<string, Province>();
+    provinces.forEach(p => newProvinceMap.set(p.Id, p));
+    setProvinceMap(newProvinceMap);
 
-      const newCountryMap = new Map<string, Country>();
-      gameState.Countries.forEach(c => newCountryMap.set(c.Id, c));
-      setCountryMap(newCountryMap);
-    }
-  }, [gameState]);
+    const newCountryMap = new Map<string, Country>();
+    countries.forEach(c => newCountryMap.set(c.Id, c));
+    setCountryMap(newCountryMap);
+  }, [provinces, countries]); // Depend on props now
 
 
   // Handle canvas resize
@@ -162,11 +164,12 @@ export const GameMap: React.FC = () => {
     handleResize();
 
     return () => window.removeEventListener('resize', handleResize);
-  }, [bitmap, gameState, provinceMap, countryMap]); // Resize only depends on these now
+  }, [bitmap, provinceMap, countryMap]); // Removed gameState dependency
 
   // Effect to pre-render the map with colors and borders when data changes
   useEffect(() => {
-    if (!bitmap || !provinceMap || !countryMap || !gameState) return;
+    // Depend on props and derived maps, not gameState
+    if (!bitmap || !provinceMap.size || !countryMap.size || !provinces || !countries) return;
 
     console.log("Pre-rendering map..."); // Log when pre-rendering happens
 
@@ -356,7 +359,8 @@ export const GameMap: React.FC = () => {
         // The effect below handles closing the *last remaining* map on unmount.
     };
 
-  }, [bitmap, gameState, provinceMap, countryMap]); // Dependencies for pre-rendering
+    // Use props in dependency array
+  }, [bitmap, provinces, countries, provinceMap, countryMap]); // Dependencies for pre-rendering
 
   // Effect specifically to close the preRenderedMap instance when it's replaced or on unmount
   useEffect(() => {
@@ -387,8 +391,8 @@ export const GameMap: React.FC = () => {
 
   // Effect to calculate contiguous province groups AND border pixels
   useEffect(() => {
-    // Ensure all necessary data is loaded
-    if (!bitmap || !provinceMap.size || !countryMap.size || !gameState) {
+    // Ensure all necessary data is loaded - use props
+    if (!bitmap || !provinceMap.size || !countryMap.size || !provinces || !countries) {
         setCountryProvinceGroups([]); // Clear groups if data is missing
         setProvinceBorders(new Map()); // Clear borders if data is missing
         return;
@@ -573,7 +577,8 @@ export const GameMap: React.FC = () => {
 
     setCountryProvinceGroups(calculatedGroups); // Set the state for groups
     console.log(`Calculated ${calculatedGroups.length} province groups.`);
-}, [bitmap, gameState, provinceMap, countryMap]); // Dependencies for group and border calculation
+    // Use props in dependency array
+}, [bitmap, provinces, countries, provinceMap, countryMap]); // Dependencies for group and border calculation
 
 // Effect for smooth zoom and position animation
 useEffect(() => {
@@ -815,7 +820,8 @@ useEffect(() => {
             zoomAnimationFrameId.current = null;
         }
     };
-  }, [preRenderedMap, mapPosition, countryProvinceGroups, countryMap, selectedProvince, bitmap, provinceMap, provinceBorders]); // Added provinceBorders dependency
+    // Removed gameState-derived maps from dependencies, rely on preRenderedMap, groups, selection etc.
+  }, [preRenderedMap, mapPosition, countryProvinceGroups, countryMap, selectedProvince, provinceBorders]);
 
   // Handle mouse events for pan and zoom
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -847,7 +853,8 @@ useEffect(() => {
 
   // Handle province selection
   const handleClick = (e: React.MouseEvent) => {
-    if (!canvasRef.current || !bitmap || !gameState) return;
+    // Check props instead of gameState
+    if (!canvasRef.current || !bitmap || !provinces || !countries) return;
 
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
@@ -893,3 +900,22 @@ useEffect(() => {
     />
   );
 };
+
+// Wrap the component with React.memo for performance optimization
+// Custom comparison function for React.memo
+const areMapPropsEqual = (prevProps: GameMapProps, nextProps: GameMapProps): boolean => {
+  // Check if array lengths are different. If so, props are not equal.
+  if (prevProps.provinces.length !== nextProps.provinces.length ||
+      prevProps.countries.length !== nextProps.countries.length) {
+    console.log("GameMap re-rendering due to array length change.");
+    return false;
+  }
+
+  // Add more specific checks if needed, e.g., comparing specific elements or properties.
+  // For now, if lengths are the same, assume props are equal to avoid expensive deep comparison.
+  // console.log("GameMap skipping re-render (array lengths identical).");
+  return true; // Assume equal if lengths match
+};
+
+// Wrap the component with React.memo and the custom comparison function
+export const GameMap = memo(GameMapComponent, areMapPropsEqual);

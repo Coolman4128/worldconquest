@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react'; // Import useMemo
 import { useGame } from '../contexts/GameContext';
 import { useProvinceSelection } from '../contexts/ProvinceSelectionContext';
 import { useLobby } from '../contexts/LobbyContext';
@@ -110,13 +110,21 @@ interface GameInterfaceProps {
 }
 
 export const GameInterface: React.FC<GameInterfaceProps> = ({ onLeaveGame }) => {
-  const { gameState, playerId, playerName, leaveGame } = useGame();
+  const { gameState, playerName, leaveGame, endTurn } = useGame(); // Removed unused playerId
   const { selectedProvince } = useProvinceSelection();
   const { currentLobby } = useLobby();
 
   const handleLeaveGame = () => {
     leaveGame();
     onLeaveGame();
+  };
+
+  const handleEndTurn = () => {
+    if (endTurn) { // Check if endTurn is available from context
+      endTurn();
+    } else {
+      console.error("endTurn function not available in GameContext");
+    }
   };
 
   const formatDate = (dateString: string) => {
@@ -126,6 +134,10 @@ export const GameInterface: React.FC<GameInterfaceProps> = ({ onLeaveGame }) => 
     });
   };
 
+  // Memoize map data to prevent unnecessary GameMap re-renders
+  const provinces = useMemo(() => gameState?.Provinces || [], [gameState?.Provinces]);
+  const countries = useMemo(() => gameState?.Countries || [], [gameState?.Countries]);
+
   return (
     <Container>
       <Header>
@@ -134,7 +146,13 @@ export const GameInterface: React.FC<GameInterfaceProps> = ({ onLeaveGame }) => 
             <>
               <span>Date: {formatDate(gameState.CurrentDate)}</span>
               <span style={{ margin: '0 20px' }}>
-                Turn: {gameState.CurrentTurnPlayerId === playerId ? 'Your Turn' : 'Waiting'}
+                Turn: {(() => {
+                  const currentTurnPlayer = currentLobby?.players.find(p => p.id === gameState.CurrentTurnPlayerId);
+                  if (currentTurnPlayer && currentTurnPlayer.name === playerName) {
+                    return <strong style={{ fontWeight: 'bold' }}>Your Turn</strong>;
+                  }
+                  return `${currentTurnPlayer?.name || 'Unknown Player'}'s Turn`;
+                })()}
               </span>
               <span>Lobby: {currentLobby?.name || 'Unknown'}</span>
             </>
@@ -143,8 +161,8 @@ export const GameInterface: React.FC<GameInterfaceProps> = ({ onLeaveGame }) => 
           )}
         </div>
         <div>
-          {gameState?.CurrentTurnPlayerId === playerId && (
-            <Button style={{ marginRight: '10px' }}>End Turn</Button>
+          {gameState && currentLobby?.players.find(p => p.id === gameState.CurrentTurnPlayerId)?.name === playerName && (
+            <Button style={{ marginRight: '10px' }} onClick={handleEndTurn}>End Turn</Button>
           )}
           <Button onClick={handleLeaveGame}>Leave Game</Button>
         </div>
@@ -204,7 +222,14 @@ export const GameInterface: React.FC<GameInterfaceProps> = ({ onLeaveGame }) => 
         </SidePanel>
 
         <MapContainer>
-          <GameMap />
+          {gameState ? (
+            <GameMap
+              provinces={provinces} // Use memoized version
+              countries={countries} // Use memoized version
+            />
+          ) : (
+            <div>Loading Map...</div> // Or some other placeholder
+          )}
         </MapContainer>
 
         <SidePanel side="right">
