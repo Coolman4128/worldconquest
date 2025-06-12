@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useGame } from '../contexts/GameContext';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { useGame } from '../contexts/GameContext'; // Import useGame
 import { useProvinceSelection } from '../contexts/ProvinceSelectionContext';
-import { Province, Country } from '../types/game'; // Removed unused GameState import
+import { Province, Country, Army } from '../types/game'; // Import Army type
 import { memo } from 'react'; // Import memo
 
 // Define fallback and border colors
@@ -62,12 +62,22 @@ const GameMapComponent: React.FC<GameMapProps> = ({ provinces, countries }) => {
   const animationFrameId = useRef<number | null>(null); // To manage animation frames
   const zoomAnimationFrameId = useRef<number | null>(null); // To manage zoom animation frames
 
-  // Get only map position and selection context data here
-  const { mapPosition, updateMapPosition } = useGame();
+  // Get map position, game state, and selection context data
+  // Assuming playerCountryId will be provided by GameContext
+  const { gameState, mapPosition, updateMapPosition, playerCountryId, sendGameAction } = useGame(); // Added sendGameAction
   const {
     selectProvince,
     selectedProvince,
   } = useProvinceSelection();
+
+  // State for selected army and context menu
+  const [selectedArmyId, setSelectedArmyId] = useState<string | null>(null);
+  const [contextMenu, setContextMenu] = useState<{
+      x: number; // Screen X
+      y: number; // Screen Y
+      targetProvinceId: string;
+      canMove: boolean;
+  } | null>(null);
 
   // Attach wheel event listener with passive: false to allow preventDefault
   React.useEffect(() => {
@@ -77,17 +87,17 @@ const GameMapComponent: React.FC<GameMapProps> = ({ provinces, countries }) => {
     // Create a new wheel listener inside the effect to ensure it captures the latest mapPosition
     const wheelListener = (e: WheelEvent) => {
       e.preventDefault();
-      
+
       // Normalize deltaY based on the deltaMode
       let normalizedDelta = e.deltaY;
-      
+
       // Apply different scaling factors based on the device type
       const zoomSensitivity = 0.025;
-      
+
       // Apply non-linear scaling for better control
       const direction = normalizedDelta > 0 ? 1 : -1;
       const magnitude = Math.log1p(Math.abs(normalizedDelta)) * direction;
-      
+
       const scaleFactor = Math.exp(-magnitude * zoomSensitivity);
       const newTargetScale = mapPosition.targetScale * scaleFactor;
 
@@ -111,7 +121,7 @@ const GameMapComponent: React.FC<GameMapProps> = ({ provinces, countries }) => {
         targetScale: newTargetScale
       });
     };
-    
+
     canvas.addEventListener('wheel', wheelListener, { passive: false });
 
     return () => {
@@ -594,18 +604,18 @@ useEffect(() => {
   const animateMapPosition = () => {
     // Animation speed factor (adjust for faster/slower animation)
     const smoothingFactor = 0.15;
-    
+
     // Calculate the differences between current and target values
     const scaleDiff = mapPosition.targetScale - mapPosition.scale;
     const xDiff = mapPosition.targetX - mapPosition.x;
     const yDiff = mapPosition.targetY - mapPosition.y;
-    
+
     // Check if we're close enough to all targets to stop animating
     const isCloseEnough =
       Math.abs(scaleDiff) < 0.001 &&
       Math.abs(xDiff) < 0.5 &&
       Math.abs(yDiff) < 0.5;
-    
+
     if (isCloseEnough) {
       // Set exact target values and stop animation
       updateMapPosition({
@@ -616,28 +626,28 @@ useEffect(() => {
       zoomAnimationFrameId.current = null;
       return;
     }
-    
+
     // Calculate the new values by moving a percentage of the way to the targets
     const newScale = mapPosition.scale + scaleDiff * smoothingFactor;
     const newX = mapPosition.x + xDiff * smoothingFactor;
     const newY = mapPosition.y + yDiff * smoothingFactor;
-    
+
     // Update all values
     updateMapPosition({
       scale: newScale,
       x: newX,
       y: newY
     });
-    
+
     // Continue the animation
     zoomAnimationFrameId.current = requestAnimationFrame(animateMapPosition);
   };
-  
+
   // Start the animation if not already running
   if (zoomAnimationFrameId.current === null) {
     zoomAnimationFrameId.current = requestAnimationFrame(animateMapPosition);
   }
-  
+
   // Cleanup function
   return () => {
     if (zoomAnimationFrameId.current !== null) {
@@ -661,7 +671,7 @@ useEffect(() => {
         if (!canvasRef.current || !preRenderedMap || !bitmap || !provinceMap.size || !countryMap.size || !provinceBorders.size) {
             animationFrameId.current = null;
             return;
-        };
+        }
 
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
@@ -674,23 +684,13 @@ useEffect(() => {
         const invScale = 1 / scale; // For line widths, etc.
 
         // --- Calculate dynamic alphas based on zoom ---
-        // Internal borders: Fade out (more transparent) as scale decreases (zoom out)
-        // Let's say fully visible at scale 1.0, fully transparent at scale 0.2
-        // const borderMinScale = 0.2; // Old range
-        // const borderMaxScale = 1.0; // Old range
-        // const borderAlpha = Math.max(0, Math.min(1, (scale - borderMinScale) / (borderMaxScale - borderMinScale))); // Old calculation
-
         // Country names: Fade out (more transparent) as scale increases (zoom in)
-        // Make names visible at lower zoom levels and become more visible quicker
-        const nameMinScale = 0.3; // Lower minimum scale (was 1.0) - names start appearing at more zoomed out level
-        const nameMaxScale = 3.0; // Lower maximum scale (was 5.0) - names become fully visible sooner
-        // Inverse relationship: higher scale -> lower alpha (Names fade on zoom IN)
-        // Using a non-linear curve to make names become visible more quickly
+        const nameMinScale = 0.3;
+        const nameMaxScale = 3.0;
         const nameAlpha = Math.max(0, Math.min(1, Math.pow(1 - (scale - nameMinScale) / (nameMaxScale - nameMinScale), 0.7)));
 
         // Internal borders: Fade IN (more opaque) as scale increases (zoom in), matching name fade-out range
-        // Transparent when zoomed out, but never exceeding 0.4 alpha even at maximum zoom
-        const maxBorderAlpha = 0.4; // Cap the maximum opacity of internal borders
+        const maxBorderAlpha = 0.4;
         const borderAlpha = Math.max(0, Math.min(maxBorderAlpha, (scale - nameMinScale) / (nameMaxScale - nameMinScale) * maxBorderAlpha));
 
 
@@ -711,9 +711,6 @@ useEffect(() => {
         }
 
         // --- Draw Dynamic Elements ---
-
-        // No longer need to fetch originalPixels here for borders.
-        // The pre-calculated provinceBorders map contains the necessary info.
 
         // 2. Draw Internal Borders (if visible) using pre-calculated data
         if (borderAlpha > 0) {
@@ -750,7 +747,54 @@ useEffect(() => {
             }
         }
 
-        // 4. Draw Country Names (if visible) - No changes needed here
+        // 4. Draw Armies
+        if (gameState && gameState.Armies) { // Check if Armies array exists
+            // --- Add Logging Here ---
+            console.log(`Rendering ${gameState.Armies.length} armies.`);
+            // --- End Logging ---
+
+            if (gameState.Armies.length > 0) { // Only proceed if there are armies
+                const armyRadius = 3 * invScale; // Adjust size based on zoom
+
+                for (const army of gameState.Armies) {
+                    const provinceId = army.province_id; // Reverted back to lowercase 'p'
+                    const borders = provinceBorders.get(provinceId);
+
+                if (borders && borders.length > 0) {
+                    // Calculate center by averaging border points
+                    let sumX = 0;
+                    let sumY = 0;
+                    for (const p of borders) { sumX += p.x; sumY += p.y; }
+                    const centerX = sumX / borders.length;
+                    const centerY = sumY / borders.length;
+
+                    // Style based on selection and ownership
+                    const isSelected = army.id === selectedArmyId;
+                    const isPlayerOwned = army.country_id === playerCountryId;
+
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, armyRadius, 0, 2 * Math.PI);
+
+                    // Fill color
+                    ctx.fillStyle = isPlayerOwned ? 'rgba(0, 0, 150, 0.8)' : 'rgba(150, 0, 0, 0.8)'; // Blue for player, Red for others
+                    ctx.fill();
+
+                    // Border color for selection
+                    if (isSelected) {
+                        ctx.strokeStyle = 'rgba(255, 255, 0, 1)'; // Yellow border if selected
+                        ctx.lineWidth = 1.5 * invScale; // Make border visible
+                        ctx.stroke();
+                    }
+                } else {
+                     // Optional: Log if borders aren't found for an army's province
+                     // console.warn(`Could not find borders for province ${provinceId} to draw army ${army.id}`);
+                }
+            }
+        }
+    } // <-- Add missing closing brace for outer if (line 751)
+
+
+        // 5. Draw Country Names (if visible) - No changes needed here
         if (nameAlpha > 0 && countryProvinceGroups.length > 0) {
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
@@ -813,18 +857,22 @@ useEffect(() => {
             cancelAnimationFrame(animationFrameId.current);
             animationFrameId.current = null;
         }
-        
+
         // Also cancel any zoom animation frame
         if (zoomAnimationFrameId.current !== null) {
             cancelAnimationFrame(zoomAnimationFrameId.current);
             zoomAnimationFrameId.current = null;
         }
     };
-    // Removed gameState-derived maps from dependencies, rely on preRenderedMap, groups, selection etc.
-  }, [preRenderedMap, mapPosition, countryProvinceGroups, countryMap, selectedProvince, provinceBorders]);
+    // Added selectedArmyId to dependencies to redraw selection highlight
+  }, [preRenderedMap, mapPosition, countryProvinceGroups, countryMap, selectedProvince, provinceBorders, gameState, playerCountryId, selectedArmyId]); // Use gameState directly as dependency
 
   // Handle mouse events for pan and zoom
   const handleMouseDown = (e: React.MouseEvent) => {
+    // Prevent dragging if clicking on the context menu
+    if (contextMenu && (e.target as HTMLElement).closest('#context-menu-div')) {
+        return;
+    }
     setIsDragging(true);
     setLastMousePos({ x: e.clientX, y: e.clientY });
   };
@@ -851,26 +899,123 @@ useEffect(() => {
 
   // Remove the duplicate wheel event listener - we're now handling it in the effect above
 
-  // Handle province selection
+  // --- Helper Function: Calculate Distance (BFS) ---
+  const calculateDistance = useCallback((startId: string, targetId: string): number => {
+      if (!provinceMap.size || startId === targetId) return 0;
+
+      const queue: { id: string; distance: number }[] = [{ id: startId, distance: 0 }];
+      const visited = new Set<string>([startId]);
+
+      while (queue.length > 0) {
+          const { id: currentId, distance: currentDistance } = queue.shift()!;
+
+          if (currentId === targetId) {
+              return currentDistance;
+          }
+
+          // Check distance limit
+          if (currentDistance >= 5) { // Optimization: Stop searching if distance exceeds 5
+              continue;
+          }
+
+          const currentProvince = provinceMap.get(currentId);
+          if (currentProvince?.AdjacentProvinceIds) {
+              for (const neighborId of currentProvince.AdjacentProvinceIds) {
+                  // Basic check: ensure neighborId exists in provinceMap before adding
+                  if (provinceMap.has(neighborId) && !visited.has(neighborId)) {
+                      visited.add(neighborId);
+                      queue.push({ id: neighborId, distance: currentDistance + 1 });
+                  }
+              }
+          }
+      }
+
+      return Infinity; // Target not reachable within 5 steps or at all
+  }, [provinceMap]); // Dependency: provinceMap
+
+  // --- Event Handlers ---
+
   const handleClick = (e: React.MouseEvent) => {
-    // Check props instead of gameState
-    if (!canvasRef.current || !bitmap || !provinces || !countries) return;
+    // Prevent click handling if clicking on the context menu itself
+    if ((e.target as HTMLElement).closest('#context-menu-div')) {
+        return;
+    }
+
+    // Close context menu on any left click outside the menu
+    if (contextMenu) {
+        setContextMenu(null);
+    }
+
+    // Check props and state
+    if (!canvasRef.current || !bitmap || !provinceMap.size || !countryMap.size || !gameState || !gameState.Armies || !playerCountryId) return;
 
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
-    
-    // Convert click coordinates to bitmap coordinates
-    const x = (e.clientX - rect.left - mapPosition.x) / mapPosition.scale;
-    const y = (e.clientY - rect.top - mapPosition.y) / mapPosition.scale;
 
-    // Find clicked province
+    // Convert click coordinates to bitmap coordinates
+    const clickXBitmap = (e.clientX - rect.left - mapPosition.x) / mapPosition.scale;
+    const clickYBitmap = (e.clientY - rect.top - mapPosition.y) / mapPosition.scale;
+
+    // --- Check for Army Click ---
+    const armyClickRadiusBitmap = 5; // Click radius in bitmap pixels (adjust as needed)
+    let clickedArmy: Army | null = null;
+
+    // Iterate armies in reverse draw order (or consider z-index if implemented)
+    // For now, simple iteration is fine.
+    for (const army of gameState.Armies) {
+        const borders = provinceBorders.get(army.province_id);
+        if (borders && borders.length > 0) {
+            // Calculate center (same logic as rendering)
+            let sumX = 0;
+            let sumY = 0;
+            for (const p of borders) { sumX += p.x; sumY += p.y; }
+            const centerX = sumX / borders.length;
+            const centerY = sumY / borders.length;
+
+            // Check distance from click to army center
+            const dx = clickXBitmap - centerX;
+            const dy = clickYBitmap - centerY;
+            const distanceSq = dx * dx + dy * dy;
+
+            // Use a slightly larger radius for clicking than for drawing if needed
+            if (distanceSq <= armyClickRadiusBitmap * armyClickRadiusBitmap) {
+                clickedArmy = army;
+                break; // Found the clicked army
+            }
+        }
+    }
+
+    if (clickedArmy) {
+        // Clicked on an army
+        const armyOwner = countryMap.get(clickedArmy.country_id);
+        // Check if the clicked army belongs to the current player
+        if (armyOwner && armyOwner.Id === playerCountryId) {
+             // Player owns this army, select it
+             setSelectedArmyId(clickedArmy.id);
+             selectProvince(null); // Deselect province when selecting army
+             console.log("Selected player army:", clickedArmy.id);
+             // Return ONLY if we successfully selected a player-owned army
+             return;
+        } else {
+            // Clicked on an enemy/neutral army, deselect player's army/province
+            setSelectedArmyId(null);
+            selectProvince(null);
+            console.log("Clicked non-player army, deselecting.");
+            // DO NOT return here - allow province selection underneath non-player armies
+        }
+        // If we clicked a non-player army, we fall through to province selection
+    }
+
+    // --- If not clicking an army (or clicking a non-player army), proceed with Province Click ---
+    setSelectedArmyId(null); // Deselect army if clicking elsewhere
+
     // Get color from the *original* bitmap to identify province
     if (!offscreenCanvasRef.current) return;
     const offscreenCtx = offscreenCanvasRef.current.getContext('2d');
     if (!offscreenCtx) return;
 
     try {
-        const pixelData = offscreenCtx.getImageData(Math.floor(x), Math.floor(y), 1, 1).data;
+        const pixelData = offscreenCtx.getImageData(Math.floor(clickXBitmap), Math.floor(clickYBitmap), 1, 1).data;
         const r = pixelData[0];
         const g = pixelData[1];
         const b = pixelData[2];
@@ -879,25 +1024,150 @@ useEffect(() => {
 
         if (province) {
           selectProvince(province);
+        } else {
+          selectProvince(null); // Deselect if clicking non-province area
         }
     } catch (e) {
          console.error("Error getting pixel data on click (tainted canvas?):", e);
+         selectProvince(null); // Deselect on error
     }
+  };
+
+  const handleContextMenu = (e: React.MouseEvent) => {
+      e.preventDefault();
+      setContextMenu(null); // Close any existing menu first
+
+      // Ensure playerCountryId is checked
+      if (!selectedArmyId || !canvasRef.current || !bitmap || !provinceMap.size || !gameState || !gameState.Armies || !playerCountryId) {
+          return; // Need a selected army and map data
+      }
+
+      const selectedArmy = gameState.Armies.find(a => a.id === selectedArmyId);
+      if (!selectedArmy) {
+          setSelectedArmyId(null); // Army disappeared? Deselect.
+          return;
+      }
+
+      // Check if the selected army belongs to the player
+      if (selectedArmy.country_id !== playerCountryId) {
+          console.log("Cannot issue orders to non-player army.");
+          setSelectedArmyId(null); // Deselect if somehow a non-player army was selected
+          return;
+      }
+
+      const canvas = canvasRef.current;
+      const rect = canvas.getBoundingClientRect();
+
+      // Convert click coordinates to bitmap coordinates
+      const clickXBitmap = (e.clientX - rect.left - mapPosition.x) / mapPosition.scale;
+      const clickYBitmap = (e.clientY - rect.top - mapPosition.y) / mapPosition.scale;
+
+      // Find clicked province ID
+      if (!offscreenCanvasRef.current) return;
+      const offscreenCtx = offscreenCanvasRef.current.getContext('2d');
+      if (!offscreenCtx) return;
+
+      let targetProvinceId: string | null = null;
+      try {
+          const pixelData = offscreenCtx.getImageData(Math.floor(clickXBitmap), Math.floor(clickYBitmap), 1, 1).data;
+          const r = pixelData[0];
+          const g = pixelData[1];
+          const b = pixelData[2];
+          const provinceId = rgbToId(r, g, b);
+          if (provinceMap.has(provinceId)) {
+              targetProvinceId = provinceId;
+          }
+      } catch (err) {
+          console.error("Error getting pixel data on context menu:", err);
+          return; // Don't show menu if we can't identify province
+      }
+
+      if (!targetProvinceId) {
+          return; // Clicked outside a valid province
+      }
+
+      // Calculate distance
+      const distance = calculateDistance(selectedArmy.province_id, targetProvinceId);
+
+      // Determine if move is possible
+      const canMove = distance <= 5 && selectedArmy.moves_remaining > 0;
+
+      console.log(`Context menu: Army ${selectedArmyId} to ${targetProvinceId}. Distance: ${distance}, Moves left: ${selectedArmy.moves_remaining}, Can move: ${canMove}`);
+
+      // Set context menu state
+      setContextMenu({
+          x: e.clientX, // Use screen coordinates for positioning
+          y: e.clientY,
+          targetProvinceId: targetProvinceId,
+          canMove: canMove,
+      });
+  };
+
+  const handleMoveClick = () => {
+    if (contextMenu && contextMenu.canMove && selectedArmyId && sendGameAction) { // Check if sendGameAction is available
+      const payload = {
+        armyId: selectedArmyId,
+        targetProvinceId: contextMenu.targetProvinceId,
+      };
+      console.log(`Sending MOVE_ARMY action:`, payload); // Log before sending
+      sendGameAction('MOVE_ARMY', payload);
+    } else {
+      console.error("Cannot handle move click: missing context, army selection, or sendGameAction function.");
+    }
+    setContextMenu(null); // Close menu after click regardless of success/failure to send
   };
 
   // Removed the old useEffect that called renderMap directly
 
   return (
-    <canvas
-      ref={canvasRef}
-      style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-      onClick={handleClick}
-      // onWheel removed; handled by manual event listener for passive: false
-    />
+    <> {/* Use Fragment to return multiple elements */}
+      <canvas
+        ref={canvasRef}
+        style={{ cursor: isDragging ? 'grabbing' : 'grab', display: 'block' /* Prevents extra space below */ }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp} // Use same handler for mouse leave
+        onClick={handleClick}
+        onContextMenu={handleContextMenu} // Add context menu handler
+        // onWheel removed; handled by manual event listener for passive: false
+      />
+      {/* Context Menu */}
+      {contextMenu && (
+        <div
+          id="context-menu-div" // Add ID for click/drag checks
+          style={{
+            position: 'absolute',
+            left: `${contextMenu.x}px`,
+            top: `${contextMenu.y}px`,
+            background: 'white',
+            border: '1px solid black',
+            padding: '5px',
+            zIndex: 1000, // Ensure it's above the canvas
+            boxShadow: '2px 2px 5px rgba(0,0,0,0.3)',
+            cursor: 'default', // Reset cursor for the menu itself
+          }}
+        >
+          <button
+            onClick={handleMoveClick}
+            disabled={!contextMenu.canMove}
+            style={{
+              display: 'block',
+              width: '100%',
+              border: 'none',
+              background: contextMenu.canMove ? '#e0e0e0' : '#f0f0f0',
+              color: contextMenu.canMove ? 'black' : 'grey',
+              padding: '4px 8px',
+              textAlign: 'left',
+              cursor: contextMenu.canMove ? 'pointer' : 'not-allowed',
+            }}
+          >
+            Move Here
+          </button>
+          {/* Add other context menu options here later if needed */}
+        </div>
+      )}
+    </>
   );
 };
 

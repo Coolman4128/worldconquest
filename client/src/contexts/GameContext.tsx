@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect, useMemo } from 'react'; // Added useMemo
 import { GameState, GameContextType, MapPosition } from '../types/game';
 import { useLobby } from './LobbyContext';
 
@@ -211,7 +211,18 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       console.error('Cannot end turn: socket not connected.');
     }
   }, [socket, isConnected]);
-
+ 
+  // Function to send generic game actions
+  const sendGameAction = useCallback((actionType: string, payload: any) => {
+    if (socket && isConnected && gameState) {
+      console.log(`Emitting game action: ${actionType}`, payload);
+      // Include gameId for server-side routing if necessary
+      socket.emit('game_action', { gameId: gameState.GameId, type: actionType, payload }); // Corrected to GameId
+    } else {
+      console.error(`Cannot send action ${actionType}: socket not connected or no game state.`);
+    }
+  }, [socket, isConnected, gameState]);
+ 
   const updateMapPosition = useCallback((position: Partial<MapPosition>) => {
     setMapPosition(prev => ({
       ...prev,
@@ -219,21 +230,29 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }));
   }, []);
 
+  // Derive playerCountryId
+  const playerCountryId = useMemo(() => {
+    if (gameState && playerId && gameState.PlayerCountries) {
+      return gameState.PlayerCountries[playerId] || null;
+    }
+    return null;
+  }, [gameState, playerId]);
+
   const value = {
     gameState,
     playerId,
     playerName,
-    // selectedProvince removed from context value
+    playerCountryId, // Add derived playerCountryId
     mapPosition,
-    gameReady, // Add gameReady to the context value
-    connect: () => {}, // Dummy function since we're using LobbyContext's socket
+    gameReady,
+    connect: () => {}, // Dummy function
     createGame,
     joinGame,
     selectCountry,
     leaveGame,
-    // selectProvince removed from context value
     updateMapPosition,
-    endTurn, // Add endTurn to context value
+    endTurn,
+    sendGameAction, // Add the new function here
   };
 
   return (

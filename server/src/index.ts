@@ -6,6 +6,14 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import fs from 'fs/promises';
 import { v4 as uuidv4 } from 'uuid';
+import { GameState } from './interfaces/GameState';
+import { Lobby } from './interfaces/Lobby';
+import { Country } from './interfaces/Country';
+import { Province } from './interfaces/Province';
+import { Unit } from './interfaces/Unit';
+import { Army } from './interfaces/Army';
+
+// Removed import: import { Army } from '../../client/src/types/game';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -41,45 +49,48 @@ async function loadDefaultGameState() {
   }
 }
 
-// Define types for our server
-interface Lobby {
-  id: string;
-  name: string;
-  players: LobbyPlayer[];
-  maxPlayers: number;
-  inProgress: boolean;
-  createdAt: string;
-  availableCountries: Country[]; // Add countries to the lobby
-}
 
-interface LobbyPlayer {
-  id: string;
-  name: string;
-  selectedCountry: string | null;
-}
 
-interface Country {
-  Id: string;
-  Name: string;
-  Color: string;
-  Money: number;
-  PlayerId: string | null;
-  Stability: number;
-  Population: number;
-}
-
-interface GameState {
-  GameId: string;
-  Players: string[];
-  Countries: Country[];
-  PlayerCountries: Record<string, string>;
-  [key: string]: any; // Allow other properties
-}
 
 // Game state storage (in-memory for now, will move to MongoDB later)
-const games = new Map();
+const games = new Map<string, GameState>(); // Specify Map types
 const lobbies = new Map<string, Lobby>();
 const playerLobbyMap = new Map<string, string>(); // Maps playerId to lobbyId
+
+// --- Helper Function: Calculate Distance (BFS) on Server ---
+const calculateDistance = (startId: string, targetId: string, provinces: Province[]): number => {
+    const provinceMap = new Map<string, Province>(provinces.map(p => [p.Id, p]));
+    if (!provinceMap.size || startId === targetId) return 0;
+
+    const queue: { id: string; distance: number }[] = [{ id: startId, distance: 0 }];
+    const visited = new Set<string>([startId]);
+    const maxSearchDepth = 10; // Limit search depth for performance
+
+    while (queue.length > 0) {
+        const { id: currentId, distance: currentDistance } = queue.shift()!;
+
+        if (currentId === targetId) {
+            return currentDistance;
+        }
+
+        // Check distance limit
+        if (currentDistance >= maxSearchDepth) {
+            continue;
+        }
+
+        const currentProvince = provinceMap.get(currentId);
+        if (currentProvince?.AdjacentProvinceIds) {
+            for (const neighborId of currentProvince.AdjacentProvinceIds) {
+                if (provinceMap.has(neighborId) && !visited.has(neighborId)) {
+                    visited.add(neighborId);
+                    queue.push({ id: neighborId, distance: currentDistance + 1 });
+                }
+            }
+        }
+    }
+
+    return Infinity; // Target not reachable within limit or at all
+};
 
 // Socket.IO event handlers
 io.on('connection', (socket: Socket) => {
@@ -247,6 +258,7 @@ io.on('connection', (socket: Socket) => {
       GameId: gameId,
       Players: lobby.players.map(p => p.id),
       PlayerCountries: {}, // Will be populated as players select countries
+      // Armies: [], // REMOVED - Let defaultGameState spread handle this
       CurrentTurnPlayerId: lobby.players[0].id // Set the first player as the current turn player
     };
     
@@ -301,6 +313,7 @@ io.on('connection', (socket: Socket) => {
       GameId: gameId,
       Players: lobby.players.map(p => p.id),
       PlayerCountries: {}, // Will be populated as players select countries
+      // Armies: [], // REMOVED - Let defaultGameState spread handle this
       CurrentTurnPlayerId: lobby.players[0].id // Set the first player as the current turn player
     };
     
@@ -540,6 +553,15 @@ io.on('connection', (socket: Socket) => {
             currentDate.setMonth(currentDate.getMonth() + 3);
             gameState.CurrentDate = currentDate.toISOString();
             console.log(`Advanced game ${gameId} date to: ${gameState.CurrentDate}`);
+
+            // Reset army movement points
+            if (gameState.Armies && Array.isArray(gameState.Armies)) {
+              gameState.Armies.forEach((army: Army) => {
+                army.moves_remaining = 5;
+              });
+              console.log(`Reset movement points for ${gameState.Armies.length} armies in game ${gameId}.`);
+            }
+
           } catch (dateError) {
             console.error(`Error parsing or advancing game date for game ${gameId}:`, dateError, "Current date string:", gameState.CurrentDate);
             // Handle error, maybe reset date or log more details
@@ -551,6 +573,82 @@ io.on('connection', (socket: Socket) => {
     io.to(gameId).emit('game_updated', gameState);
     console.log(`Game state updated and broadcasted for game ${gameId}. New turn: ${gameState.CurrentTurnPlayerId}`);
   });
+
+  // --- Handle Generic Game Actions ---
+  socket.on('game_action', ({ gameId, type, payload }) => {
+    console.log(`Received game_action: ${type} for game ${gameId} from ${socket.id}`, payload);
+    const gameState = games.get(gameId);
+    const playerId = socket.id; // Assuming socket.id is the player identifier
+
+    if (!gameState) {
+      console.error(`Game state not found for gameId: ${gameId}`);
+      return socket.emit('error', 'Game not found.');
+    }
+
+    // Ensure the player is actually in this game
+    if (!gameState.Players || !gameState.Players.includes(playerId)) {
+       console.error(`Player ${playerId} attempted action in game ${gameId} but is not listed as a player.`);
+       return socket.emit('error', 'You are not a player in this game.');
+    }
+
+    switch (type) {
+      case 'MOVE_ARMY':
+        const { armyId, targetProvinceId } = payload;
+
+        // --- Validation ---
+        const army = gameState.Armies?.find((a: Army) => a.id === armyId);
+        if (!army) {
+          console.warn(`[Game ${gameId}] Player ${playerId} tried to move non-existent army ${armyId}.`);
+          return socket.emit('move_invalid', { armyId, reason: 'Army not found.' });
+        }
+
+        const playerCountryId = gameState.PlayerCountries?.[playerId];
+        if (!playerCountryId || army.country_id !== playerCountryId) {
+          console.warn(`[Game ${gameId}] Player ${playerId} tried to move army ${armyId} belonging to ${army.country_id} (Player controls ${playerCountryId}).`);
+          return socket.emit('move_invalid', { armyId, reason: 'Army does not belong to you.' });
+        }
+
+        if (army.moves_remaining <= 0) {
+          console.warn(`[Game ${gameId}] Player ${playerId} tried to move army ${armyId} with 0 moves remaining.`);
+          return socket.emit('move_invalid', { armyId, reason: 'Army has no moves remaining.' });
+        }
+
+        const currentProvinceId = army.province_id;
+        if (!gameState.Provinces) {
+            console.error(`[Game ${gameId}] Missing Provinces data for distance calculation.`);
+            return socket.emit('move_invalid', { armyId, reason: 'Server error: Province data unavailable.' });
+        }
+        const distance = calculateDistance(currentProvinceId, targetProvinceId, gameState.Provinces);
+
+        if (distance === Infinity) {
+          console.warn(`[Game ${gameId}] Player ${playerId} tried to move army ${armyId} to unreachable province ${targetProvinceId}.`);
+          return socket.emit('move_invalid', { armyId, reason: 'Target province is unreachable.' });
+        }
+
+        if (distance > army.moves_remaining) {
+          console.warn(`[Game ${gameId}] Player ${playerId} tried to move army ${armyId} distance ${distance} with only ${army.moves_remaining} moves left.`);
+          return socket.emit('move_invalid', { armyId, reason: `Not enough moves remaining (need ${distance}, have ${army.moves_remaining}).` });
+        }
+
+        // --- Execution ---
+        console.log(`[Game ${gameId}] Executing move for army ${armyId} from ${currentProvinceId} to ${targetProvinceId} (Cost: ${distance}).`);
+        army.province_id = targetProvinceId;
+        army.moves_remaining -= distance;
+
+        // --- Broadcast Update ---
+        io.to(gameId).emit('game_updated', gameState);
+        console.log(`[Game ${gameId}] Broadcasted game update after army move.`);
+        break;
+
+      // Add other game actions here...
+      // case 'ATTACK':
+      //   break;
+
+      default:
+        console.warn(`[Game ${gameId}] Received unknown game_action type: ${type}`);
+    }
+  });
+  // --- End Handle Generic Game Actions ---
 
   socket.on('disconnect', () => {
     console.log('Client disconnected:', socket.id);

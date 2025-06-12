@@ -12963,8 +12963,45 @@
       "Upgradable": true
     }
   ],
+"unit_definitions": {
+  "infantry": {
+    "name": "Infantry",
+    "cost": 10,
+    "tech_level": 1,
+    "max_men": 1000
+  },
+  "cavalry": {
+    "name": "Cavalry",
+    "cost": 25,
+    "tech_level": 1,
+    "max_men": 500
+  }
+},
   "DiplomaticRelations": [],
   "CurrentDate": "1080-01-01T00:00:00",
   "CurrentTurnPlayerId": "",
-  "Armies": []
+  "Armies": [
+    {
+      "Id": "denmark_army_1",
+      "OwnerId": "denmark",
+      "province_id": "207_42_19",
+      "Units": [
+        {
+          "Type": "infantry",
+          "Men": 1000
+        }
+      ]
+    },
+    {
+      "Id": "hre_army_1",
+      "OwnerId": "hre",
+      "province_id": "27_146_0",
+      "Units": [
+        {
+          "Type": "infantry",
+          "Men": 1000
+        }
+      ]
+    }
+  ]
 }

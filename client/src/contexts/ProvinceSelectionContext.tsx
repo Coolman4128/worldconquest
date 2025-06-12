@@ -3,7 +3,7 @@ import type { Province } from '../types/game';
 
 interface ProvinceSelectionContextType {
   selectedProvince: Province | null;
-  selectProvince: (province: Province) => void;
+  selectProvince: (province: Province | null) => void; // Allow null for deselection
 }
 
 const ProvinceSelectionContext = createContext<ProvinceSelectionContextType | undefined>(undefined);
@@ -11,8 +11,8 @@ const ProvinceSelectionContext = createContext<ProvinceSelectionContextType | un
 export const ProvinceSelectionProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [selectedProvince, setSelectedProvince] = useState<Province | null>(null);
 
-  const selectProvince = useCallback((province: Province) => {
-    setSelectedProvince(province);
+  const selectProvince = useCallback((province: Province | null) => { // Allow null
+    setSelectedProvince(province); // Set state to Province or null
   }, []);
 
   // Memoize the context value to prevent unnecessary re-renders

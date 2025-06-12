@@ -8,6 +8,7 @@ export interface Province {
   Type: 'Land' | 'Water';
   Unrest: number;
   Upgradable: boolean;
+  AdjacentProvinceIds: string[]; // Added for pathfinding
 }
 
 export interface Country {
@@ -21,17 +22,17 @@ export interface Country {
 }
 
 export interface Army {
-  Id: string;
-  OwnerId: string;
-  ProvinceId: string;
-  Units: Unit[];
-  MovesRemaining: number;
+  id: string; // Unique identifier
+  country_id: string; // ID of the owning country
+  general_name: string; // Name of the general
+  province_id: string; // ID of the current province
+  units: Unit[]; // Array of units in the army
+  moves_remaining: number; // Movement points left
 }
 
 export interface Unit {
-  Id: string;
-  Type: string;
-  Count: number;
+  type: string; // Key referencing unit_definitions
+  current_men: number; // Current number of men in the unit
 }
 
 export interface GameState {
@@ -44,6 +45,32 @@ export interface GameState {
   CurrentTurnPlayerId: string;
   Armies: Army[];
   PlayerCountries: Record<string, string>; // Maps playerId to countryId
+}
+
+export interface MapPosition {
+  x: number;
+  y: number;
+  scale: number;
+  targetX: number;
+  targetY: number;
+  targetScale: number;
+}
+
+export interface GameContextType {
+  gameState: GameState | null;
+  playerId: string | null;
+  playerName: string | null;
+  playerCountryId: string | null; // Added player's country ID
+  mapPosition: MapPosition;
+  gameReady: boolean;
+  connect: () => void;
+  createGame: (lobbyId: string) => void;
+  joinGame: (gameId: string, countryId: string) => void;
+  selectCountry: (countryId: string) => void;
+  leaveGame: () => void;
+  updateMapPosition: (position: Partial<MapPosition>) => void;
+  endTurn: () => void;
+  sendGameAction: (actionType: string, payload: any) => void; // Added sendGameAction
 }
 
 export interface Lobby {
@@ -69,29 +96,7 @@ export interface DiplomaticRelation {
   TruceUntil?: string;
 }
 
-export interface MapPosition {
-  x: number;
-  y: number;
-  scale: number;
-  targetX: number;
-  targetY: number;
-  targetScale: number;
-}
-
-export interface GameContextType {
-  gameState: GameState | null;
-  playerId: string | null;
-  playerName: string | null;
-  mapPosition: MapPosition;
-  gameReady: boolean; // Add gameReady property
-  connect: () => void;
-  createGame: (lobbyId: string) => void;
-  joinGame: (gameId: string, countryId: string) => void;
-  updateMapPosition: (position: Partial<MapPosition>) => void;
-  selectCountry: (countryId: string) => void;
-  leaveGame: () => void;
-  endTurn: () => void; // Add endTurn function type
-}
+// Removed duplicate MapPosition and GameContextType interfaces
 
 export interface LobbyContextType {
   lobbies: Lobby[];
